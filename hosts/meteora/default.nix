@@ -50,9 +50,9 @@
     curl
   ];
 
-  environment.variables = [
+  environment.variables = {
     
-  ];
+  };
 
   # services
   services.openssh.enable = true;
