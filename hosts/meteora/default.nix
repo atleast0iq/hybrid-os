@@ -79,19 +79,5 @@
     config.allowUnfree = true;
   };
 
-  # system packages
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-    wget
-    curl
-  ];
-
-  # environment variables
-  environment.variables = {
-    EDITOR = "vim";
-  };
-
-  # system version
   system.stateVersion = "23.11";
 }
