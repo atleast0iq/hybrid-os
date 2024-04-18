@@ -41,6 +41,19 @@
     keyMap = "us";
   };
 
+  # global packages and variables
+  environment.systemPackages = with pkgs; [
+    git
+    just
+    vim
+    wget
+    curl
+  ];
+
+  environment.variables = [
+    
+  ];
+
   # services
   services.openssh.enable = true;
 
