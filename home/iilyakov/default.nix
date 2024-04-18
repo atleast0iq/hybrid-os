@@ -2,10 +2,8 @@
   home.username = "iilyakov";
   home.homeDirectory = "/home/iilyakov";
 
-  home.packages = with pkgs; [];
-
   imports = [
-    ./git.nix
+    ./programs
   ];
 
   home.stateVersion = "23.11";

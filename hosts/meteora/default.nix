@@ -43,9 +43,9 @@
 
   # global packages and variables
   environment.systemPackages = with pkgs; [
+    vim
     git
     just
-    vim
     wget
     curl
   ];
