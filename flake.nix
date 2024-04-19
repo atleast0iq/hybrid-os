@@ -17,6 +17,11 @@
     ...
   } : let
     system = "x86_64-linux";
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations = {
       meteora = nixpkgs.lib.nixosSystem {
@@ -38,6 +43,17 @@
 
             home-manager.users.iilyakov = import ./home/iilyakov;
           }
+        ];
+      };
+    };
+
+    homeManagerConifgurations = {
+      iilyakov = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+
+        modules = [
+          ./home/iilyakov
         ];
       };
     };

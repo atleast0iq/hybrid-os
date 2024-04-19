@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }: {
   imports = [ 
-    ./hardware-configuration.nix
+    ../hardware-configuration.nix
     ./modules
   ];
 
