@@ -30,3 +30,5 @@ DELETE-OLD-WARNING:
     sudo nix-collect-garbage --delete-older-than 7d
     sudo nix-collect-garbage --delete-old
     just switch-system
+
+all: switch-system home-manager-switch
