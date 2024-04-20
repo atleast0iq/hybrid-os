@@ -47,7 +47,7 @@
       };
     };
 
-    homeManagerConifgurations = {
+    homeManagerConfigurations = {
       iilyakov = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
