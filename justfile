@@ -29,4 +29,4 @@ collect-garbage:
 DELETE-OLD-WARNING:
     sudo nix-collect-garbage --delete-older-than 7d
     sudo nix-collect-garbage --delete-old
-    switch-system
+    just switch-system
