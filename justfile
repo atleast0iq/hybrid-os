@@ -4,9 +4,6 @@ default:
 home-manager-build:
     nix build path:.#homeManagerConfigurations.iilyakov.activationPackage
 
-home-manager-build-verbose:
-    nix build path:.#homeManagerConfigurations.iilyakov.activationPackage --show-trace
-
 home-manager-switch: home-manager-build
     ./result/activate
 
@@ -24,7 +21,12 @@ update-dotfiles:
     git commit -m "Updated dotfiles"
     git push origin main
 
-garbage-collect:
+collect-garbage:
     sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 7d
     sudo nix store gc --debug
     home-manager expire-generations "-7 days"
+
+DELETE-OLD-WARNING:
+    sudo nix-collect-garbage --delete-older-than 7d
+    sudo nix-collect-garbage --delete-old
+    switch-system
