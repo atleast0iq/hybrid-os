@@ -14,7 +14,7 @@ switch-system:
     sudo nixos-rebuild switch --flake path:.#meteora
 
 update-flake:
-    nix flake update
+    sudo nix flake update
 
 copy-hardware-config:
     cp /etc/nixos/hardware-configuration.nix ./hosts/hardware-configuration.nix
