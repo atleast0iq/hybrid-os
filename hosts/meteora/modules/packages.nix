@@ -1,6 +1,6 @@
 { config, pkgs, lib, inputs, ... }: {
   imports = [
-    #./hyprland.nix
+    ./hyprland.nix
   ];
 
   environment.systemPackages = with pkgs; [
