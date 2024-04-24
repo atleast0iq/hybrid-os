@@ -1,9 +1,15 @@
 { config, pkgs, lib, inputs, ... }: {
+  imports = [
+    ./hyprland.nix
+  ];
+
   environment.systemPackages = with pkgs; [
+    # tools to build my config
     neovim
     git
     just
-    wget
-    curl
+
+    # wayland and hyprland stuff
+
   ];
 }

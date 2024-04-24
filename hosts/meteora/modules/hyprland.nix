@@ -1,0 +1,19 @@
+{ config, pkgs, lib, inputs, ... }: {
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+
+    xwayland = {
+      enable = true;
+      hidpi = false;
+    };
+
+    xdg.portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-hyprland
+      ]
+    };
+  };
+}
