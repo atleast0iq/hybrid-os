@@ -23,6 +23,7 @@
     self,
     nixpkgs,
     home-manager,
+    grub2-themes,
     ...
   } : let
     system = "x86_64-linux";
