@@ -2,7 +2,7 @@ default:
     @just --list
 
 home-manager-build:
-    nix build path:.#homeManagerConfigurations.iilyakov.activationPackage
+    nix build path:.#homeConfigurations.iilyakov.activationPackage
 
 home-manager-switch: home-manager-build
     ./result/activate
