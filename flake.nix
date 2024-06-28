@@ -9,6 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    grub2-themes = {
+      url = "github:vinceliuice/grub2-themes";
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +42,7 @@
 
         modules = [
           ./hosts/meteora
+          grub2-themes.nixosModules.default
         ];
       };
     };
