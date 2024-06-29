@@ -45,7 +45,7 @@
 
     homeConfigurations = {
       iilyakov = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs system;
+        inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
 
         modules = [

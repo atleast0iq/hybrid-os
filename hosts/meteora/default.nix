@@ -17,7 +17,7 @@
         device = "nodev";
         forceInstall = true;
 
-        theme = inputs.nixos-grub-themes.packages.${system}.big-sur;
+        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.fallout;
       };
     };
 
@@ -52,8 +52,6 @@
       options = "--delete-older-than 7d";
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   # networking
   networking = {
