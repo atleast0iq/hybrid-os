@@ -5,4 +5,7 @@
     git
     just
   ];
+
+  # Hyprland
+  programs.hyprland.enable = true;
 }

@@ -13,10 +13,7 @@
       url = "github:vinceliuice/grub2-themes";
     };
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
   outputs = inputs @ {
@@ -24,6 +21,7 @@
     nixpkgs,
     home-manager,
     grub2-themes,
+    hyprland,
     ...
   } : let
     system = "x86_64-linux";
