@@ -16,12 +16,8 @@
         efiSupport = true;
         device = "nodev";
         forceInstall = true;
-      };
 
-      grub2-theme = {
-        enable = true;
-        theme = "vimix";
-        footer = true;
+        theme = inputs.nixos-grub-themes.packages.${system}.big-sur;
       };
     };
 

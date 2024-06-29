@@ -1,23 +1,5 @@
 {
   "nodes": {
-    "grub2-themes": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1717262140,
-        "narHash": "sha256-SdYUlJ/5ZrdtqmffUjrTo0+SgagezYysEy1ZS4o7Shg=",
-        "owner": "vinceliuice",
-        "repo": "grub2-themes",
-        "rev": "0628270f03f36f00c12487e008644a6fce9b4ec9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vinceliuice",
-        "repo": "grub2-themes",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -74,7 +56,7 @@
         "hyprlang": "hyprlang",
         "hyprutils": "hyprutils",
         "hyprwayland-scanner": "hyprwayland-scanner",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "systems": "systems",
         "xdph": "xdph"
       },
@@ -200,23 +182,25 @@
         "type": "github"
       }
     },
-    "nixpkgs": {
+    "nixos-grub-themes": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
       "locked": {
-        "lastModified": 1719648682,
-        "narHash": "sha256-rLHhWQ18PABEcs8Xa7umLamYHBpudreojIoox+SVyRE=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "885309a9e60ff4f5c87ddb01e8f04e2bd32b1d0a",
+        "lastModified": 1719682050,
+        "narHash": "sha256-5RNF4ly89HL/hvxSeqrCJdJvgMiScrRNujJLa4RlAtU=",
+        "owner": "atleast0iq",
+        "repo": "nixos-grub-themes",
+        "rev": "967fced93a1e854fb9bfd4c44d4440700a205b58",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixpkgs",
+        "owner": "atleast0iq",
+        "repo": "nixos-grub-themes",
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs": {
       "locked": {
         "lastModified": 1719075281,
         "narHash": "sha256-CyyxvOwFf12I91PBWz43iGT1kjsf5oi6ax7CrvaMyAo=",
@@ -227,6 +211,22 @@
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1719506693,
+        "narHash": "sha256-C8e9S7RzshSdHB7L+v9I51af1gDM5unhJ2xO1ywxNH8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b2852eb9365c6de48ffb0dc2c9562591f652242a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -250,9 +250,9 @@
     },
     "root": {
       "inputs": {
-        "grub2-themes": "grub2-themes",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "nixos-grub-themes": "nixos-grub-themes",
         "nixpkgs": "nixpkgs_3"
       }
     },

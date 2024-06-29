@@ -9,9 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    grub2-themes = {
-      url = "github:vinceliuice/grub2-themes";
-    };
+    nixos-grub-themes.url = "github:atleast0iq/nixos-grub-themes";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
@@ -20,7 +18,7 @@
     self,
     nixpkgs,
     home-manager,
-    grub2-themes,
+    nixos-grub-themes,
     hyprland,
     ...
   } : let
@@ -33,7 +31,7 @@
   in {
     nixosConfigurations = {
       meteora = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit pkgs system;
 
         specialArgs = {
           inherit inputs;
@@ -41,14 +39,13 @@
 
         modules = [
           ./hosts/meteora
-          grub2-themes.nixosModules.default
         ];
       };
     };
 
     homeConfigurations = {
       iilyakov = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        inherit pkgs system;
         extraSpecialArgs = { inherit inputs; };
 
         modules = [
