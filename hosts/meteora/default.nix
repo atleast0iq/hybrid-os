@@ -1,5 +1,5 @@
 { config, lib, pkgs, inputs, ... }: {
-  imports = [ 
+ imports = [ 
     ./../hardware-configuration.nix
     ./packages.nix
     ./services.nix
@@ -16,17 +16,34 @@
         efiSupport = true;
         device = "nodev";
         forceInstall = true;
+	splashImage = lib.mkForce null;
 
-        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.fallout;
+	theme = "${
+	  (pkgs.fetchFromGitHub {
+	    owner = "Blaysht";
+	    repo = "grub_bios_theme";
+	    rev = "035554c30df6a10158a5a71acfbc4975045fc7ac";
+	    sha256 = "sha256-kYcEMCV9ipwPGgfAwOtFgYO4eHZxkUS97tOr0ft4rUE=";
+	  })
+	}/OldBIOS/";
       };
     };
 
-    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod;
     initrd.kernelModules = [ "amdgpu" ];
 
-    plymouth = {
-      enable = true;
-    };
+    # silent boot
+    initrd.verbose = false;
+    kernelParams = [ "quiet" "udev.log_level=3" ];
+  };
+
+  # hardware
+  hardware = {
+    cpu.amd.updateMicrocode = true;
+    enableRedistributableFirmware = true;
+    opengl.enable = true;
+    opengl.driSupport = true;
+
+    amdgpu.initrd.enable = true;
   };
 
   # nix

@@ -1,6 +1,6 @@
 { config, pkgs, lib, inputs, ... }: {
-  # ssh
-  services.openssh = {
-    enable = true;
+  services = {
+    # autologin in main account
+    getty.autologinUser = "iilyakov";
   };
 }

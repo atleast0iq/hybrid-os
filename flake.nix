@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-grub-themes.url = "github:atleast0iq/nixos-grub-themes";
-
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
@@ -18,7 +16,6 @@
     self,
     nixpkgs,
     home-manager,
-    nixos-grub-themes,
     hyprland,
     ...
   } : let
@@ -31,7 +28,7 @@
   in {
     nixosConfigurations = {
       meteora = nixpkgs.lib.nixosSystem {
-        inherit pkgs system;
+        inherit system;
 
         specialArgs = {
           inherit inputs;
