@@ -1,4 +1,10 @@
-{ config, pkgs, lib, inputs, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -8,6 +14,7 @@
     neovim
     git
     just
+    alejandra
   ];
 
   # Hyprland

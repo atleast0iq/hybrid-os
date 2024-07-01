@@ -1,5 +1,11 @@
-{ config, lib, pkgs, inputs, ... }: {
- imports = [ 
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
     ./../hardware-configuration.nix
     ./packages.nix
     ./services.nix
@@ -16,24 +22,24 @@
         efiSupport = true;
         device = "nodev";
         forceInstall = true;
-	      splashImage = lib.mkForce null;
+        splashImage = lib.mkForce null;
 
-	      theme = "${
-	        (pkgs.fetchFromGitHub {
-	          owner = "Blaysht";
-	          repo = "grub_bios_theme";
-	          rev = "035554c30df6a10158a5a71acfbc4975045fc7ac";
-	          sha256 = "sha256-kYcEMCV9ipwPGgfAwOtFgYO4eHZxkUS97tOr0ft4rUE=";
-	        })
-	      }/OldBIOS/";
+        theme = "${
+          (pkgs.fetchFromGitHub {
+            owner = "Blaysht";
+            repo = "grub_bios_theme";
+            rev = "035554c30df6a10158a5a71acfbc4975045fc7ac";
+            sha256 = "sha256-kYcEMCV9ipwPGgfAwOtFgYO4eHZxkUS97tOr0ft4rUE=";
+          })
+        }/OldBIOS/";
       };
     };
 
-    initrd.kernelModules = [ "amdgpu" ];
+    initrd.kernelModules = ["amdgpu"];
 
     # silent boot
     initrd.verbose = false;
-    kernelParams = [ "quiet" "udev.log_level=3" ];
+    kernelParams = ["quiet" "udev.log_level=3"];
   };
 
   # hardware
@@ -50,12 +56,12 @@
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = "experimental-features = nix-command flakes";
-    
+
     settings = {
       auto-optimise-store = true;
 
       substituters = [
-        "https://hyprland.cachix.org"  
+        "https://hyprland.cachix.org"
       ];
 
       trusted-public-keys = [
@@ -71,10 +77,12 @@
   };
 
   # swapfile
-  swapDevices = [{
-    device = "/swapfile";
-    size = 8 * 1024;
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 8 * 1024;
+    }
+  ];
   zramSwap.enable = true;
 
   # networking
@@ -105,6 +113,9 @@
     pulse.enable = true;
   };
 
+  # bluetooth
+  hardware.bluetooth.enable = true;
+
   # powersaving
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
@@ -112,7 +123,7 @@
       governor = "powersave";
       turbo = "never";
     };
-    
+
     charger = {
       governor = "performance";
       turbo = "auto";
@@ -126,7 +137,7 @@
   # misc
   console = {
     earlySetup = true;
-    packages = with pkgs; [ terminus_font ];
+    packages = with pkgs; [terminus_font];
     font = "ter-v24n";
     keyMap = "us";
   };

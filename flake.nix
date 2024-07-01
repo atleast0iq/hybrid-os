@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +18,7 @@
     home-manager,
     hyprland,
     ...
-  } : let
+  }: let
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
@@ -43,7 +43,7 @@
     homeConfigurations = {
       iilyakov = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {inherit inputs;};
 
         modules = [
           ./home/iilyakov
