@@ -6,6 +6,10 @@
       extraGroups = [ "networkmanager" "wheel" "input" "docker" ];
       createHome = true;
       home = "/home/iilyakov";
+      shell = pkgs.fish;
+      initialPassword = "password";
     };
   };
+
+  programs.fish.enable = true;
 }

@@ -70,6 +70,13 @@
     };
   };
 
+  # swapfile
+  swapDevices = [{
+    device = "/swapfile";
+    size = 8 * 1024;
+  }];
+  zramSwap.enable = true;
+
   # networking
   networking = {
     networkmanager.enable = true;
@@ -85,6 +92,36 @@
   time.hardwareClockInLocalTime = true;
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings.LC_TIME = "en_GB.UTF-8";
+
+  # polkit
+  security.polkit.enable = true;
+
+  # sound
+  services.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
+  # powersaving
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
+  powerManagement.powertop.enable = true;
+
+  # autologin
+  services.getty.autologinUser = "iilyakov";
 
   # misc
   console = {
