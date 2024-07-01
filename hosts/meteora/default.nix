@@ -16,16 +16,16 @@
         efiSupport = true;
         device = "nodev";
         forceInstall = true;
-	splashImage = lib.mkForce null;
+	      splashImage = lib.mkForce null;
 
-	theme = "${
-	  (pkgs.fetchFromGitHub {
-	    owner = "Blaysht";
-	    repo = "grub_bios_theme";
-	    rev = "035554c30df6a10158a5a71acfbc4975045fc7ac";
-	    sha256 = "sha256-kYcEMCV9ipwPGgfAwOtFgYO4eHZxkUS97tOr0ft4rUE=";
-	  })
-	}/OldBIOS/";
+	      theme = "${
+	        (pkgs.fetchFromGitHub {
+	          owner = "Blaysht";
+	          repo = "grub_bios_theme";
+	          rev = "035554c30df6a10158a5a71acfbc4975045fc7ac";
+	          sha256 = "sha256-kYcEMCV9ipwPGgfAwOtFgYO4eHZxkUS97tOr0ft4rUE=";
+	        })
+	      }/OldBIOS/";
       };
     };
 
@@ -97,7 +97,7 @@
   security.polkit.enable = true;
 
   # sound
-  services.rtkit.enable = true;
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
