@@ -17,6 +17,7 @@
     qbittorrent
     gnome.nautilus
     bitwarden-desktop
+    tenacity
 
     # wine
     lutris

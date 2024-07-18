@@ -14,7 +14,7 @@
 
   # boot
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_6;
+    kernelPackages = pkgs.linuxPackages_xanmod;
     kernelModules = ["v4l2loopback"];
     extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
 
@@ -81,15 +81,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  # swapfile
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 8 * 1024;
-    }
-  ];
-  zramSwap.enable = true;
 
   # networking
   networking = {
