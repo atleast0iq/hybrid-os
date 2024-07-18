@@ -33,6 +33,7 @@
       libthai
       harfbuzz
       gamescope
+      gamemode`
       pkgsi686Linux.gperftools
     ];
   };
