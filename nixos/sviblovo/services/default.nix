@@ -7,6 +7,10 @@
 }: {
   imports = [
     ./greetd.nix
-    ./upower.nix
   ];
+  
+  services = {
+    upower.enable = true;
+    udisks2.enable = true;
+  };
 }
