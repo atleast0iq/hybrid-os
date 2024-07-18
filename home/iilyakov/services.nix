@@ -5,11 +5,7 @@
   inputs,
   ...
 }: {
-  imports = [
-    ./greetd.nix
-  ];
-  
   services = {
-    upower.enable = true;
+    udiskie.enable = true;
   };
 }

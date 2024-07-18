@@ -17,6 +17,7 @@
 
   imports = [
     ./stylix.nix
+    ./services.nix
     ./apps
     ./fonts.nix
     ./shell

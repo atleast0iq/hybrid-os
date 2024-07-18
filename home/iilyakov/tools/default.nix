@@ -22,5 +22,6 @@
     grim
     slurp
     wl-clipboard
+    xdg-user-dirs
   ];
 }
