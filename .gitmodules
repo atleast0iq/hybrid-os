@@ -1,0 +1,3 @@
+[submodule "home/iilyakov/apps/firefox/PotatoFox"]
+	path = home/iilyakov/apps/firefox/PotatoFox
+	url = https://codeberg.org/awwpotato/PotatoFox
