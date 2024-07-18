@@ -9,19 +9,19 @@
     };
 
     # disk configuration
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #disko = {
+    #  url = "github:nix-community/disko";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     # hyprland
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
-    Hyprspace = {
-      url = "github:ReshetnikovPavel/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
+    #Hyprspace = {
+    #  url = "github:KZDKM/Hyprspace";
+    #  inputs.hyprland.follows = "hyprland";
+    #};
 
     # themes for every single program
     stylix.url = "github:danth/stylix";
@@ -54,8 +54,8 @@
 
         modules = [
           # system configuration
-          inputs.disko.nixosModules.default
-          # (import ./disko.nix {device = "/dev/nvme0n1";})
+          #inputs.disko.nixosModules.default
+          #(import ./disko.nix {device = "/dev/nvme0n1";})
           ./nixos/sviblovo
 
           # home manager configuration

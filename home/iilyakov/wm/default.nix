@@ -19,7 +19,7 @@
     xwayland.enable = true;
 
     plugins = [
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+      #inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
     settings = {
