@@ -17,7 +17,7 @@
     qbittorrent
     gnome.nautilus
     bitwarden-desktop
-  
+
     # wine
     lutris
     wineWowPackages.stable

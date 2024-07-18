@@ -8,7 +8,7 @@
   imports = [
     ./greetd.nix
   ];
-  
+
   services = {
     upower.enable = true;
   };
