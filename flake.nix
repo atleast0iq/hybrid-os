@@ -9,10 +9,10 @@
     };
 
     # disk configuration
-    #disko = {
-    #  url = "github:nix-community/disko";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # hyprland
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -54,8 +54,8 @@
 
         modules = [
           # system configuration
-          #inputs.disko.nixosModules.default
-          #(import ./disko.nix {device = "/dev/nvme0n1";})
+          inputs.disko.nixosModules.default
+          ./disko.nix {_module.args.device = "/dev/nvme0n1";}
           ./nixos/sviblovo
 
           # home manager configuration
