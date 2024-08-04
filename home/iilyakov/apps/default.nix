@@ -18,6 +18,7 @@
     gnome.nautilus
     bitwarden-desktop
     tenacity
+    vlc
 
     # wine
     lutris

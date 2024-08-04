@@ -9,7 +9,7 @@
     users.iilyakov = {
       isNormalUser = true;
       description = "Ivan Ilyakov";
-      extraGroups = ["networkmanager" "wheel" "input" "docker"];
+      extraGroups = ["networkmanager" "wheel" "input" "docker" "adbusers"];
       createHome = true;
       home = "/home/iilyakov";
       shell = pkgs.nushell;

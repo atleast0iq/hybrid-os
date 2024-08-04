@@ -55,7 +55,8 @@
         modules = [
           # system configuration
           inputs.disko.nixosModules.default
-          ./disko.nix {_module.args.device = "/dev/nvme0n1";}
+          ./disko.nix
+          {_module.args.device = "/dev/nvme0n1";}
           ./nixos/sviblovo
 
           # home manager configuration
