@@ -15,7 +15,8 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = pkgs.hyprland;
     xwayland.enable = true;
 
     plugins = [
@@ -58,7 +59,7 @@
       };
 
       decoration = {
-        rounding = 5;
+        rounding = 10;
         drop_shadow = false;
       };
 

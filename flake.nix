@@ -15,7 +15,7 @@
     };
 
     # hyprland
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     #Hyprspace = {

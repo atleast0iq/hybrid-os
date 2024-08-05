@@ -17,8 +17,8 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./../../non-nix/wallpapers/evening-sky.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    image = ./../../non-nix/wallpapers/ayu-dark.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     fonts = {
       monospace = default_font;
@@ -29,7 +29,7 @@ in {
       sizes.terminal = 15;
     };
 
-    opacity.terminal = 0.85;
+    opacity.terminal = 0.90;
 
     targets = {
       bat.enable = true;
@@ -38,6 +38,8 @@ in {
       foot.enable = true;
       gtk.enable = true;
       hyprland.enable = true;
+      hyprpaper.enable = true;
+      mangohud.enable = true;
       nushell.enable = true;
       swaylock.enable = true;
       vesktop.enable = true;

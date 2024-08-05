@@ -6,7 +6,7 @@
   ...
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  session = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/Hyprland";
+  session = "Hyprland";
 in {
   services.greetd = {
     enable = true;
