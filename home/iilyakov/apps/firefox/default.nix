@@ -17,15 +17,6 @@
       DisableFirefoxAccounts = true;
       DisableAccounts = true;
       DontCheckDefaultBrowser = true;
-
-      # required by PotatoFox and not listed in firefox-addons flake
-      ExtensionSettings = {
-        "*".installation_mode = "force_installed";
-        "userchrome-toggle-extended@n2ezr.ru" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4295256/userchrome_toggle_extended-1.5.xpi";
-          installation_mode = "force_installed";
-        };
-      };
     };
 
     profiles.default = {
@@ -41,7 +32,7 @@
 
         # required by PotatoFox
         sidebery
-        firefox-color
+        userchrome-toggle-extended
       ];
 
       settings = {
@@ -93,29 +84,30 @@
         "app.normandy.first_run" = false;
         "browser.uitour.url" = false;
         "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","customizableui-special-spring5","urlbar-container","customizableui-special-spring2","save-to-pocket-button","downloads-button","fxa-toolbar-menu-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["developer-button"],"dirtyAreaCache":["nav-bar","PersonalToolbar"],"currentVersion":20,"newElementCount":6}'';
+
+        # PotatoFox
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
+        "layout.css.has-selector.enabled" = true;
+        "browser.urlbar.suggest.calculator" = true;
+        "browser.urlbar.unitConversion.enabled" = true;
+        "browser.urlbar.trimHttps" = true;
+        "browser.urlbar.trimURLs" = true;
+        "widget.gtk.rounded-bottom-corners.enabled" = true;
+        "browser.compactmode.show" = true;
+        "widget.gtk.ignore-bogus-leave-notify" = 1;
+        "browser.uidensity" = 1;
       };
 
       search = {
         default = "Google";
         privateDefault = "Google";
       };
-
-      userChrome = ''
-        @import "PotatoFox/userChrome.css";
-      '';
-
-      userContent = ''
-        @import "PotatoFox/userContent.css";
-      '';
     };
   };
 
-  home.file.".mozilla/firefox/${config.programs.firefox.profiles.default.path}/user.js" = {
-    source = ./PotatoFox/user.js;
-  };
-
-  home.file."PotatoFox" = {
-    target = ".mozilla/firefox/default/chrome/PotatoFox";
-    source = ./PotatoFox/chrome;
+  home.file.".mozilla/firefox/default/chrome" = {
+    source = "${inputs.potatofox}/chrome";
+    recursive = true;
   };
 }

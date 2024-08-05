@@ -26,10 +26,15 @@
     # themes for every single program
     stylix.url = "github:danth/stylix";
 
-    # firefox addons management
+    # firefox
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    potatofox = {
+      url = "git+https://codeberg.org/awwpotato/PotatoFox";
+      flake = false;
     };
   };
 
