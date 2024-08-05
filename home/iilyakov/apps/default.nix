@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./firefox
+    ./firefox.nix
     ./foot.nix
   ];
 
