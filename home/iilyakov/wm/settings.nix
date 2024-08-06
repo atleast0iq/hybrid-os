@@ -49,7 +49,7 @@
       };
 
       decoration = {
-        rounding = 25;
+        rounding = 15;
 
         drop_shadow = true;
         shadow_ignore_window = true;
