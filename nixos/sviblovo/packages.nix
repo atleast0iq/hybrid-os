@@ -18,6 +18,12 @@
   programs = {
     adb.enable = true;
 
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+      portalPackage = with pkgs; xdg-desktop-portal-hyprland;
+    };
+
     steam = {
       enable = true;
       package = pkgs.steam.override {

@@ -17,8 +17,6 @@
 in {
   imports = [
     ./apps
-    ./shell
-    ./tools
     ./wm
   ];
 
@@ -65,5 +63,19 @@ in {
     };
 
     opacity.terminal = 0.90;
+  };
+
+  xdg.enable = true;
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    music = "${config.home.homeDirectory}/Media/Music";
+    videos = "${config.home.homeDirectory}/Media/Videos";
+    pictures = "${config.home.homeDirectory}/Media/Pictures";
+    download = "${config.home.homeDirectory}/Downloads";
+    documents = "${config.home.homeDirectory}/Documents";
+    templates = null;
+    desktop = null;
+    publicShare = null;
   };
 }
