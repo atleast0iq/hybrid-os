@@ -46,7 +46,7 @@
     nixosConfigurations = {
       sviblovo = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs pkgs pkgs-unstable;};
 
         modules = [
           inputs.disko.nixosModules.default
@@ -59,7 +59,7 @@
             home-manager.verbose = true;
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
-            home-manager.extraSpecialArgs = {inherit inputs;};
+            home-manager.extraSpecialArgs = {inherit inputs pkgs pkgs-unstable;};
             home-manager.users.iilyakov.imports = [
               ./home/iilyakov
               inputs.stylix.homeManagerModules.stylix

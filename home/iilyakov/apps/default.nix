@@ -14,40 +14,44 @@
     ./starship.nix
   ];
 
-  home.packages = with pkgs; [
-    # graphical
-    telegram-desktop
-    vesktop
-    spotify
-    qbittorrent
-    gnome.nautilus
-    bitwarden-desktop
-    tenacity
-    vlc
+  home.packages =
+    (with pkgs; [
+      # graphical
+      telegram-desktop
+      vesktop
+      spotify
+      qbittorrent
+      gnome.nautilus
+      bitwarden-desktop
+      tenacity
+      vlc
 
-    # wine
-    lutris
-    wineWowPackages.stable
-    winetricks
+      # wine
+      lutris
+      wineWowPackages.stable
+      winetricks
 
-    # misc
-    ripgrep
-    fd
-    cpufetch
-    fastfetch
-    wget
-    curl
-    btop
-    brightnessctl
-    pulsemixer
-    acpi
-    killall
-    grim
-    slurp
-    wl-clipboard
-    xdg-user-dirs
-    wev
-  ];
+      # misc
+      ripgrep
+      fd
+      cpufetch
+      fastfetch
+      wget
+      curl
+      btop
+      brightnessctl
+      pulsemixer
+      acpi
+      killall
+      grim
+      slurp
+      wl-clipboard
+      xdg-user-dirs
+      wev
+    ])
+    ++ (with pkgs-unstable; [
+      zed-editor
+    ]);
 
   programs = {
     bat.enable = true;
