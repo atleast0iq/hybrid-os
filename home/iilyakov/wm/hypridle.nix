@@ -1,24 +1,24 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   lib,
   inputs,
   ...
 }: {
   services.hypridle = {
     enable = true;
-    package = inputs.hypridle.packages.${pkgs.system}.hypridle;
     settings = {
       general = {
         ignore_dbus_inhibit = false;
-        lock_cmd = lib.getExe config.programs.hyprlock.package;
+        lock_cmd = "hyprlock";
         before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
       };
 
       listener = [
         {
           timeout = 300;
-          on-timeout = "${lib.getExe config.programs.hyprlock.package}";
+          on-timeout = "hyprlock";
         }
 
         {

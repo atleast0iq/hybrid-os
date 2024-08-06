@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   lib,
   inputs,
   ...
@@ -8,13 +9,13 @@
   imports = [
     ./hardware-configuration.nix
     ./users.nix
-    ./packages
-    ./services
+    ./packages.nix
+    ./services.nix
   ];
 
   # boot
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = ["v4l2loopback"];
     extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
 
@@ -119,10 +120,6 @@
     packages = with pkgs; [terminus_font];
     font = "ter-v24n";
     keyMap = "us";
-  };
-
-  environment.variables = {
-    EDITOR = "nvim";
   };
 
   # NixOS version

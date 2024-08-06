@@ -1,37 +1,23 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # home manager
-    home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # disk configuration
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland
-    #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    #Hyprspace = {
-    #  url = "github:KZDKM/Hyprspace";
-    #  inputs.hyprland.follows = "hyprland";
-    #};
-
-    # themes for every single program
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix.url = "github:danth/stylix";
 
-    # firefox
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     potatofox = {
       url = "git+https://codeberg.org/awwpotato/PotatoFox";
       flake = false;
@@ -41,13 +27,18 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
-    stylix,
     ...
   }: let
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
     };
@@ -58,13 +49,11 @@
         specialArgs = {inherit inputs;};
 
         modules = [
-          # system configuration
           inputs.disko.nixosModules.default
           ./disko.nix
           {_module.args.device = "/dev/nvme0n1";}
           ./nixos/sviblovo
 
-          # home manager configuration
           home-manager.nixosModules.home-manager
           {
             home-manager.verbose = true;
@@ -73,7 +62,7 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.users.iilyakov.imports = [
               ./home/iilyakov
-              stylix.homeManagerModules.stylix
+              inputs.stylix.homeManagerModules.stylix
             ];
           }
         ];
