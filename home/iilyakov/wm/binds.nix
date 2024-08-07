@@ -89,14 +89,13 @@
   };
 
   wayland.windowManager.hyprland.extraConfig = ''
-    bind=$mod,R,submap,resize
-
+    bind=$mod,r,submap,resize
     submap=resize
     binde=,l,resizeactive,30 0
     binde=,h,resizeactive,-30 0
     binde=,k,resizeactive,0 -30
     binde=,j,resizeactive,0 30
-    bind=,escape,submap,reset
+    bind=$mod,r,submap,reset
     submap=reset
   '';
 }

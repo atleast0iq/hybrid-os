@@ -26,22 +26,9 @@ in {
     username = "iilyakov";
     homeDirectory = "/home/iilyakov";
     sessionPath = ["$HOME/.local/bin"];
-
-    packages = with pkgs; [
-      (nerdfonts.override {
-        fonts = [
-          "Iosevka"
-          "FiraCode"
-          "JetBrainsMono"
-          "DroidSansMono"
-        ];
-      })
-    ];
   };
 
   programs.home-manager.enable = true;
-
-  fonts.fontconfig.enable = true;
 
   services = {
     udiskie.enable = true;
@@ -68,6 +55,24 @@ in {
     };
 
     opacity.terminal = 0.90;
+  };
+
+  gtk = {
+    iconTheme = {
+      package = pkgs.numix-icon-theme;
+      name = "Numix";
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
   };
 
   xdg.enable = true;

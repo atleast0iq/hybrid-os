@@ -122,6 +122,17 @@
     keyMap = "us";
   };
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "Iosevka"
+        "FiraCode"
+        "JetBrainsMono"
+        "DroidSansMono"
+      ];
+    })
+  ];
+
   # NixOS version
   system.stateVersion = "24.05";
 }

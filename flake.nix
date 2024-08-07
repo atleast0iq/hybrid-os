@@ -22,6 +22,8 @@
       url = "git+https://codeberg.org/awwpotato/PotatoFox";
       flake = false;
     };
+
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = inputs @ {
