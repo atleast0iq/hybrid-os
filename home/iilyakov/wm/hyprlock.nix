@@ -5,23 +5,22 @@
       general = {
         disable_loading_bar = true;
         grace = 0;
-        hide_cursor = false;
+        hide_cursor = true;
         no_fade_in = false;
       };
 
       background = [
         {
-          path = "screenshot";
-          blur_passes = 5;
-          blur_size = 10;
+          path = "$HOME/hybrid-os/home/iilyakov/wallpapers/ayu-dark.png";
         }
       ];
 
       input-field = [
         {
-          size = "200, 50";
-          position = "0, -80";
+          size = "400, 50";
+          position = "0, -300";
           monitor = "";
+          font = "JetBrainsMono Nerd Font";
           dots_center = true;
           fade_on_empty = false;
           font_color = "rgb(202, 211, 245)";

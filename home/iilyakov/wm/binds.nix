@@ -29,7 +29,7 @@
 
     bind = [
       "$mod,delete,exit,"
-      "$mod,esc,exec,hyprlock"
+      "$mod,Escape,exec,hyprlock"
 
       "$mod,c,killactive,"
       "$mod,s,togglefloating,"
