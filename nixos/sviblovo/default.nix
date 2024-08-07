@@ -15,7 +15,7 @@
 
   # boot
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     kernelModules = ["v4l2loopback"];
     extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
 
