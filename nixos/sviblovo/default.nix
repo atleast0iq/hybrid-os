@@ -87,8 +87,6 @@
   networking = {
     networkmanager.enable = true;
     networkmanager.wifi.powersave = false;
-    enableIPv6 = false;
-    useDHCP = false;
     hostName = "meteora";
   };
 

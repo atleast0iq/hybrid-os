@@ -51,6 +51,7 @@
     ])
     ++ (with pkgs-unstable; [
       zed-editor
+      wireguard-tools
     ]);
 
   programs = {
