@@ -1,14 +1,15 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
-}: let
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
+}:
+let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   session = "Hyprland";
-in {
+in
+{
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
     StandardInput = "tty";

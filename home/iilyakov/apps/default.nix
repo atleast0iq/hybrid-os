@@ -1,10 +1,9 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
 }: {
   imports = [
     ./firefox.nix
@@ -48,10 +47,11 @@
       wl-clipboard
       xdg-user-dirs
       wev
+      unzip
     ])
     ++ (with pkgs-unstable; [
-      zed-editor
       wireguard-tools
+      openvpn
     ]);
 
   programs = {

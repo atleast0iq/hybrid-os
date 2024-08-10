@@ -1,13 +1,14 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
-}: let
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
+}:
+let
   nu_scripts = "${pkgs.nu_scripts}/share/nu_scripts";
-in {
+in
+{
   programs = {
     nushell = {
       enable = true;

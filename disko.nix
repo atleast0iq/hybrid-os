@@ -1,4 +1,4 @@
-{device ? throw "no device", ...}: {
+{ device ? throw "no device", ... }: {
   disko.devices = {
     disk = {
       main = {

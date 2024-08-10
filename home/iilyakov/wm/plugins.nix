@@ -1,9 +1,7 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
-}: {
-}
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
+}: { }

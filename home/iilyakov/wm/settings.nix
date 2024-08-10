@@ -1,10 +1,9 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -104,16 +103,6 @@
         mfact = 0.55;
         orientation = "right";
         new_status = "slave";
-      };
-
-      plugin = {
-        overview = {
-          panelHeight = 80;
-          gapsIn = 5;
-          gapsOut = 10;
-          workspaceMargin = 10;
-          overrideAnimSpeed = 0.1;
-        };
       };
     };
   };

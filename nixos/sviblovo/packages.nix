@@ -1,10 +1,9 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
+{ config
+, pkgs
+, pkgs-unstable
+, lib
+, inputs
+, ...
 }: {
   environment.systemPackages = with pkgs; [
     neovim
