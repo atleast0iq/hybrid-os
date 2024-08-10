@@ -5,7 +5,7 @@
 , inputs
 , ...
 }: {
-  imports = [];
+  imports = [ ];
 
   home.packages =
     (with pkgs; [
