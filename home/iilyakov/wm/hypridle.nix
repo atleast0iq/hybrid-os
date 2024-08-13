@@ -1,9 +1,10 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
   services.hypridle = {
     enable = true;

@@ -1,11 +1,11 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
-}:
-let
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
+}: let
   default_font = {
     name = "JetBrainsMono Nerd Font";
     package = pkgs.nerdfonts.override {
@@ -14,8 +14,7 @@ let
       ];
     };
   };
-in
-{
+in {
   imports = [
     ./apps
     ./programming
@@ -27,7 +26,7 @@ in
 
     username = "iilyakov";
     homeDirectory = "/home/iilyakov";
-    sessionPath = [ "$HOME/.local/bin" ];
+    sessionPath = ["$HOME/.local/bin"];
   };
 
   programs.home-manager.enable = true;

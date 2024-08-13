@@ -1,14 +1,15 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
   wayland.windowManager.hyprland.settings = {
-    layerrule = [ ];
+    layerrule = [];
 
-    windowrule = [ ];
+    windowrule = [];
 
     windowrulev2 = [
       "noblur,class:^()$,title:^()$"

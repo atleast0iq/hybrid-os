@@ -1,9 +1,10 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -15,8 +16,8 @@
   # boot
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
-    kernelModules = [ "v4l2loopback" ];
-    extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+    kernelModules = ["v4l2loopback"];
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
 
     loader = {
       efi = {
@@ -42,11 +43,11 @@
       };
     };
 
-    initrd.kernelModules = [ "amdgpu" ];
+    initrd.kernelModules = ["amdgpu"];
 
     # silent boot
     initrd.verbose = false;
-    kernelParams = [ "quiet" "udev.log_level=3" ];
+    kernelParams = ["quiet" "udev.log_level=3"];
   };
 
   # hardware
@@ -59,8 +60,8 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = [ pkgs.amdvlk ];
-      extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
+      extraPackages = [pkgs.amdvlk];
+      extraPackages32 = [pkgs.driversi686Linux.amdvlk];
     };
   };
 
@@ -114,7 +115,7 @@
   # misc
   console = {
     earlySetup = true;
-    packages = with pkgs; [ terminus_font ];
+    packages = with pkgs; [terminus_font];
     font = "ter-v24n";
     keyMap = "us";
   };

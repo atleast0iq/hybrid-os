@@ -1,17 +1,22 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
-  imports = [ ];
+  imports = [];
 
   home.packages =
     (with pkgs; [
       gcc
       gdb
       clang-tools
+
+      python3
+      pyright
+
       nixd
     ])
     ++ (with pkgs-unstable; [

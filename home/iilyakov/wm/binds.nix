@@ -1,9 +1,10 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
@@ -14,7 +15,7 @@
     ];
 
     bindl = [
-      ",switch:on:Lid Switch,exec,hyprlock"
+      # ",switch:on:Lid Switch,exec,hyprlock"
       ",switch:off:Lid Switch,exec,hyprlock"
     ];
 

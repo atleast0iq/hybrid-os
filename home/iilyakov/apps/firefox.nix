@@ -1,14 +1,15 @@
-{ config
-, pkgs
-, pkgs-unstable
-, lib
-, inputs
-, ...
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
 }: {
   programs.firefox = {
     enable = true;
 
-    package = pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { };
+    package = pkgs.wrapFirefox (pkgs.firefox-unwrapped.override {pipewireSupport = true;}) {};
 
     policies = {
       DisableTelemetry = true;
@@ -23,7 +24,7 @@
       id = 0;
       name = "Default";
 
-      bookmarks = [ ];
+      bookmarks = [];
 
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin
