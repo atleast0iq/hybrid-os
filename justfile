@@ -9,7 +9,7 @@ switch-system:
     sudo nixos-rebuild switch --flake path:.#sviblovo
 
 update-flake:
-    sudo nix flake update
+    nix flake update
 
 update-dotfiles:
     git add .
@@ -17,7 +17,7 @@ update-dotfiles:
     git push origin main
 
 gc:
-    nix-collect-garbage --delete-old
+    sudo nix-collect-garbage --delete-old
 
 install: copy-hardware-config switch-system
     

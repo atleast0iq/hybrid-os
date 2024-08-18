@@ -15,8 +15,7 @@
     ];
 
     bindl = [
-      # ",switch:on:Lid Switch,exec,hyprlock"
-      ",switch:off:Lid Switch,exec,hyprlock"
+      ",switch:on:Lid Switch,exec,hyprlock"
     ];
 
     bindle = [
