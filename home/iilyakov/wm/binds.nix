@@ -79,11 +79,6 @@
       "$mod SHIFT,7,movetoworkspace,7"
       "$mod SHIFT,8,movetoworkspace,8"
       "$mod SHIFT,9,movetoworkspace,9"
-
-      "$mod CTRL,l,resizeactive,10 0"
-      "$mod CTRL,h,resizeactive,-10 0"
-      "$mod CTRL,k,resizeactive,0 -10"
-      "$mod CTRL,j,resizeactive,0 10"
     ];
   };
 
@@ -95,6 +90,15 @@
     binde=,k,resizeactive,0 -30
     binde=,j,resizeactive,0 30
     bind=$mod,r,submap,reset
+    submap=reset
+
+    bind=$mod,m,submap,move
+    submap=move
+    binde=,l,moveactive,30 0
+    binde=,h,moveactive,-30 0
+    binde=,k,moveactive,0 -30
+    binde=,j,moveactive,0 30
+    bind=$mod,m,submap,reset
     submap=reset
   '';
 }

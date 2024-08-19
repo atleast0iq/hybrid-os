@@ -12,8 +12,8 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./plugins.nix
-    ./portal.nix
     ./rules.nix
     ./settings.nix
+    ./xdg-portal.nix
   ];
 }

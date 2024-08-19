@@ -30,6 +30,8 @@ in {
       };
     };
 
+    gvfs.enable = true;
+
     tlp = {
       enable = true;
       settings = {

@@ -40,8 +40,8 @@
       };
 
       general = {
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 10;
+        gaps_out = 20;
         border_size = 2;
         layout = "dwindle";
         "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}ff)";
@@ -63,8 +63,8 @@
           brightness = 1.0;
           contrast = 1.0;
           noise = 0.02;
-          passes = 3;
-          size = 10;
+          passes = 1;
+          size = 5;
         };
       };
 

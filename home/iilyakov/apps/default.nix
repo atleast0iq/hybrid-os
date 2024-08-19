@@ -8,9 +8,10 @@
 }: {
   imports = [
     ./firefox.nix
+    ./fish.nix
     ./foot.nix
     ./git.nix
-    ./nushell.nix
+    ./spotify.nix
     ./starship.nix
   ];
 
@@ -19,7 +20,6 @@
       # graphical
       telegram-desktop
       vesktop
-      spotify
       qbittorrent
       gnome.nautilus
       bitwarden-desktop
@@ -49,6 +49,7 @@
       xdg-user-dirs
       wev
       unzip
+      eza
     ])
     ++ (with pkgs-unstable; [
       wireguard-tools
