@@ -8,9 +8,9 @@
 }: {
   imports = [
     ./firefox.nix
-    ./fish.nix
     ./foot.nix
     ./git.nix
+    ./nushell.nix
     ./spotify.nix
     ./starship.nix
   ];
