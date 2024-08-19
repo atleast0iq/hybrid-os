@@ -13,6 +13,8 @@
     alejandra
     mangohud
     gamemode
+
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 
   programs = {

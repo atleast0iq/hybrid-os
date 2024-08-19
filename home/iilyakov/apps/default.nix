@@ -50,6 +50,7 @@
       wev
       unzip
       eza
+      libqalculate
     ])
     ++ (with pkgs-unstable; [
       wireguard-tools
