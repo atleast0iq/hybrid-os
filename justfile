@@ -1,9 +1,6 @@
 default:
     @just --list
 
-copy-hardware-config:
-    cp /etc/nixos/hardware-configuration.nix ./nixos/sviblovo/hardware-configuration.nix
-
 switch-system:
     find ~ -type f -name "*.homeManagerBackupFileExtension" -delete
     sudo nixos-rebuild switch --flake path:.#sviblovo
@@ -19,4 +16,4 @@ update-dotfiles:
 gc:
     sudo nix-collect-garbage --delete-old
 
-install: copy-hardware-config switch-system
+install: switch-system
