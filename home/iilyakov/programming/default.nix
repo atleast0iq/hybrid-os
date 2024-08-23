@@ -15,11 +15,22 @@
       clang-tools
 
       python3
-      pyright
 
-      nixd
+      bun
+      nodePackages_latest.nodejs
     ])
-    ++ (with pkgs-unstable; [
-      zed-editor
-    ]);
+    ++ (
+      let
+        zed-fhs = pkgs.buildFHSUserEnv {
+          name = "zed";
+          targetPkgs = pkgs:
+            with pkgs-unstable; [
+              zed-editor
+            ];
+          runScript = "zed";
+        };
+      in [
+        zed-fhs
+      ]
+    );
 }

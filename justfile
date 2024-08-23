@@ -20,4 +20,3 @@ gc:
     sudo nix-collect-garbage --delete-old
 
 install: copy-hardware-config switch-system
-    

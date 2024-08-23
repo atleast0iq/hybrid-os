@@ -23,7 +23,8 @@ in {
 
     cursor = {
       package = pkgs.rose-pine-cursor;
-      name = "Rose Pine";
+      name = "BreezeX-RosePine-Linux";
+      size = 24;
     };
 
     fonts = {
@@ -39,10 +40,13 @@ in {
   };
 
   gtk = {
+    enable = true;
+
     iconTheme = {
-      package = pkgs.numix-icon-theme;
-      name = "Numix";
+      package = pkgs.rose-pine-icon-theme;
+      name = "rose-pine";
     };
+
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
     };

@@ -7,12 +7,14 @@
   ...
 }: {
   imports = [
+    ./ags
     ./firefox.nix
     ./foot.nix
     ./git.nix
     ./nushell.nix
     ./spotify.nix
     ./starship.nix
+    ./vscode.nix
   ];
 
   home.packages =

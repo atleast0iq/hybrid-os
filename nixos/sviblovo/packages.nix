@@ -13,8 +13,6 @@
     alejandra
     mangohud
     gamemode
-
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 
   programs = {
@@ -59,4 +57,15 @@
       ];
     };
   };
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "Iosevka"
+        "FiraCode"
+        "JetBrainsMono"
+        "DroidSansMono"
+      ];
+    })
+  ];
 }
