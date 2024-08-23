@@ -23,10 +23,6 @@
       "pin,class:^(firefox)$,title:^(Firefox)$"
       "float,class:^(firefox)$,title:^(Firefox)$"
 
-      "float,title:^(foot)$"
-      "size 50% 50%,class:^(floating)$,title:^(foot)$"
-      "center,class:^(floating)$,title:^(foot)$"
-
       "stayfocused, title:^()$,class:^(steam)$"
       "minsize 1 1, title:^()$,class:^(steam)$"
 
