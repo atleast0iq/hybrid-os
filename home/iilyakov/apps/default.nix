@@ -52,6 +52,7 @@
       wev
       unzip
       eza
+      jq
       libqalculate
     ])
     ++ (with pkgs-unstable; [

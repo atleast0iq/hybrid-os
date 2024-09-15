@@ -61,5 +61,18 @@ label {
     halign = center
     valign = center
 }
+
+label {
+    monitor =
+    text = cmd[update:100] echo "<b> "$(hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap')" </b>"
+    color = "#${config.lib.stylix.colors.base05}";
+
+    font_size = 16
+    font_family = JetBrains Mono Nerd Font 10
+
+    position = 0, -170
+    halign = center
+    valign = center
+}
     '';
 }
