@@ -2,6 +2,7 @@
   config,
   pkgs,
   pkgs-unstable,
+  pkgs-2311,
   lib,
   inputs,
   ...
@@ -14,19 +15,18 @@
     ./nushell.nix
     ./spotify.nix
     ./starship.nix
-    ./vscode.nix
   ];
 
   home.packages =
     (with pkgs; [
       # graphical
-      telegram-desktop
       vesktop
       qbittorrent
       gnome.nautilus
       bitwarden-desktop
       tenacity
       vlc
+      lmms
 
       # wine
       lutris
@@ -55,8 +55,13 @@
       libqalculate
     ])
     ++ (with pkgs-unstable; [
+      telegram-desktop
+
       wireguard-tools
       openvpn
+    ])
+    ++ (with pkgs-2311; [
+      jetbrains.clion
     ]);
 
   programs = {

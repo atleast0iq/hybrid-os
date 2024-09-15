@@ -15,7 +15,11 @@
     ];
 
     bindl = [
+      "$mod,delete,exit,"
       ",switch:on:Lid Switch,exec,hyprlock"
+
+      ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_SINK@ toggle"
+      ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_SOURCE@ toggle"
     ];
 
     bindle = [
@@ -27,7 +31,6 @@
     ];
 
     bind = [
-      "$mod,delete,exit,"
       "$mod,Escape,exec,hyprlock"
 
       "$mod,c,killactive,"
@@ -41,8 +44,6 @@
       "$mod,Return,exec,foot"
       "$mod SHIFT,f,exec,firefox"
       "$mod SHIFT,s,exec,slurp | grim -g - - | wl-copy"
-      ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_SINK@ toggle"
-      ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_SOURCE@ toggle"
 
       "$mod,h,movefocus,l"
       "$mod,l,movefocus,r"
