@@ -28,7 +28,6 @@
       tenacity
       vlc
       lmms
-      zathura
 
       lutris
       wineWowPackages.stable
@@ -67,5 +66,6 @@
 
   programs = {
     bat.enable = true;
+    zathura.enable = true;
   };
 }
