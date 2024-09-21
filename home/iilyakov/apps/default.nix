@@ -19,21 +19,21 @@
 
   home.packages =
     (with pkgs; [
-      # graphical
+      anytype
       vesktop
       qbittorrent
       gnome.nautilus
+      gnome.eog
       bitwarden-desktop
       tenacity
       vlc
       lmms
+      zathura
 
-      # wine
       lutris
       wineWowPackages.stable
       winetricks
 
-      # misc
       ripgrep
       fd
       cpufetch
