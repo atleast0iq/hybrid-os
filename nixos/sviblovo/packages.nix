@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   ...
@@ -21,7 +20,6 @@
     hyprland = {
       enable = true;
       xwayland.enable = true;
-      portalPackage = with pkgs; xdg-desktop-portal-hyprland;
     };
 
     steam = {

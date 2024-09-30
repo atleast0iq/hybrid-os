@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   pkgs-2311,
   lib,
   inputs,
@@ -22,12 +21,13 @@
       anytype
       vesktop
       qbittorrent
-      gnome.nautilus
-      gnome.eog
+      nautilus
+      eog
       bitwarden-desktop
       tenacity
       vlc
       lmms
+      telegram-desktop
 
       lutris
       wineWowPackages.stable
@@ -53,9 +53,6 @@
       eza
       jq
       libqalculate
-    ])
-    ++ (with pkgs-unstable; [
-      telegram-desktop
 
       wireguard-tools
       openvpn

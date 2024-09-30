@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   ...
@@ -16,10 +15,10 @@
 
       "keepaspectratio,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "noborder,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "fakefullscreen,class:^(firefox)$,title:^(Picture-in-Picture)$"
+      "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "float,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "pin,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "fakefullscreen,class:^(firefox)$,title:^(Firefox)$"
+      "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Firefox)$"
       "pin,class:^(firefox)$,title:^(Firefox)$"
       "float,class:^(firefox)$,title:^(Firefox)$"
 

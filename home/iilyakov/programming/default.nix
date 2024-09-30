@@ -1,27 +1,24 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   ...
 }: {
   imports = [];
 
-  home.packages =
-    (with pkgs; [
-      gcc
-      gdb
-      clang-tools
+  home.packages = with pkgs; [
+    gcc
+    gdb
+    clang-tools
 
-      python3
+    python3
 
-      bun
-      nodePackages_latest.nodejs
+    bun
+    nodePackages_latest.nodejs
 
-      nixd
-    ])
-    ++ (with pkgs-unstable; [
-      zed-editor
-    ]);
+    nixd
+
+    zed-editor
+  ];
 }

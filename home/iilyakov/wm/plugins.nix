@@ -1,8 +1,10 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   ...
-}: {}
+}: {
+  wayland.windowManager.hyprland.plugins = with pkgs; [
+  ];
+}

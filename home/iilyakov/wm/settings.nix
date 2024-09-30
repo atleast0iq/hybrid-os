@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   ...
@@ -9,9 +8,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-
-    plugins = [
-    ];
 
     settings = {
       monitor = [

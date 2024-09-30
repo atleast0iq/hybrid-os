@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   lib,
   inputs,
   modulesPath,
@@ -27,10 +26,9 @@
     enableRedistributableFirmware = true;
     amdgpu.initrd.enable = true;
 
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = [pkgs.amdvlk];
       extraPackages32 = [pkgs.driversi686Linux.amdvlk];
     };
@@ -38,7 +36,6 @@
     bluetooth.enable = true;
   };
 
-  sound.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
