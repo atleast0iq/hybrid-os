@@ -18,6 +18,8 @@
 
       bun
       nodePackages_latest.nodejs
+
+      nixd
     ])
     ++ (with pkgs-unstable; [
       zed-editor
