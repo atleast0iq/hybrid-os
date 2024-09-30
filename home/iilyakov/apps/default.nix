@@ -13,7 +13,6 @@
     ./foot.nix
     ./git.nix
     ./nushell.nix
-    ./spotify.nix
     ./starship.nix
   ];
 
@@ -28,6 +27,7 @@
       tenacity
       vlc
       lmms
+      spotify
 
       lutris
       wineWowPackages.stable

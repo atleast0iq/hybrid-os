@@ -19,18 +19,7 @@
       bun
       nodePackages_latest.nodejs
     ])
-    ++ (
-      let
-        zed-fhs = pkgs.buildFHSUserEnv {
-          name = "zed";
-          targetPkgs = pkgs:
-            with pkgs-unstable; [
-              zed-editor
-            ];
-          runScript = "zed";
-        };
-      in [
-        zed-fhs
-      ]
-    );
+    ++ (with pkgs-unstable; [
+      zed-editor
+    ]);
 }
