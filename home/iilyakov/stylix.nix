@@ -18,7 +18,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./wallpapers/mima.png;
+    image = ./images/mima.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     cursor = {

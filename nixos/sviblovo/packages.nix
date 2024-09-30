@@ -65,6 +65,7 @@
         "FiraCode"
         "JetBrainsMono"
         "DroidSansMono"
+        "UbuntuMono"
       ];
     })
   ];

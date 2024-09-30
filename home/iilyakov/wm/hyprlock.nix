@@ -5,77 +5,129 @@
   ...
 }: {
   programs.hyprlock.enable = true;
-  programs.hyprlock.settings = {
-    path = "screenshot";
-    general = {
-      grace = 0;
-      ignore_empty_input = true;
-    };
-
-    background = {
-      path = "screenshot";
-      blur_passes = 3;
-      blur_size = 10;
-      brightness = 1.0;
-      contrast = 1.0;
-      noise = 0.02;
-    };
-
-    input-field = {
-      monitor = "";
-      size = "750, 50";
-      outline_thickness = 0;
-      dots_size = 0.26;
-      inner_color = "#${config.lib.stylix.colors.base05}";
-      dots_spacing = 0.64;
-      dots_center = true;
-      fade_on_empty = true;
-      placeholder_text = "<i>Password...</i>";
-      hide_input = false;
-      check_color = "rgb(40, 200, 250)";
-      position = "0, 50";
-      halign = "center";
-      valign = "bottom";
-    };
-  };
   programs.hyprlock.extraConfig = ''
-    label {
-        monitor =
-        text = cmd[update:1000] echo "<b><big> $(date +"%H:%M") </big></b>"
-        color = "#${config.lib.stylix.colors.base05}";
+  # BACKGROUND
+  background {
+      monitor =
+      path = ~/hybrid-os/home/iilyakov/images/mimadark.png
+      blur_passes = 2
+      contrast = 0.8916
+      brightness = 0.8172
+      vibrancy = 0.1696
+      vibrancy_darkness = 0.0
+  }
 
-        font_size = 64
-        font_family = JetBrains Mono Nerd Font 10
+  # GENERAL
+  general {
+      no_fade_in = false
+      grace = 0
+      disable_loading_bar = false
+  }
 
-        position = 0, -70
-        halign = center
-        valign = center
-    }
 
-    label {
-        monitor =
-        text = cmd[update:18000000] echo "<b> "$(date +'%A, %-d %B %Y')" </b>"
-        color = "#${config.lib.stylix.colors.base05}";
+  # Day
+  label {
+      monitor =
+      text = cmd[update:1000] echo -e "$(date +"%A")"
+      color = rgba(216, 222, 233, 0.70)
+      font_size = 90
+      font_family = UbuntuMono Nerd Font
+      position = 0, 350
+      halign = center
+      valign = center
+  }
 
-        font_size = 24
-        font_family = JetBrains Mono Nerd Font 10
+  # Date-Month
+  label {
+      monitor =
+      text = cmd[update:1000] echo -e "$(date +"%d %B")"
+      color = rgba(216, 222, 233, 0.70)
+      font_size = 40
+      font_family = UbuntuMono Nerd Font
+      position = 0, 250
+      halign = center
+      valign = center
+  }
 
-        position = 0, -120
-        halign = center
-        valign = center
-    }
+  # Time
+  label {
+      monitor =
+      text = cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"
+      color = rgba(216, 222, 233, 0.70)
+      font_size = 20
+      font_family = UbuntuMono Nerd Font
+      position = 0, 190
+      halign = center
+      valign = center
+  }
 
-    label {
-        monitor =
-        text = cmd[update:100] echo "<b> "$(hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap')" </b>"
-        color = "#${config.lib.stylix.colors.base05}";
+  # Profie-Photo
+  image {
+      monitor =
+      path = ~/hybrid-os/home/iilyakov/images/iilyakov.jpg
+      border_size = 2
+      border_color = rgba(255, 255, 255, .65)
+      size = 130
+      rounding = -1
+      rotate = 0
+      reload_time = -1
+      reload_cmd =
+      position = 0, 40
+      halign = center
+      valign = center
+  }
 
-        font_size = 16
-        font_family = JetBrains Mono Nerd Font 10
+  # USER-BOX
+  shape {
+      monitor =
+      size = 300, 60
+      color = rgba(255, 255, 255, .1)
+      rounding = -1
+      border_size = 0
+      border_color = rgba(255, 255, 255, 0)
+      rotate = 0
+      xray = false # if true, make a "hole" in the background (rectangle of specified size, no rotation)
 
-        position = 0, -170
-        halign = center
-        valign = center
-    }
+      position = 0, -130
+      halign = center
+      valign = center
+  }
+
+  # USER
+  label {
+      monitor =
+      text =     $USER
+      color = rgba(216, 222, 233, 0.80)
+      outline_thickness = 2
+      dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
+      dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
+      dots_center = true
+      font_size = 18
+      font_family = UbuntuMono Nerd Font
+      position = 0, -130
+      halign = center
+      valign = center
+      size = 600, 60
+  }
+
+  # INPUT FIELD
+  input-field {
+      monitor =
+      size = 300, 60
+      outline_thickness = 2
+      dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
+      dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
+      dots_center = true
+      outer_color = rgba(255, 255, 255, 0)
+      inner_color = rgba(255, 255, 255, 0.1)
+      font_color = rgb(200, 200, 200)
+      fade_on_empty = false
+      font_family = UbuntuMono Nerd Font
+      placeholder_text = <span foreground="##ffffff99">🔒 Enter Pass</span>
+      hide_input = false
+      position = 0, -210
+      halign = center
+      valign = center
+  }
   '';
 }
