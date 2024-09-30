@@ -42,7 +42,7 @@
       general = {
         gaps_in = 10;
         gaps_out = 20;
-        border_size = 2;
+        border_size = 0;
         layout = "dwindle";
         "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}ff)";
         "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base02}ff)";

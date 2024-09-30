@@ -19,6 +19,7 @@
       accountsservice
       glib
       gjs
+      sassc
     ];
   };
 }

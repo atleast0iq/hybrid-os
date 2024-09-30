@@ -2,7 +2,6 @@ default:
     @just --list
 
 switch-system:
-    find ~ -type f -name "*.homeManagerBackupFileExtension" -delete
     sudo nixos-rebuild switch --flake path:.#sviblovo
 
 update-flake:

@@ -101,6 +101,7 @@
       };
 
       search = {
+        force = true;
         default = "Google";
         privateDefault = "Google";
       };
