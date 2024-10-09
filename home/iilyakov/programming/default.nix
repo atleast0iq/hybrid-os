@@ -20,5 +20,6 @@
     nixd
 
     zed-editor
+    vscode-fhs
   ];
 }
