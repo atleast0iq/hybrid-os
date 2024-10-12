@@ -42,4 +42,13 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      gutenprintBin
+      canon-cups-ufr2
+      canon-capt
+    ];
+  };
 }

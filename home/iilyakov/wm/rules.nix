@@ -11,8 +11,6 @@
     windowrule = [];
 
     windowrulev2 = [
-      "noblur,class:^()$,title:^()$"
-
       "keepaspectratio,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "noborder,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Picture-in-Picture)$"
@@ -27,6 +25,8 @@
 
       "float,title:^(Open File)$"
       "float,title:^(Open Folder)$"
+
+      "opacity 0.9 0.9,class:^(org.pwmt.zathura)$"
     ];
   };
 }

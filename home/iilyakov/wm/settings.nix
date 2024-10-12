@@ -40,17 +40,17 @@
         gaps_out = 20;
         border_size = 1;
         layout = "dwindle";
-        "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}ff)";
-        "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base02}ff)";
+        "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}f0)";
+        "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base02}f0)";
       };
 
       decoration = {
-        rounding = 15;
+        rounding = 17;
 
         drop_shadow = true;
         shadow_ignore_window = true;
         shadow_offset = "2 2";
-        shadow_range = 20;
+        shadow_range = 30;
         shadow_render_power = 3;
 
         blur = {

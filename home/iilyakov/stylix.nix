@@ -17,8 +17,8 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./images/mima.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    image = ./images/background.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     cursor = {
       package = pkgs.rose-pine-cursor;
@@ -38,7 +38,7 @@ in {
     opacity.terminal = 0.9;
 
     targets = {
-      spicetify.enable = false;
+      # spicetify.enable = false;
     };
   };
 

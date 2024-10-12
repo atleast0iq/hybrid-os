@@ -28,6 +28,7 @@
       vlc
       lmms
       telegram-desktop
+      obs-studio
 
       lutris
       wineWowPackages.stable

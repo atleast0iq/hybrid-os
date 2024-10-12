@@ -64,7 +64,9 @@
         "JetBrainsMono"
         "DroidSansMono"
         "UbuntuMono"
+        "SpaceMono"
       ];
     })
+    google-fonts
   ];
 }

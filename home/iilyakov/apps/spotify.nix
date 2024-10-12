@@ -12,8 +12,6 @@
     spicetifyPkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in {
     enable = true;
-    spotifyPackage = pkgs.spotify;
-    theme = spicetifyPkgs.themes.dribbblish;
-    colorScheme = "catppuccin-mocha";
+    spotifyPackage = pkgs.spotify-unwrapped;
   };
 }
