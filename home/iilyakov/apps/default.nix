@@ -34,7 +34,7 @@
     nixd
     zed-editor
     vscode-fhs
-    jetbrains.clion
+    pkgs-2311.jetbrains.clion
 
     lutris
     wineWowPackages.stable
