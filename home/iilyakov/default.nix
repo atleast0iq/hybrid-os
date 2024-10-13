@@ -7,7 +7,6 @@
 }: {
   imports = [
     ./apps
-    ./programming
     ./wm
     ./stylix.nix
   ];

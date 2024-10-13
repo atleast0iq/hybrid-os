@@ -7,62 +7,92 @@
   ...
 }: {
   imports = [
-    ./ags
     ./firefox.nix
-    ./foot.nix
-    ./git.nix
-    ./nushell.nix
-    ./spotify.nix
-    ./starship.nix
+    ./shell.nix
+
+    inputs.spicetify-nix.homeManagerModules.default
   ];
 
-  home.packages =
-    (with pkgs; [
-      anytype
-      vesktop
-      qbittorrent
-      nautilus
-      eog
-      bitwarden-desktop
-      tenacity
-      vlc
-      lmms
-      telegram-desktop
-      obs-studio
+  home.packages = with pkgs; [
+    vesktop
+    qbittorrent
+    nautilus
+    eog
+    bitwarden-desktop
+    tenacity
+    vlc
+    lmms
+    telegram-desktop
+    obs-studio
 
-      lutris
-      wineWowPackages.stable
-      winetricks
+    gcc
+    gdb
+    clang-tools
+    python3
+    bun
+    nodePackages_latest.nodejs
+    nixd
+    zed-editor
+    vscode-fhs
+    jetbrains.clion
 
-      ripgrep
-      fd
-      cpufetch
-      fastfetch
-      wget
-      curl
-      btop
-      brightnessctl
-      pulsemixer
-      acpi
-      killall
-      grim
-      slurp
-      wl-clipboard
-      xdg-user-dirs
-      wev
-      unzip
-      eza
-      jq
-      libqalculate
+    lutris
+    wineWowPackages.stable
+    winetricks
 
-      wireguard-tools
-      openvpn
-    ])
-    ++ (with pkgs-2311; [
-      jetbrains.clion
-    ]);
+    ripgrep
+    fd
+    cpufetch
+    fastfetch
+    wget
+    curl
+    btop
+    brightnessctl
+    pulsemixer
+    acpi
+    killall
+    grim
+    slurp
+    wl-clipboard
+    xdg-user-dirs
+    wev
+    unzip
+    eza
+    jq
+    libqalculate
+
+    wireguard-tools
+    openvpn
+  ];
 
   programs = {
+    spicetify = let
+      spicetifyPkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in {
+      enable = true;
+      spotifyPackage = pkgs.spotify-unwrapped;
+    };
+
+    foot = {
+      enable = true;
+      server.enable = true;
+
+      settings = {
+        main = {
+          term = "foot";
+          title = "foot";
+          font = lib.mkDefault "JetBrainsMono:size=15";
+          pad = "15x15center";
+          selection-target = "clipboard";
+        };
+
+        tweak = {
+          font-monospace-warn = "no";
+          sixel = "yes";
+        };
+      };
+    };
+
     bat.enable = true;
     zathura.enable = true;
   };

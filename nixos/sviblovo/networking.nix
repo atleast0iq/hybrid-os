@@ -8,7 +8,7 @@
   networking = {
     networkmanager.enable = true;
     networkmanager.wifi.powersave = false;
-    hostName = "meteora";
+    hostName = "sviblovo";
 
     firewall = {
       enable = true;
