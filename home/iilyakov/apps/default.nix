@@ -14,6 +14,7 @@
   ];
 
   home.packages = with pkgs; [
+    chromium
     vesktop
     qbittorrent
     nautilus
@@ -35,6 +36,8 @@
     zed-editor
     vscode-fhs
     pkgs-2311.jetbrains.clion
+    jetbrains.pycharm-community
+    jetbrains.goland
 
     lutris
     wineWowPackages.stable
@@ -66,9 +69,7 @@
   ];
 
   programs = {
-    spicetify = let
-      spicetifyPkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-    in {
+    spicetify = {
       enable = true;
       spotifyPackage = pkgs.spotify-unwrapped;
     };

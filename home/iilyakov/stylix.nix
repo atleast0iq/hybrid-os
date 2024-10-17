@@ -36,10 +36,6 @@ in {
     };
 
     opacity.terminal = 0.9;
-
-    targets = {
-      # spicetify.enable = false;
-    };
   };
 
   gtk = {

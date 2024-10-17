@@ -43,7 +43,13 @@
 
     mimeApps.enable = true;
     mimeApps.defaultApplications = {
-      "inode/directory" = "org.gnome.Nautilus.desktop";
+      "inode/directory" = ["org.gnome.Nautilus.desktop"];
+      "default-web-browser" = ["firefox.desktop"];
+      "text/html" = ["firefox.desktop"];
+      "x-scheme-handler/http" = ["firefox.desktop"];
+      "x-scheme-handler/https" = ["firefox.desktop"];
+      "x-scheme-handler/about" = ["firefox.desktop"];
+      "x-scheme-handler/unknown" = ["firefox.desktop"];
     };
   };
 }
