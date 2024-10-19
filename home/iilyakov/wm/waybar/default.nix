@@ -36,7 +36,6 @@
           "rewrite" = {
             "(.*) — Mozilla Firefox" = "🌎 $1";
             "(.*) - fish" = "> [$1]";
-            "" = "Desktop";
           };
           "separate-outputs" = true;
           "max-length" = 40;
@@ -52,7 +51,8 @@
         };
 
         "network" = {
-          "format" = "  {essid}";
+          "format" = "󰤨  {essid}";
+          "format-disconnected" = "󰤭  disconnected";
           "tooltip" = false;
         };
 
