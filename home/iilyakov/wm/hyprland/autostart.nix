@@ -5,6 +5,6 @@
   ...
 }: {
   wayland.windowManager.hyprland.extraConfig = ''
-    exec-once=${pkgs.waybar}/bin/waybar
+    exec-once=waybar
   '';
 }
