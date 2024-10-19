@@ -14,10 +14,12 @@
     };
   };
 in {
+  imports = [inputs.stylix.homeManagerModules.stylix];
+
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./images/background.png;
+    image = ./images/fish.webp;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     cursor = {

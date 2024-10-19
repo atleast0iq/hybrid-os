@@ -27,15 +27,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ags = {
-      url = "github:Aylur/ags/v2";
-      inputs.astal.follows = "astal";
-    };
   };
 
   outputs = inputs @ {
@@ -76,7 +67,6 @@
             home-manager.extraSpecialArgs = {inherit inputs pkgs pkgs-2311;};
             home-manager.users.iilyakov.imports = [
               ./home/iilyakov
-              inputs.stylix.homeManagerModules.stylix
             ];
           }
         ];
