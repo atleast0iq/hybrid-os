@@ -40,8 +40,8 @@
         gaps_out = "7, 20, 20, 20";
         border_size = 1;
         layout = "dwindle";
-        "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}f0)";
-        "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base02}f0)";
+        "col.active_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base0D}ba)";
+        "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base02}ba)";
       };
 
       decoration = {

@@ -54,6 +54,8 @@
         pkgsi686Linux.gperftools
       ];
     };
+
+    zsh.enable = true;
   };
 
   fonts.packages = with pkgs; [

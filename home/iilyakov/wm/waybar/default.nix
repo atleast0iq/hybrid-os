@@ -84,13 +84,14 @@
           border: none;
           border-radius: 9px;
           font-family: UbuntuMono Nerd Font;
-          font-size: 15px;
+          font-size: 13pt;
           font-weight: 400;
       }
 
       window#waybar {
-          background: rgba(15, 20, 25, 0.75);
-          color: #f3f4f5;
+          background: #${config.lib.stylix.colors.base00};
+          color: #${config.lib.stylix.colors.base05};
+          opacity: 0.9;
       }
 
       #workspaces {
@@ -101,10 +102,11 @@
       #workspaces button {
           padding: 0 5px;
           background: transparent;
+          color: #${config.lib.stylix.colors.base05};
       }
 
       #workspaces button.active {
-          color: #59c2ff;
+          color: #${config.lib.stylix.colors.base0D};
       }
 
       #language,

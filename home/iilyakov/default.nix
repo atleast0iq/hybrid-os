@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./apps
+    ./programs
     ./wm
     ./stylix.nix
   ];

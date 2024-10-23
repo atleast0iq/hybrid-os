@@ -38,6 +38,7 @@
     go
     gnumake
     jetbrains.pycharm-community
+    pkgs-2311.jetbrains.clion
 
     lutris
     wineWowPackages.stable
@@ -69,9 +70,12 @@
   ];
 
   programs = {
-    spicetify = {
+    spicetify = let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in {
       enable = true;
       spotifyPackage = pkgs.spotify-unwrapped;
+      theme = lib.mkForce spicePkgs.themes.text;
     };
 
     foot = {

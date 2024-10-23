@@ -12,7 +12,7 @@
       extraGroups = ["networkmanager" "wheel" "input" "docker" "adbusers"];
       createHome = true;
       home = "/home/iilyakov";
-      shell = pkgs.nushell;
+      shell = pkgs.zsh;
     };
   };
 }

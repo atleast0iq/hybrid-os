@@ -16,4 +16,6 @@
     polkit.enable = true;
     rtkit.enable = true;
   };
+
+  environment.pathsToLink = ["/share/zsh"];
 }
