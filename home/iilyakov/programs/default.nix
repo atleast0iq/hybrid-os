@@ -76,6 +76,7 @@
       enable = true;
       spotifyPackage = pkgs.spotify-unwrapped;
       theme = lib.mkForce spicePkgs.themes.text;
+      colorScheme = "Dracula";
     };
 
     foot = {
