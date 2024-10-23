@@ -6,15 +6,9 @@
   ...
 }: {
   wayland.windowManager.hyprland.plugins = with pkgs; [
-    hyprlandPlugins.hyprexpo
+    hyprlandPlugins.hyprspace
   ];
 
   wayland.windowManager.hyprland.extraConfig = ''
-    plugin {
-      hyprexpo {
-        workspace_method = first 1
-        gesture_fingers = 3
-      }
-    }
   '';
 }

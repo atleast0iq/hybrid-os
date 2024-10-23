@@ -35,6 +35,9 @@
     nixd
     zed-editor
     vscode-fhs
+    go
+    gnumake
+    jetbrains.pycharm-community
 
     lutris
     wineWowPackages.stable
