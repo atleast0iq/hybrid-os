@@ -43,6 +43,8 @@
     lutris
     wineWowPackages.stable
     winetricks
+    mangohud
+    gamemode
 
     ripgrep
     fd

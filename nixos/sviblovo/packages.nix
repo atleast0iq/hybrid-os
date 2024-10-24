@@ -10,8 +10,6 @@
     git
     just
     alejandra
-    mangohud
-    gamemode
   ];
 
   programs = {
