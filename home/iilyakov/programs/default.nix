@@ -76,7 +76,13 @@
       enable = true;
       spotifyPackage = pkgs.spotify-unwrapped;
       theme = lib.mkForce spicePkgs.themes.text;
-      colorScheme = "Dracula";
+      colorScheme = lib.mkForce "custom";
+      customColorScheme = {
+        accent = "${config.lib.stylix.colors.base0D}";
+        accent-active = "${config.lib.stylix.colors.base0D}";
+        text = "${config.lib.stylix.colors.base05}";
+        main = "${config.lib.stylix.colors.base00}";
+      };
     };
 
     foot = {
