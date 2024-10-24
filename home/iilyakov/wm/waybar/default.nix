@@ -59,12 +59,14 @@
         "backlight" = {
           "format" = "{icon}  {percent}%";
           "format-icons" = ["󰃞" "󰃟" "󰃠"];
+          "tooltip" = false;
         };
 
         "wireplumber" = {
           "format" = "{icon}  {volume}%";
           "format-muted" = " muted";
           "format-icons" = ["" "" ""];
+          "tooltip" = false;
         };
 
         "battery" = {
