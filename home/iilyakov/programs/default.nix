@@ -66,9 +66,6 @@
     eza
     jq
     libqalculate
-
-    wireguard-tools
-    openvpn
   ];
 
   programs = {
