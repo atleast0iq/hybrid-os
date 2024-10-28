@@ -12,7 +12,13 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
+    extraModulePackages =
+      (with config.boot.kernelPackages; [v4l2loopback])
+      ++ (with {
+        amneziawg-module = pkgs.callPackage ../../modules/amnezia/linux {
+          kernel = pkgs.linuxPackages_xanmod_stable.kernel;
+        };
+      }; [amneziawg-module]);
     kernelModules = ["v4l2loopback" "kvm-amd"];
 
     initrd = {
