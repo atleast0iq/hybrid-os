@@ -39,6 +39,7 @@
     gnumake
     jetbrains.pycharm-community
     pkgs-2311.jetbrains.clion
+    pkgs-2311.jetbrains.goland
 
     lutris
     wineWowPackages.stable
