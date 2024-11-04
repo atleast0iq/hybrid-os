@@ -58,10 +58,6 @@ in {
 
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
-    style = {
-      name = "Adwaita-Dark";
-      package = pkgs.adwaita-qt;
-    };
+    platformTheme.name = "gtk3";
   };
 }
