@@ -53,6 +53,7 @@
         "network" = {
           "format" = "󰤨  {essid}";
           "format-disconnected" = "󰤭  disconnected";
+          "format-ethernet" = "󰤨  wired";
           "tooltip" = false;
         };
 
