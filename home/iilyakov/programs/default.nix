@@ -15,37 +15,26 @@
 
   home.packages = with pkgs; [
     chromium
-    vesktop
     qbittorrent
     nautilus
     eog
     bitwarden-desktop
-    tenacity
     vlc
-    lmms
     telegram-desktop
     obs-studio
+
+    zed-editor
 
     gcc
     gdb
     clang-tools
     python3
-    bun
-    nodePackages_latest.nodejs
     nixd
-    zed-editor
-    vscode-fhs
     go
     gnumake
     jetbrains.pycharm-community
     pkgs-2311.jetbrains.clion
     pkgs-2311.jetbrains.goland
-
-    lutris
-    wineWowPackages.stable
-    winetricks
-    mangohud
-    gamemode
 
     ripgrep
     fd
