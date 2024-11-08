@@ -7,7 +7,10 @@ switch-system:
 update-flake:
     nix flake update
 
-update-dotfiles:
+fmt:
+    nix fmt
+
+update-dotfiles: fmt
     git add .
     git commit -m "Updated dotfiles"
     git push origin main
