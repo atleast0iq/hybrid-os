@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
   imports = [
     ./boot.nix
     ./hardware.nix

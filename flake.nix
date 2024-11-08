@@ -54,7 +54,6 @@
         specialArgs = {inherit inputs pkgs pkgs-2311;};
 
         modules = [
-          inputs.disko.nixosModules.default
           ./disko.nix
           {_module.args.device = "/dev/nvme0n1";}
           ./nixos/sviblovo
@@ -65,14 +64,12 @@
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
             home-manager.extraSpecialArgs = {inherit inputs pkgs pkgs-2311;};
-            home-manager.users.iilyakov.imports = [
-              ./home/iilyakov
-            ];
+            home-manager.users.iilyakov.imports = [./home/iilyakov];
           }
         ];
       };
     };
 
-    formatter.${system} = pkgs.nixpkgs-fmt;
+    formatter.${system} = pkgs.alejandra;
   };
 }
