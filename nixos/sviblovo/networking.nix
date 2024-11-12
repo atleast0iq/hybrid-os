@@ -16,6 +16,7 @@
       allowedTCPPorts = [22];
     };
   };
+  services.resolved.enable = true;
 
   time.timeZone = "Europe/Moscow";
   time.hardwareClockInLocalTime = true;
