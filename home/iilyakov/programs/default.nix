@@ -24,6 +24,9 @@
     obs-studio
 
     zed-editor
+    jetbrains.pycharm-community
+    pkgs-2311.jetbrains.clion
+    pkgs-2311.jetbrains.goland
 
     gcc
     gdb
@@ -31,11 +34,8 @@
     python3
     nixd
     go
-    gnumake
-    jetbrains.pycharm-community
-    pkgs-2311.jetbrains.clion
-    pkgs-2311.jetbrains.goland
 
+    gnumake
     ripgrep
     fd
     cpufetch
