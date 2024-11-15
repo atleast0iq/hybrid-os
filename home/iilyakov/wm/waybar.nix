@@ -18,6 +18,7 @@
         "modules-left" = ["hyprland/workspaces" "hyprland/window"];
         "modules-center" = ["clock"];
         "modules-right" = [
+          "tray"
           "hyprland/language"
           "network"
           "backlight"
@@ -40,7 +41,24 @@
         };
 
         "clock" = {
-          "tooltip" = false;
+          "tooltip" = true;
+          "tooltip-format" = "<tt><small>{calendar}</small></tt>";
+          "calendar" = {
+            "mode" = "month";
+            "mode-mon-col" = 3;
+            "on-scroll" = 1;
+            "on-click-right" = "mode";
+            "format" = {
+              "months" = "<span color='#${config.lib.stylix.colors.base0A}'><b>{}</b></span>";
+              "weekdays" = "<span color='#${config.lib.stylix.colors.base04}'><b>{}</b></span>";
+              "today" = "<span color='#${config.lib.stylix.colors.base08}'><b>{}</b></span>";
+            };
+          };
+        };
+
+        "tray" = {
+          "icon-size" = 18;
+          "spacing" = 15;
         };
 
         "hyprland/language" = {
@@ -89,6 +107,15 @@
           font-weight: 400;
       }
 
+      tooltip {
+          background: #${config.lib.stylix.colors.base00};
+          color: #${config.lib.stylix.colors.base05};
+          font-size: 13pt;
+          border-radius: 9px;
+          border: 0px solid;
+          opacity: 0.9;
+      }
+
       window#waybar {
           background: #${config.lib.stylix.colors.base00};
           color: #${config.lib.stylix.colors.base05};
@@ -110,6 +137,7 @@
           color: #${config.lib.stylix.colors.base0D};
       }
 
+      #tray,
       #language,
       #network,
       #backlight,
