@@ -18,7 +18,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = "${self}/home/iilyakov/images/fish.webp";
+    image = ./images/fish.webp;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     cursor = {
@@ -39,7 +39,7 @@ in {
     opacity.terminal = 0.9;
 
     targets = {
-      hyprland.enable = false;
+      hyprlock.enable = false;
     };
   };
 

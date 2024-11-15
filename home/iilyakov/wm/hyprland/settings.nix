@@ -45,11 +45,13 @@
       decoration = {
         rounding = 9;
 
-        drop_shadow = true;
-        shadow_ignore_window = true;
-        shadow_offset = "2 2";
-        shadow_range = 30;
-        shadow_render_power = 3;
+        shadow = {
+          enabled = true;
+          ignore_window = true;
+          offset = "2 2";
+          range = 30;
+          render_power = 3;
+        };
 
         blur = {
           enabled = true;
