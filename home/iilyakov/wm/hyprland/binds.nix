@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{...}: {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
 

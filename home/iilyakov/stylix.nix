@@ -1,7 +1,6 @@
 {
-  config,
+  self,
   pkgs,
-  lib,
   inputs,
   ...
 }: let
@@ -19,7 +18,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./images/fish.webp;
+    image = "${self}/home/iilyakov/images/fish.webp";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     cursor = {
@@ -38,6 +37,10 @@ in {
     };
 
     opacity.terminal = 0.9;
+
+    targets = {
+      hyprland.enable = false;
+    };
   };
 
   gtk = {

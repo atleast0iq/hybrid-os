@@ -1,15 +1,10 @@
-{
-  settings,
-  config,
-  pkgs,
-  ...
-}: {
+{self, ...}: {
   programs.hyprlock.enable = true;
   programs.hyprlock.extraConfig = ''
     # BACKGROUND
     background {
         monitor =
-        path = ~/hybrid-os/home/iilyakov/images/background.png
+        path = ${self}/home/iilyakov/images/fish.webp
         blur_passes = 2
         contrast = 0.8916
         brightness = 0.6872
@@ -64,7 +59,7 @@
     # Profie-Photo
     image {
         monitor =
-        path = ~/hybrid-os/home/iilyakov/images/senya.jpg
+        path = ${self}/home/iilyakov/images/iilyakov.jpg
         border_size = 2
         border_color = rgba(255, 255, 255, .65)
         size = 130

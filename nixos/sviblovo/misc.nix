@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   console = {
     earlySetup = true;
     packages = with pkgs; [terminus_font];
