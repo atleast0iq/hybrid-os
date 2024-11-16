@@ -55,10 +55,9 @@
       };
       "inputbar" = {
         enabled = true;
-        padding = mkLiteral "10px 10px 10px 10px";
         margin = mkLiteral "10px";
         background-color = lib.mkForce (mkLiteral "transparent");
-        border-radius = "25px";
+        border-radius = "9px";
         orientation = mkLiteral "horizontal";
         children = map mkLiteral [
           "entry"
@@ -68,13 +67,13 @@
       "entry" = {
         enabled = true;
         expand = false;
-        width = mkLiteral "20%";
+        width = mkLiteral "100%";
         padding = mkLiteral "10px";
-        border-radius = mkLiteral "12px";
-        background-color = lib.mkForce (mkLiteral "@selected");
-        text-color = lib.mkForce (mkLiteral "@text-selected");
+        border-radius = mkLiteral "9px";
+        background-color = lib.mkForce (mkLiteral "@background");
+        text-color = lib.mkForce (mkLiteral "@text-color");
         cursor = mkLiteral "text";
-        placeholder = "🖥️ Search ";
+        placeholder = "🖥️Search ";
         placeholder-color = mkLiteral "inherit";
       };
       "listbox" = {
@@ -90,7 +89,7 @@
       "listview" = {
         enabled = true;
         columns = 2;
-        lines = 4;
+        lines = 5;
         cycle = true;
         dynamic = true;
         scrollbar = false;
@@ -102,34 +101,11 @@
         background-color = lib.mkForce (mkLiteral "transparent");
         border = mkLiteral "0px";
       };
-      "dummy" = {
-        expand = true;
-        background-color = lib.mkForce (mkLiteral "transparent");
-      };
-      "button" = {
-        width = mkLiteral "5%";
-        padding = mkLiteral "12px";
-        border-radius = mkLiteral "12px";
-        background-color = lib.mkForce (mkLiteral "@text-selected");
-        text-color = lib.mkForce (mkLiteral "@text-color");
-        cursor = mkLiteral "pointer";
-      };
-      "button selected" = {
-        background-color = lib.mkForce (mkLiteral "@selected");
-        text-color = lib.mkForce (mkLiteral "@text-selected");
-      };
-      "scrollbar" = {
-        width = mkLiteral "4px";
-        border = 0;
-        handle-color = lib.mkForce (mkLiteral "@border-color");
-        handle-width = mkLiteral "8px";
-        padding = 0;
-      };
       "element" = {
         enabled = true;
         spacing = mkLiteral "10px";
         padding = mkLiteral "10px";
-        border-radius = mkLiteral "12px";
+        border-radius = mkLiteral "9px";
         background-color = lib.mkForce (mkLiteral "transparent");
         cursor = mkLiteral "pointer";
       };
@@ -137,35 +113,11 @@
         background-color = lib.mkForce (mkLiteral "inherit");
         text-color = lib.mkForce (mkLiteral "inherit");
       };
-      "element normal.urgent" = {
-        background-color = lib.mkForce (mkLiteral "@urgent");
-        text-color = lib.mkForce (mkLiteral "@foreground");
-      };
-      "element normal.active" = {
-        background-color = lib.mkForce (mkLiteral "@active");
-        text-color = lib.mkForce (mkLiteral "@foreground");
-      };
       "element selected.normal" = {
         background-color = lib.mkForce (mkLiteral "@selected");
         text-color = lib.mkForce (mkLiteral "@text-selected");
       };
-      "element selected.urgent" = {
-        background-color = lib.mkForce (mkLiteral "@urgent");
-        text-color = lib.mkForce (mkLiteral "@text-selected");
-      };
-      "element selected.active" = {
-        background-color = lib.mkForce (mkLiteral "@urgent");
-        text-color = lib.mkForce (mkLiteral "@text-selected");
-      };
       "element alternate.normal" = {
-        background-color = lib.mkForce (mkLiteral "transparent");
-        text-color = lib.mkForce (mkLiteral "inherit");
-      };
-      "element alternate.urgent" = {
-        background-color = lib.mkForce (mkLiteral "transparent");
-        text-color = lib.mkForce (mkLiteral "inherit");
-      };
-      "element alternate.active" = {
         background-color = lib.mkForce (mkLiteral "transparent");
         text-color = lib.mkForce (mkLiteral "inherit");
       };
@@ -182,24 +134,6 @@
         cursor = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";
         horizontal-align = mkLiteral "0.0";
-      };
-      "message" = {
-        background-color = lib.mkForce (mkLiteral "transparent");
-        border = mkLiteral "0px";
-      };
-      "textbox" = {
-        padding = mkLiteral "12px";
-        border-radius = mkLiteral "10px";
-        background-color = lib.mkForce (mkLiteral "@bg-alt");
-        text-color = lib.mkForce (mkLiteral "@bg");
-        vertical-align = mkLiteral "0.5";
-        horizontal-align = mkLiteral "0.0";
-      };
-      "error-message" = {
-        padding = mkLiteral "12px";
-        border-radius = mkLiteral "20px";
-        background-color = lib.mkForce (mkLiteral "@bg-alt");
-        text-color = lib.mkForce (mkLiteral "@bg");
       };
     };
   };
