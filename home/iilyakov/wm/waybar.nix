@@ -92,8 +92,9 @@
             "warning" = 30;
             "critical" = 15;
           };
-          "format" = "{icon}  {capacity}%";
-          "format-icons" = ["" "" "" "" ""];
+          "format" = "{icon} {capacity}%";
+          "format-icons" = ["󰂎" "󱊡" "󱊢" "󱊣"];
+          "format-charging" = "󰂄 {capacity}%";
         };
       };
     };
@@ -162,11 +163,7 @@
         color: #${config.lib.stylix.colors.base08};
       }
 
-      #battery.charging:not(.full) {
-        color: #${config.lib.stylix.colors.base0A};
-      }
-
-      #battery.full {
+      #battery:not(.critical) {
         color: #${config.lib.stylix.colors.base0B};
       }
     '';
