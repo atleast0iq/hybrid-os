@@ -22,6 +22,7 @@
     vlc
     telegram-desktop
     obs-studio
+    libreoffice
 
     zed-editor
     jetbrains.pycharm-community
