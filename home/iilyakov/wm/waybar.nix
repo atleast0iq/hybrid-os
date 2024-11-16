@@ -58,7 +58,7 @@
 
         "tray" = {
           "icon-size" = 18;
-          "spacing" = 15;
+          "spacing" = 20;
         };
 
         "hyprland/language" = {
@@ -144,6 +144,30 @@
       #wireplumber,
       #battery {
           padding-right: 20px;
+      }
+
+      #network {
+        color: #${config.lib.stylix.colors.base0C};
+      }
+
+      #backlight {
+        color: #${config.lib.stylix.colors.base0A};
+      }
+
+      #wireplumber {
+        color: #${config.lib.stylix.colors.base0E};
+      }
+
+      #battery.critical:not(.charging) {
+        color: #${config.lib.stylix.colors.base08};
+      }
+
+      #battery.charging:not(.full) {
+        color: #${config.lib.stylix.colors.base0A};
+      }
+
+      #battery.full {
+        color: #${config.lib.stylix.colors.base0B};
       }
     '';
   };
