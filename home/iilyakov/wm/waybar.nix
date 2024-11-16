@@ -22,7 +22,7 @@
           "hyprland/language"
           "network"
           "backlight"
-          "wireplumber"
+          "pulseaudio"
           "battery"
         ];
 
@@ -79,10 +79,12 @@
           "tooltip" = false;
         };
 
-        "wireplumber" = {
-          "format" = "{icon}  {volume}%";
-          "format-muted" = " muted";
+        "pulseaudio" = {
+          "format" = "{format_source} {icon} {volume}%";
+          "format-muted" = "{format_source}  muted";
           "format-icons" = ["" "" ""];
+          "format-source" = "󰍬";
+          "format-source-muted" = "󰍭";
           "tooltip" = false;
         };
 
@@ -142,7 +144,7 @@
       #language,
       #network,
       #backlight,
-      #wireplumber,
+      #pulseaudio,
       #battery {
           padding-right: 20px;
       }
@@ -155,7 +157,7 @@
         color: #${config.lib.stylix.colors.base0A};
       }
 
-      #wireplumber {
+      #pulseaudio {
         color: #${config.lib.stylix.colors.base0E};
       }
 
