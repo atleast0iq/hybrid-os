@@ -7,14 +7,13 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    terminal = "${pkgs.foot}/bin/foot";
+    terminal = "foot";
 
     extraConfig = {
       modi = "drun";
       show-icons = true;
       font = "JetBrainsMono Nerd Font Mono 12";
       drun-display-format = "{icon} {name}";
-      display-drun = " Apps";
     };
 
     theme = let
@@ -29,7 +28,7 @@
         border-color = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
       };
       "window" = {
-        width = mkLiteral "35%";
+        width = mkLiteral "672px";
         transparency = "real";
         orientation = mkLiteral "vertical";
         cursor = mkLiteral "default";
@@ -60,7 +59,7 @@
         width = mkLiteral "100%";
         padding = mkLiteral "10px";
         border-radius = mkLiteral "9px";
-        background-color = lib.mkForce (mkLiteral "@bg");
+        background-color = lib.mkForce (mkLiteral "transparent");
         text-color = lib.mkForce (mkLiteral "@text-color");
         cursor = mkLiteral "text";
         placeholder = "🖥️Search ";
