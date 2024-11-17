@@ -39,6 +39,7 @@ in {
 
     targets = {
       hyprlock.enable = false;
+      rofi.enable = false;
     };
   };
 

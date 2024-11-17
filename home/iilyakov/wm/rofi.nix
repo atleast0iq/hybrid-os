@@ -22,7 +22,6 @@
     in {
       "*" = {
         bg = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base00}e6");
-        foreground = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base01}");
         selected = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
         active = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
         text-selected = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base00}");
@@ -44,10 +43,7 @@
         padding = mkLiteral "15px";
         enabled = true;
         orientation = mkLiteral "vertical";
-        children = map mkLiteral [
-          "inputbar"
-          "listbox"
-        ];
+        children = map mkLiteral ["inputbar" "listbox"];
         background-color = lib.mkForce (mkLiteral "transparent");
       };
       "inputbar" = {
@@ -56,9 +52,7 @@
         background-color = lib.mkForce (mkLiteral "transparent");
         border-radius = "9px";
         orientation = mkLiteral "horizontal";
-        children = map mkLiteral [
-          "entry"
-        ];
+        children = map mkLiteral ["entry"];
       };
       "entry" = {
         enabled = true;
@@ -66,7 +60,7 @@
         width = mkLiteral "100%";
         padding = mkLiteral "10px";
         border-radius = mkLiteral "9px";
-        background-color = lib.mkForce (mkLiteral "@background");
+        background-color = lib.mkForce (mkLiteral "@bg");
         text-color = lib.mkForce (mkLiteral "@text-color");
         cursor = mkLiteral "text";
         placeholder = "🖥️Search ";
@@ -77,9 +71,7 @@
         padding = mkLiteral "10px";
         background-color = lib.mkForce (mkLiteral "transparent");
         orientation = mkLiteral "vertical";
-        children = map mkLiteral [
-          "listview"
-        ];
+        children = map mkLiteral ["listview"];
       };
       "listview" = {
         enabled = true;
