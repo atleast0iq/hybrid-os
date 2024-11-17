@@ -24,7 +24,6 @@
     obs-studio
     libreoffice
 
-    zed-editor
     jetbrains.pycharm-community
     pkgs-2311.jetbrains.clion
     pkgs-2311.jetbrains.goland
@@ -97,5 +96,12 @@
 
     bat.enable = true;
     zathura.enable = true;
+
+    zed-editor = {
+      enable = true;
+      extensions = ["nix" "justfile"];
+      userKeymaps = {};
+      userSettings = {};
+    };
   };
 }
