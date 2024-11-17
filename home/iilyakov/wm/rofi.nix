@@ -21,19 +21,16 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        bg = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base00}");
-        bg-alt = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
+        bg = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base00}e6");
         foreground = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base01}");
         selected = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
         active = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
         text-selected = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base00}");
         text-color = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base05}");
         border-color = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0D}");
-        urgent = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0A}");
       };
       "window" = {
         width = mkLiteral "35%";
-        height = mkLiteral "50%";
         transparency = "real";
         orientation = mkLiteral "vertical";
         cursor = mkLiteral "default";
@@ -61,7 +58,6 @@
         orientation = mkLiteral "horizontal";
         children = map mkLiteral [
           "entry"
-          "dummy"
         ];
       };
       "entry" = {
@@ -82,7 +78,6 @@
         background-color = lib.mkForce (mkLiteral "transparent");
         orientation = mkLiteral "vertical";
         children = map mkLiteral [
-          "message"
           "listview"
         ];
       };
@@ -95,7 +90,7 @@
         scrollbar = false;
         layout = mkLiteral "vertical";
         reverse = false;
-        fixed-height = false;
+        fixed-height = true;
         fixed-columns = true;
         spacing = mkLiteral "10px";
         background-color = lib.mkForce (mkLiteral "transparent");
