@@ -284,22 +284,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-dc460ec": {
-      "locked": {
-        "lastModified": 1731319897,
-        "narHash": "sha256-PbABj4tnbWFMfBp6OcUK5iGy1QY+/Z96ZcLpooIbuEI=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "dc460ec76cbff0e66e269457d7b728432263166c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "dc460ec76cbff0e66e269457d7b728432263166c",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1731531548,
@@ -339,7 +323,6 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-2311": "nixpkgs-2311",
-        "nixpkgs-dc460ec": "nixpkgs-dc460ec",
         "potatofox": "potatofox",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"

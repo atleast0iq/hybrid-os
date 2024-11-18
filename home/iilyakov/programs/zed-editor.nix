@@ -1,7 +1,7 @@
-{pkgs-dc460ec, ...}: {
+{pkgs, ...}: {
   programs.zed-editor = {
     enable = true;
-    package = pkgs-dc460ec.zed-editor;
+    package = pkgs.zed-editor;
     extensions = [
       "nix"
       "justfile"

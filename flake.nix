@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs-dc460ec.url = "github:NixOS/nixpkgs/dc460ec76cbff0e66e269457d7b728432263166c";
     nixpkgs-2311.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     disko = {
@@ -33,7 +32,6 @@
   outputs = inputs @ {
     self,
     nixpkgs,
-    nixpkgs-dc460ec,
     nixpkgs-2311,
     home-manager,
     ...
@@ -41,11 +39,6 @@
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-
-    pkgs-dc460ec = import nixpkgs-dc460ec {
       inherit system;
       config.allowUnfree = true;
     };
@@ -63,7 +56,6 @@
             self
             inputs
             pkgs
-            pkgs-dc460ec
             pkgs-2311
             ;
         };
@@ -83,7 +75,6 @@
                 self
                 inputs
                 pkgs
-                pkgs-dc460ec
                 pkgs-2311
                 ;
             };
