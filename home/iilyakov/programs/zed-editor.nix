@@ -32,6 +32,16 @@
           };
         };
       };
+      lsp = {
+        clangd = {
+          binary = {
+            path = "clangd";
+            arguments = [
+              "-header-insertion=never"
+            ];
+          };
+        };
+      };
     };
   };
 }
