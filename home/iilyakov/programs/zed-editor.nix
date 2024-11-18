@@ -8,13 +8,19 @@
     ];
     userKeymaps = {};
     userSettings = {
-      magnification = 1.15;
+      auto_update = false;
+      telemetry = {
+        diagnostics = false;
+        metrics = false;
+      };
+
       theme = "Ayu Dark";
+      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_size = 16;
+      ui_font_family = "JetBrainsMono Nerd Font";
+      ui_font_size = 16;
 
       autosave = "on_focus_change";
-      auto_update = false;
-
-      buffer_font_family = "JetBrainsMono Nerd Font";
 
       languages = {
         Nix = {
