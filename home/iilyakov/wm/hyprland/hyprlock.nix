@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   programs.hyprlock.enable = true;
   programs.hyprlock.extraConfig = ''
     # BACKGROUND

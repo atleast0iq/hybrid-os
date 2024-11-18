@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   imports = [
     ./programs
     ./wm
@@ -10,7 +11,7 @@
 
     username = "iilyakov";
     homeDirectory = "/home/iilyakov";
-    sessionPath = ["$HOME/.local/bin"];
+    sessionPath = [ "$HOME/.local/bin" ];
   };
 
   programs.home-manager.enable = true;
@@ -37,14 +38,14 @@
 
     mimeApps.enable = true;
     mimeApps.defaultApplications = {
-      "inode/directory" = ["org.gnome.Nautilus.desktop"];
-      "default-web-browser" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/about" = ["firefox.desktop"];
-      "x-scheme-handler/unknown" = ["firefox.desktop"];
-      "application/pdf" = ["org.pwmt.zathura.desktop"];
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+      "default-web-browser" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/about" = [ "firefox.desktop" ];
+      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
     };
   };
 }

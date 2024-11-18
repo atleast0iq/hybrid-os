@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./hyprland
     ./rofi.nix

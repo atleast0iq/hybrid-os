@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     env = [
       "XDG_CURRENT_DESKTOP,Hyprland"

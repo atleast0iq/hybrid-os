@@ -3,7 +3,8 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -11,17 +12,28 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
     extraModulePackages =
-      (with config.boot.kernelPackages; [v4l2loopback])
-      ++ (with {
-        amneziawg-module = pkgs.callPackage ../../modules/amnezia/linux {
-          kernel = pkgs.linuxPackages_xanmod_stable.kernel;
-        };
-      }; [amneziawg-module]);
-    kernelModules = ["v4l2loopback" "kvm-amd"];
+      (with config.boot.kernelPackages; [ v4l2loopback ])
+      ++ (
+        with {
+          amneziawg-module = pkgs.callPackage ../../modules/amnezia/linux {
+            kernel = pkgs.linuxPackages_xanmod_stable.kernel;
+          };
+        }; [ amneziawg-module ]);
+    kernelModules = [
+      "v4l2loopback"
+      "kvm-amd"
+    ];
 
     initrd = {
-      availableKernelModules = ["nvme" "xhci_pci"];
-      kernelModules = ["nvme" "xhci_pci" "amdgpu"];
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+      ];
+      kernelModules = [
+        "nvme"
+        "xhci_pci"
+        "amdgpu"
+      ];
     };
   };
 
@@ -33,8 +45,8 @@
     graphics = {
       enable = true;
       enable32Bit = true;
-      extraPackages = [pkgs.amdvlk];
-      extraPackages32 = [pkgs.driversi686Linux.amdvlk];
+      extraPackages = [ pkgs.amdvlk ];
+      extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
     };
 
     bluetooth.enable = true;

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./autostart.nix
     ./binds.nix

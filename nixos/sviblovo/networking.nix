@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   networking = {
     networkmanager.enable = true;
     networkmanager.wifi.powersave = false;
@@ -6,8 +7,8 @@
 
     firewall = {
       enable = true;
-      allowedUDPPorts = [51820];
-      allowedTCPPorts = [22];
+      allowedUDPPorts = [ 51820 ];
+      allowedTCPPorts = [ 22 ];
     };
   };
   services.resolved.enable = true;

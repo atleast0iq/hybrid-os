@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -58,7 +59,7 @@
           special = true;
           brightness = 1.0;
           contrast = 1.0;
-          noise = 0.02;
+          noise = 2.0e-2;
           passes = 1;
           size = 5;
         };

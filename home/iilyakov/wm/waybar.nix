@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   programs.waybar = {
     enable = true;
 
@@ -15,8 +16,11 @@
         "margin-right" = 20;
         "margin-top" = 10;
 
-        "modules-left" = ["hyprland/workspaces" "hyprland/window"];
-        "modules-center" = ["clock"];
+        "modules-left" = [
+          "hyprland/workspaces"
+          "hyprland/window"
+        ];
+        "modules-center" = [ "clock" ];
         "modules-right" = [
           "tray"
           "hyprland/language"
@@ -27,7 +31,9 @@
         ];
 
         "hyprland/workspaces" = {
-          "persistent-workspaces" = {"*" = 5;};
+          "persistent-workspaces" = {
+            "*" = 5;
+          };
         };
 
         "hyprland/window" = {
@@ -75,14 +81,22 @@
 
         "backlight" = {
           "format" = "{icon}  {percent}%";
-          "format-icons" = ["󰃞" "󰃟" "󰃠"];
+          "format-icons" = [
+            "󰃞"
+            "󰃟"
+            "󰃠"
+          ];
           "tooltip" = false;
         };
 
         "pulseaudio" = {
           "format" = "{format_source} {icon} {volume}%";
           "format-muted" = "{format_source}  muted";
-          "format-icons" = ["" "" ""];
+          "format-icons" = [
+            ""
+            ""
+            ""
+          ];
           "format-source" = "󰍬";
           "format-source-muted" = "󰍭";
           "tooltip" = false;
@@ -95,7 +109,12 @@
             "critical" = 15;
           };
           "format" = "{icon} {capacity}%";
-          "format-icons" = ["󰂎" "󱊡" "󱊢" "󱊣"];
+          "format-icons" = [
+            "󰂎"
+            "󱊡"
+            "󱊢"
+            "󱊣"
+          ];
           "format-charging" = "󰂄 {capacity}%";
         };
       };
