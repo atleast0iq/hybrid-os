@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-dc460ec,
   pkgs-2311,
   lib,
   inputs,
