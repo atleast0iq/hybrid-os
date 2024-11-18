@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     dconf
   ];
@@ -8,8 +7,8 @@
     enable = true;
     xdgOpenUsePortal = true;
     config = {
-      common.default = [ "gtk" ];
-      hyprland.default = [ "hyprland" ];
+      common.default = ["gtk"];
+      hyprland.default = ["hyprland"];
     };
 
     extraPortals = with pkgs; [

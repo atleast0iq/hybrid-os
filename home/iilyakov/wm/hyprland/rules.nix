@@ -1,9 +1,8 @@
-{ ... }:
-{
+{...}: {
   wayland.windowManager.hyprland.settings = {
-    layerrule = [ ];
+    layerrule = [];
 
-    windowrule = [ ];
+    windowrule = [];
 
     windowrulev2 = [
       "keepaspectratio,class:^(firefox)$,title:^(Picture-in-Picture)$"

@@ -6,11 +6,11 @@
   lib,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     ./firefox.nix
     ./shell.nix
+    ./zed-editor.nix
 
     inputs.spicetify-nix.homeManagerModules.default
   ];
@@ -61,22 +61,20 @@
   ];
 
   programs = {
-    spicetify =
-      let
-        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-      in
-      {
-        enable = true;
-        spotifyPackage = pkgs.spotify-unwrapped;
-        theme = lib.mkForce spicePkgs.themes.text;
-        colorScheme = lib.mkForce "custom";
-        customColorScheme = {
-          accent = "${config.lib.stylix.colors.base0D}";
-          accent-active = "${config.lib.stylix.colors.base0D}";
-          text = "${config.lib.stylix.colors.base05}";
-          main = "${config.lib.stylix.colors.base00}";
-        };
+    spicetify = let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in {
+      enable = true;
+      spotifyPackage = pkgs.spotify-unwrapped;
+      theme = lib.mkForce spicePkgs.themes.text;
+      colorScheme = lib.mkForce "custom";
+      customColorScheme = {
+        accent = "${config.lib.stylix.colors.base0D}";
+        accent-active = "${config.lib.stylix.colors.base0D}";
+        text = "${config.lib.stylix.colors.base05}";
+        main = "${config.lib.stylix.colors.base00}";
       };
+    };
 
     foot = {
       enable = true;
@@ -100,16 +98,5 @@
 
     bat.enable = true;
     zathura.enable = true;
-
-    zed-editor = {
-      enable = true;
-      package = pkgs-dc460ec.zed-editor;
-      extensions = [
-        "nix"
-        "justfile"
-      ];
-      userKeymaps = { };
-      userSettings = { };
-    };
   };
 }

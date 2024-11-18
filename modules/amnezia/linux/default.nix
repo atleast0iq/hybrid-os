@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   sourceRoot = "${finalAttrs.src.name}/src";
-  hardeningDisable = [ "pic" ];
+  hardeningDisable = ["pic"];
   nativeBuildInputs = kernel.moduleBuildDependencies;
 
   buildFlags = [
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags =
     kernel.makeFlags
-    ++ [ "KERNELDIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build" ]
+    ++ ["KERNELDIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build"]
     ++ lib.optional (lib.versionAtLeast kernel.version "5.6") "KERNEL_SOURCE_DIR=${srcOnly kernel}";
 
   enableParallelBuilding = true;
@@ -38,13 +38,13 @@ stdenv.mkDerivation (finalAttrs: {
     "INSTALL_MOD_PATH=${placeholder "out"}"
   ];
 
-  passthru.updateScript = nix-update-script { };
+  passthru.updateScript = nix-update-script {};
 
   meta = {
     description = "Kernel module for the AmneziaWG";
     homepage = "https://amnezia.org";
     license = lib.licenses.gpl2Only;
-    maintainers = with lib.maintainers; [ averyanalex ];
+    maintainers = with lib.maintainers; [averyanalex];
     platforms = lib.platforms.linux;
   };
 })

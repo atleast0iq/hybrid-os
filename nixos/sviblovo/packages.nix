@@ -1,17 +1,18 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages =
     (with pkgs; [
-      neovim
+      alejandra
       git
       just
+      neovim
     ])
     ++ (
       with {
         amneziawg-tools = pkgs.callPackage ../../modules/amnezia/amneziawg-tools {
-          amneziawg-go = pkgs.callPackage ../../modules/amnezia/amneziawg-go { };
+          amneziawg-go = pkgs.callPackage ../../modules/amnezia/amneziawg-go {};
         };
-      }; [ amneziawg-tools ]);
+      }; [amneziawg-tools]
+    );
 
   programs = {
     adb.enable = true;

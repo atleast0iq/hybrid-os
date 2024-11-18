@@ -30,72 +30,69 @@
     };
   };
 
-  outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      nixpkgs-dc460ec,
-      nixpkgs-2311,
-      home-manager,
-      ...
-    }:
-    let
-      system = "x86_64-linux";
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    nixpkgs-dc460ec,
+    nixpkgs-2311,
+    home-manager,
+    ...
+  }: let
+    system = "x86_64-linux";
 
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-      pkgs-dc460ec = import nixpkgs-dc460ec {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-      pkgs-2311 = import nixpkgs-2311 {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    in
-    {
-      nixosConfigurations = {
-        sviblovo = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit
-              self
-              inputs
-              pkgs
-              pkgs-dc460ec
-              pkgs-2311
-              ;
-          };
-
-          modules = [
-            ./disko.nix
-            { _module.args.device = "/dev/nvme0n1"; }
-            ./nixos/sviblovo
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.verbose = true;
-              home-manager.backupFileExtension = "homeManagerBackupFileExtension";
-              home-manager.useGlobalPkgs = true;
-              home-manager.extraSpecialArgs = {
-                inherit
-                  self
-                  inputs
-                  pkgs
-                  pkgs-dc460ec
-                  pkgs-2311
-                  ;
-              };
-              home-manager.users.iilyakov.imports = [ ./home/iilyakov ];
-            }
-          ];
-        };
-      };
-
-      formatter.${system} = pkgs.nixfmt-rfc-style;
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
     };
+
+    pkgs-dc460ec = import nixpkgs-dc460ec {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    pkgs-2311 = import nixpkgs-2311 {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in {
+    nixosConfigurations = {
+      sviblovo = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit
+            self
+            inputs
+            pkgs
+            pkgs-dc460ec
+            pkgs-2311
+            ;
+        };
+
+        modules = [
+          ./disko.nix
+          {_module.args.device = "/dev/nvme0n1";}
+          ./nixos/sviblovo
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.verbose = true;
+            home-manager.backupFileExtension = "homeManagerBackupFileExtension";
+            home-manager.useGlobalPkgs = true;
+            home-manager.extraSpecialArgs = {
+              inherit
+                self
+                inputs
+                pkgs
+                pkgs-dc460ec
+                pkgs-2311
+                ;
+            };
+            home-manager.users.iilyakov.imports = [./home/iilyakov];
+          }
+        ];
+      };
+    };
+
+    formatter.${system} = pkgs.alejandra;
+  };
 }

@@ -22,7 +22,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-zXd9PK3fpOx/YjCNs2auZWhbLUk2fO6tyLV5FxAH0us=";
 
-  subPackages = [ "." ];
+  subPackages = ["."];
 
   ldflags = [
     "-s"
@@ -31,13 +31,13 @@ buildGoModule rec {
 
   strictDeps = true;
 
-  passthru.updateScript = nix-update-script { };
+  passthru.updateScript = nix-update-script {};
 
   meta = {
     description = "Userspace Go implementation of AmneziaWG";
     homepage = "https://github.com/amnezia-vpn/amneziawg-go";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ averyanalex ];
+    maintainers = with lib.maintainers; [averyanalex];
     mainProgram = "amneziawg-go";
   };
 }

@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   programs.firefox = {
     enable = true;
 
@@ -20,7 +19,7 @@
       id = 0;
       name = "Default";
 
-      bookmarks = [ ];
+      bookmarks = [];
 
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin

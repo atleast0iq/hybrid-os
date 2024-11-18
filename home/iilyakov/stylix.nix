@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   default_font = {
     name = "JetBrainsMono Nerd Font";
     package = pkgs.nerdfonts.override {
@@ -12,9 +11,8 @@ let
       ];
     };
   };
-in
-{
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+in {
+  imports = [inputs.stylix.homeManagerModules.stylix];
 
   stylix = {
     enable = true;
