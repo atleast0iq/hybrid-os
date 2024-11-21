@@ -29,55 +29,40 @@
     };
   };
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    nixpkgs-2311,
-    home-manager,
-    ...
-  }: let
+  outputs = inputs @ {self, ...}: let
     system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
+    pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
 
-    pkgs-2311 = import nixpkgs-2311 {
+    pkgs-unstable = import inputs.nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    pkgs-2311 = import inputs.nixpkgs-2311 {
       inherit system;
       config.allowUnfree = true;
     };
   in {
     nixosConfigurations = {
-      sviblovo = nixpkgs.lib.nixosSystem {
+      sviblovo = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {
-          inherit
-            self
-            inputs
-            pkgs
-            pkgs-2311
-            ;
-        };
+        specialArgs = {inherit self inputs pkgs pkgs-unstable pkgs-2311;};
 
         modules = [
           ./disko.nix
           {_module.args.device = "/dev/nvme0n1";}
           ./nixos/sviblovo
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.verbose = true;
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
-            home-manager.extraSpecialArgs = {
-              inherit
-                self
-                inputs
-                pkgs
-                pkgs-2311
-                ;
-            };
+            home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-unstable pkgs-2311;};
             home-manager.users.iilyakov.imports = [./home/iilyakov];
           }
         ];
