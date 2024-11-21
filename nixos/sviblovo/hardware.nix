@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   modulesPath,
   ...
 }: {
@@ -10,15 +11,7 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
-    extraModulePackages =
-      (with config.boot.kernelPackages; [v4l2loopback])
-      ++ (
-        with {
-          amneziawg-module = pkgs.callPackage ../../modules/amnezia/linux {
-            kernel = pkgs.linuxPackages_xanmod_stable.kernel;
-          };
-        }; [amneziawg-module]
-      );
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback pkgs-unstable.linuxKernel.packages.linux_xanmod_stable.amneziawg];
     kernelModules = [
       "v4l2loopback"
       "kvm-amd"

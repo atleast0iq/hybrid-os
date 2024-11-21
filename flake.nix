@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-2311.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     disko = {
@@ -37,7 +38,7 @@
       config.allowUnfree = true;
     };
 
-    pkgs-unstable = import inputs.nixpkgs {
+    pkgs-unstable = import inputs.nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
     };
