@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   pkgs-2311,
   lib,
@@ -33,7 +32,7 @@
     gdb
     clang-tools
     python3
-    nixd
+    nil
     go
 
     gnumake
@@ -65,13 +64,29 @@
     in {
       enable = true;
       spotifyPackage = pkgs.spotify-unwrapped;
-      theme = lib.mkForce spicePkgs.themes.text;
+      theme = lib.mkForce spicePkgs.themes.sleek;
       colorScheme = lib.mkForce "custom";
       customColorScheme = {
-        accent = "${config.lib.stylix.colors.base0D}";
-        accent-active = "${config.lib.stylix.colors.base0D}";
-        text = "${config.lib.stylix.colors.base05}";
-        main = "${config.lib.stylix.colors.base00}";
+        text = "bfbdb6";
+        subtext = "565b66";
+        nav-active-text = "59c2ff";
+        main = "0b0e14";
+        sidebar = "0b0e14";
+        player = "0b0e14";
+        card = "0b0e14";
+        shadow = "000000";
+        main-secondary = "0b0e14";
+        button = "475266";
+        button-secondary = "74c7ec";
+        button-active = "59c2ff";
+        button-disabled = "181825";
+        nav-active = "0d1017";
+        play-button = "59c2ff";
+        tab-active = "0b0e14";
+        notification = "0b0e14";
+        notification-error = "0b0e14";
+        playback-bar = "59c2ff";
+        misc = "f4dbd6";
       };
     };
 

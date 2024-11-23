@@ -7,7 +7,7 @@
     firewall = {
       enable = true;
       allowedUDPPorts = [51820];
-      allowedTCPPorts = [22];
+      allowedTCPPorts = [22 80 443];
     };
   };
   services.resolved.enable = true;

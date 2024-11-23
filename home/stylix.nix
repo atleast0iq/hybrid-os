@@ -40,6 +40,7 @@ in {
     targets = {
       hyprlock.enable = false;
       rofi.enable = false;
+      spicetify.enable = false;
     };
   };
 
