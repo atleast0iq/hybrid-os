@@ -32,6 +32,7 @@
     gdb
     clang-tools
     python3
+    nixd
     nil
     go
 

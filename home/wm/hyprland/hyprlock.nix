@@ -59,7 +59,7 @@
     # Profie-Photo
     image {
         monitor =
-        path = ${self}/home/iilyakov/images/iilyakov.jpg
+        path = ${self}/home/images/iilyakov.jpg
         border_size = 2
         border_color = rgba(255, 255, 255, .65)
         size = 130
