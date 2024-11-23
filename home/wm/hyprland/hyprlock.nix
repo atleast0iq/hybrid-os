@@ -4,7 +4,7 @@
     # BACKGROUND
     background {
         monitor =
-        path = ${self}/home/iilyakov/images/fish.webp
+        path = ${self}/home/images/fish.webp
         blur_passes = 2
         contrast = 0.8916
         brightness = 0.6872

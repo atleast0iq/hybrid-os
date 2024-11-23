@@ -56,7 +56,7 @@
         modules = [
           ./disko.nix
           {_module.args.device = "/dev/nvme0n1";}
-          ./nixos/sviblovo
+          ./system
 
           inputs.home-manager.nixosModules.home-manager
           {
@@ -64,7 +64,7 @@
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
             home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-unstable pkgs-2311;};
-            home-manager.users.iilyakov.imports = [./home/iilyakov];
+            home-manager.users.iilyakov.imports = [./home];
           }
         ];
       };
