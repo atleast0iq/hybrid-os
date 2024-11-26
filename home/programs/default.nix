@@ -21,6 +21,7 @@
     eog
     bitwarden-desktop
     vlc
+    lmms
     telegram-desktop
     obs-studio
     libreoffice
