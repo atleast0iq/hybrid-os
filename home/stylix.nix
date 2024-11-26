@@ -18,7 +18,7 @@ in {
     enable = true;
     polarity = "dark";
     image = ./images/fish.webp;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
 
     cursor = {
       package = pkgs.rose-pine-cursor;

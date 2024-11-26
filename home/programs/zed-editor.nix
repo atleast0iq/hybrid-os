@@ -14,7 +14,7 @@
         metrics = false;
       };
 
-      theme = "Ayu Dark";
+      theme = "Ayu Mirage";
       buffer_font_family = "JetBrainsMono Nerd Font";
       buffer_font_size = 16;
       ui_font_family = "JetBrainsMono Nerd Font";

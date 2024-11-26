@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   pkgs-2311,
   lib,
@@ -23,6 +24,7 @@
     telegram-desktop
     obs-studio
     libreoffice
+    obsidian
 
     jetbrains.pycharm-community
     pkgs-2311.jetbrains.clion
@@ -68,25 +70,25 @@
       theme = lib.mkForce spicePkgs.themes.sleek;
       colorScheme = lib.mkForce "custom";
       customColorScheme = {
-        text = "bfbdb6";
-        subtext = "565b66";
-        nav-active-text = "59c2ff";
-        main = "0b0e14";
-        sidebar = "0b0e14";
-        player = "0b0e14";
-        card = "0b0e14";
+        text = "${config.lib.stylix.colors.base05}";
+        subtext = "${config.lib.stylix.colors.base04}";
+        nav-active-text = "${config.lib.stylix.colors.base0D}";
+        main = "${config.lib.stylix.colors.base01}";
+        sidebar = "${config.lib.stylix.colors.base01}";
+        player = "${config.lib.stylix.colors.base01}";
+        card = "${config.lib.stylix.colors.base01}";
         shadow = "000000";
-        main-secondary = "0b0e14";
-        button = "475266";
-        button-secondary = "74c7ec";
-        button-active = "59c2ff";
-        button-disabled = "181825";
-        nav-active = "0d1017";
-        play-button = "59c2ff";
-        tab-active = "0b0e14";
-        notification = "0b0e14";
-        notification-error = "0b0e14";
-        playback-bar = "59c2ff";
+        main-secondary = "${config.lib.stylix.colors.base01}";
+        button = "${config.lib.stylix.colors.base04}";
+        button-secondary = "${config.lib.stylix.colors.base0C}";
+        button-active = "${config.lib.stylix.colors.base0D}";
+        button-disabled = "${config.lib.stylix.colors.base01}";
+        nav-active = "${config.lib.stylix.colors.base01}";
+        play-button = "${config.lib.stylix.colors.base0D}";
+        tab-active = "${config.lib.stylix.colors.base01}";
+        notification = "${config.lib.stylix.colors.base01}";
+        notification-error = "${config.lib.stylix.colors.base01}";
+        playback-bar = "${config.lib.stylix.colors.base0D}";
         misc = "f4dbd6";
       };
     };
