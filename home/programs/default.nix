@@ -15,6 +15,7 @@
   ];
 
   home.packages = with pkgs; [
+    inputs.zen-browser.packages."${system}".specific
     chromium
     qbittorrent
     nautilus
