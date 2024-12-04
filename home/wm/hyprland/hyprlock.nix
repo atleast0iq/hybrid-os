@@ -4,7 +4,7 @@
     # BACKGROUND
     background {
         monitor =
-        path = ${self}/home/images/fish.webp
+        path = ${self}/unmanaged/images/fish.webp
         blur_passes = 2
         contrast = 0.8916
         brightness = 0.6872
@@ -59,7 +59,7 @@
     # Profie-Photo
     image {
         monitor =
-        path = ${self}/home/images/iilyakov.jpg
+        path = ${self}/unmanaged/images/iilyakov.jpg
         border_size = 2
         border_color = rgba(255, 255, 255, .65)
         size = 130

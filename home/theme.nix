@@ -17,7 +17,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./images/fish.webp;
+    image = ./../unmanaged/images/fish.webp;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
 
     cursor = {
