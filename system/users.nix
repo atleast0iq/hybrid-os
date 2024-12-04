@@ -9,6 +9,8 @@
         "input"
         "docker"
         "adbusers"
+        "scanner"
+        "lp"
       ];
       createHome = true;
       home = "/home/iilyakov";

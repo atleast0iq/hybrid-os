@@ -41,6 +41,10 @@
     };
 
     bluetooth.enable = true;
+    sane = {
+      enable = true;
+      extraBackends = with pkgs; [hplipWithPlugin epkowa];
+    };
   };
 
   services.pipewire = {
