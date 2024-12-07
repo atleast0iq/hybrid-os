@@ -9,7 +9,7 @@
 
     bindl = [
       "$mod,delete,exit,"
-      ",switch:on:Lid Switch,exec,hyprlock"
+      ",switch:off:Lid Switch,exec,hyprlock"
 
       ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_SINK@ toggle"
       ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_SOURCE@ toggle"

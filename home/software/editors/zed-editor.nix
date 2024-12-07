@@ -4,7 +4,7 @@
     package = pkgs-unstable.zed-editor;
     extensions = [
       "nix"
-      "justfile"
+      "just"
     ];
     userKeymaps = {};
     userSettings = {

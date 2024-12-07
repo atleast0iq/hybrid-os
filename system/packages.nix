@@ -3,6 +3,10 @@
   pkgs-unstable,
   ...
 }: {
+  imports = [
+    ./steam.nix
+  ];
+
   environment.systemPackages =
     (with pkgs; [
       alejandra
@@ -23,17 +27,6 @@
     hyprland = {
       enable = true;
       xwayland.enable = true;
-    };
-
-    steam = {
-      enable = true;
-
-      extest.enable = true;
-      gamescopeSession.enable = true;
-
-      remotePlay.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-      dedicatedServer.openFirewall = true;
     };
 
     zsh.enable = true;
