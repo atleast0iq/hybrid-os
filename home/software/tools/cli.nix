@@ -19,6 +19,7 @@
     eza
     jq
     libqalculate
+    libnotify
   ];
 
   programs = {

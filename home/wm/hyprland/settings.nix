@@ -64,23 +64,26 @@
         };
       };
 
-      animations = {
-        enabled = true;
+      animation = {
         bezier = [
-          "wind, 0.05, 0.9, 0.1, 1.05"
-          "winIn, 0.1, 1.1, 0.1, 1.1"
-          "winOut, 0.3, -0.3, 0, 1"
-          "liner, 1, 1, 1, 1"
+          "fluent_decel, 0, 0.2, 0.4, 1"
+          "easeOutCirc, 0, 0.55, 0.45, 1"
+          "easeOutCubic, 0.33, 1, 0.68, 1"
+          "easeinoutsine, 0.37, 0, 0.63, 1"
         ];
         animation = [
-          "windows, 1, 3, wind, slide"
-          "windowsIn, 1, 3, winIn, popin"
-          "windowsOut, 1, 2, winOut, slide"
-          "windowsMove, 1, 2, wind, slide"
-          "border, 1, 1, liner"
-          "borderangle, 1, 15, liner, loop"
-          "fade, 1, 5, default"
-          "workspaces, 1, 2, wind"
+          "windowsIn, 1, 1.7, easeOutCubic, slide"
+          "windowsOut, 1, 1.7, easeOutCubic, slide"
+          "windowsMove, 1, 2.5, easeinoutsine, slide"
+
+          "fadeIn, 1, 3, easeOutCubic"
+          "fadeOut, 1, 3, easeOutCubic"
+          "fadeSwitch, 1, 5, easeOutCirc"
+          "fadeShadow, 1, 5, easeOutCirc"
+          "fadeDim, 1, 6, fluent_decel"
+          "border, 1, 2.7, easeOutCirc"
+          "workspaces, 1, 2, fluent_decel, slide"
+          "specialWorkspace, 1, 3, fluent_decel, slidevert"
         ];
       };
 

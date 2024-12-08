@@ -40,7 +40,11 @@
       enable32Bit = true;
     };
 
-    bluetooth.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+
     sane = {
       enable = true;
       extraBackends = with pkgs; [hplipWithPlugin epkowa];

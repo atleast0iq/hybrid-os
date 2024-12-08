@@ -13,6 +13,8 @@ in {
   };
 
   services = {
+    blueman.enable = true;
+
     greetd = {
       enable = true;
       settings = {

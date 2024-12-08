@@ -21,7 +21,8 @@
         mangohud
         libthai
         pango
-        gtk3
+
+        zandronum
       ];
 
       extraLibraries = pkgs: [
