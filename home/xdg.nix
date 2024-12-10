@@ -18,12 +18,12 @@
     mimeApps.enable = true;
     mimeApps.defaultApplications = {
       "inode/directory" = ["org.gnome.Nautilus.desktop"];
-      "default-web-browser" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/about" = ["firefox.desktop"];
-      "x-scheme-handler/unknown" = ["firefox.desktop"];
+      "default-web-browser" = ["zen.desktop"];
+      "text/html" = ["zen.desktop"];
+      "x-scheme-handler/http" = ["zen.desktop"];
+      "x-scheme-handler/https" = ["zen.desktop"];
+      "x-scheme-handler/about" = ["zen.desktop"];
+      "x-scheme-handler/unknown" = ["zen.desktop"];
       "application/pdf" = ["org.pwmt.zathura.desktop"];
     };
   };

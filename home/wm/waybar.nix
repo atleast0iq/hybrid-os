@@ -64,6 +64,7 @@
         "tray" = {
           "icon-size" = 18;
           "spacing" = 20;
+          "reverse-direction" = true;
         };
 
         "hyprland/language" = {

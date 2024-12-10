@@ -17,7 +17,7 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
-    zen-twilight.url = "github:atleast0iq/zen-browser-twilight.nix";
+    zen-browser.url = "github:omarcresp/zen-browser-flake";
   };
 
   outputs = inputs @ {self, ...}: let

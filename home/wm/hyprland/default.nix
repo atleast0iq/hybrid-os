@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./autostart.nix
     ./binds.nix
@@ -10,4 +10,6 @@
     ./settings.nix
     ./xdg-portal.nix
   ];
+
+  home.packages = with pkgs; [hyprpolkitagent];
 }

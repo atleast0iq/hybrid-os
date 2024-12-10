@@ -9,6 +9,6 @@
 
   home.packages = with pkgs; [
     chromium
-    inputs.zen-twilight.packages."${system}".default
+    inputs.zen-browser.packages."${system}".default
   ];
 }
