@@ -6,11 +6,13 @@
 
     windowrulev2 = [
       "noblur,class:^()$,title:^()$"
-      "keepaspectratio,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "noborder,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "float,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "pin,class:^(firefox)$,title:^(Picture-in-Picture)$"
+
+      "keepaspectratio,title:^(Picture-in-Picture)$"
+      "noborder,title:^(Picture-in-Picture)$"
+      "fullscreenstate, -1, 2,title:^(Picture-in-Picture)$"
+      "float,title:^(Picture-in-Picture)$"
+      "pin,title:^(Picture-in-Picture)$"
+
       "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Firefox)$"
       "pin,class:^(firefox)$,title:^(Firefox)$"
       "float,class:^(firefox)$,title:^(Firefox)$"
