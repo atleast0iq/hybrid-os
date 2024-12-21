@@ -13,10 +13,6 @@
       "float,title:^(Picture-in-Picture)$"
       "pin,title:^(Picture-in-Picture)$"
 
-      "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Firefox)$"
-      "pin,class:^(firefox)$,title:^(Firefox)$"
-      "float,class:^(firefox)$,title:^(Firefox)$"
-
       "stayfocused, title:^()$,class:^(steam)$"
       "minsize 1 1, title:^()$,class:^(steam)$"
 

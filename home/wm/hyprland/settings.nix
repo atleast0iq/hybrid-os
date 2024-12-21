@@ -24,6 +24,7 @@
         sensitivity = 0.4;
         touchpad = {
           natural_scroll = 1;
+          scroll_factor = 0.8;
         };
       };
 
@@ -58,7 +59,7 @@
           special = true;
           brightness = 1.0;
           contrast = 1.0;
-          noise = 2.0e-2;
+          noise = 0.2;
           passes = 1;
           size = 5;
         };

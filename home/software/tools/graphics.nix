@@ -13,6 +13,7 @@
       pkgs-2311.jetbrains.clion
       pkgs-2311.jetbrains.goland
       simple-scan
+      inkscape
 
       (lutris.override {
         extraPkgs = pkgs: [
