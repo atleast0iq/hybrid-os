@@ -1,12 +1,19 @@
-{...}: {
+{lib, ...}: {
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
 
     settings = {
-      format = ''
-        $username@$hostname: $directory $character
-      '';
+      # format = ''
+      #   $python $username@$hostname: $directory $character
+      # '';
+
+      format = lib.concatStrings [
+        "$python"
+        "$username@$hostname: "
+        "$directory "
+        "$character"
+      ];
 
       right_format = ''
         $cmd_duration
@@ -30,6 +37,10 @@
       hostname = {
         ssh_only = false;
         format = "[$hostname](bold blue)";
+      };
+
+      python = {
+        format = "\\($virtualenv $version\\) ";
       };
     };
   };
