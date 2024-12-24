@@ -59,7 +59,7 @@
           special = true;
           brightness = 1.0;
           contrast = 1.0;
-          noise = 0.2;
+          noise = 0;
           passes = 1;
           size = 5;
         };

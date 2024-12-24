@@ -4,6 +4,7 @@
     ripgrep
     fd
     cpufetch
+    fastfetch
     wget
     curl
     btop
