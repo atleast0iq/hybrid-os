@@ -91,11 +91,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1735054826,
-        "narHash": "sha256-n1x41VFZFeG144KS1tu7R2qpXlS3kk7iguGO8B1uIuE=",
+        "lastModified": 1735099403,
+        "narHash": "sha256-22NF70bxkMY7/IY2NG0pC7WzgJ0bI67FGSUP37d2mQ8=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "d558686ba23132b3e98329952023d31bb5f7289c",
+        "rev": "5b2c380332cf5a3022fde931d0346e2b868b544e",
         "type": "gitlab"
       },
       "original": {
@@ -281,11 +281,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1735057427,
-        "narHash": "sha256-itDxXLWozctWBSGiNMB0QhZTZr02TUCCXgBka0Zumpg=",
+        "lastModified": 1735140310,
+        "narHash": "sha256-NuhGCcev/etYS4qAsh905St1Co0tK8FjgGDovUeCVjo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "cf56aed31d168cf64822ee8f24fc6f6946d61ce2",
+        "rev": "bb881a68c1174d38ee466a35f5e23d03a938b186",
         "type": "github"
       },
       "original": {
@@ -345,11 +345,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1734875076,
-        "narHash": "sha256-Pzyb+YNG5u3zP79zoi8HXYMs15Q5dfjDgwCdUI5B0nY=",
+        "lastModified": 1734991663,
+        "narHash": "sha256-8T660guvdaOD+2/Cj970bWlQwAyZLKrrbkhYOFcY1YE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1807c2b91223227ad5599d7067a61665c52d1295",
+        "rev": "6c90912761c43e22b6fb000025ab96dd31c971ff",
         "type": "github"
       },
       "original": {
@@ -410,11 +410,11 @@
     "potatofox": {
       "flake": false,
       "locked": {
-        "lastModified": 1734398906,
-        "narHash": "sha256-NaCz6GsHJTBqvZiXVBwCSIBym2q2DcSjKQbT2mX+do8=",
+        "lastModified": 1735080742,
+        "narHash": "sha256-nPenEUptf9ymVIfet5lHZfXSMwuWzozigpQRcDqNTq4=",
         "ref": "refs/heads/main",
-        "rev": "56df7fd6ecba5981f39a94f7628a19cc22839a68",
-        "revCount": 375,
+        "rev": "0949d70379611242b43f67eb8e67d5279ff369f4",
+        "revCount": 377,
         "type": "git",
         "url": "https://codeberg.org/awwpotato/PotatoFox"
       },
@@ -444,11 +444,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1735013792,
-        "narHash": "sha256-kMSd7swqmksHIKh3CRTKTVkKDhqe68JKXkAg7GmAX4s=",
+        "lastModified": 1735100190,
+        "narHash": "sha256-H3cFMvOmryQz78UwrpelVg+3sBZjaVWgJXTvT2wWGGw=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "0b442bc3b6e796565c126ab720429650269e46ec",
+        "rev": "628d1d47b4af5aa53fa6bcbb0c38b7a4d921f0de",
         "type": "github"
       },
       "original": {

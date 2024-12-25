@@ -4,10 +4,6 @@
     enableZshIntegration = true;
 
     settings = {
-      # format = ''
-      #   $python $username@$hostname: $directory $character
-      # '';
-
       format = lib.concatStrings [
         "$python"
         "$username@$hostname: "
