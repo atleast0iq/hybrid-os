@@ -10,8 +10,8 @@
   ];
 
   boot = {
-    kernelPackages = pkgs-unstable.linuxPackages_xanmod_stable;
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback pkgs-unstable.linuxKernel.packages.linux_xanmod_stable.amneziawg];
+    kernelPackages = pkgs-unstable.linuxPackages_latest;
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback pkgs-unstable.linuxPackages_latest.amneziawg];
     kernelModules = [
       "v4l2loopback"
       "kvm-amd"
