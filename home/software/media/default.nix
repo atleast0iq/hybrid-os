@@ -10,6 +10,9 @@
     lmms
     obs-studio
     libreoffice
+
+    # games
+    mindustry-wayland
   ];
 
   programs = {

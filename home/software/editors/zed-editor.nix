@@ -1,7 +1,7 @@
-{pkgs-master, ...}: {
+{pkgs-unstable, ...}: {
   programs.zed-editor = {
     enable = true;
-    package = pkgs-master.zed-editor;
+    package = pkgs-unstable.zed-editor;
     extensions = [
       "nix"
       "just"
