@@ -33,5 +33,6 @@
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
+      vesktop
     ]);
 }

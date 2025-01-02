@@ -10,6 +10,7 @@
     lmms
     obs-studio
     libreoffice
+    gimp
 
     # games
     mindustry-wayland
