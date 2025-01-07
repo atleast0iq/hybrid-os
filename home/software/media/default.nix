@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
     ./spotify.nix
   ];
@@ -11,6 +15,7 @@
     obs-studio
     libreoffice
     gimp
+    pkgs-unstable.video-downloader
 
     # games
     mindustry-wayland
