@@ -21,6 +21,7 @@
     jq
     libqalculate
     libnotify
+    yt-dlp
   ];
 
   programs = {

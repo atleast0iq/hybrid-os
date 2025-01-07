@@ -31,7 +31,7 @@
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
-            "*" = 5;
+            "*" = 6;
           };
         };
 
