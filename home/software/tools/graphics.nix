@@ -27,8 +27,6 @@
           attr
         ];
       })
-
-      bottles
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
