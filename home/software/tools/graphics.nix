@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  pkgs-2311,
   ...
 }: {
   home.packages =
