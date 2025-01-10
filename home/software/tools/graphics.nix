@@ -9,9 +9,6 @@
       nautilus
       bitwarden-desktop
       obsidian
-      jetbrains.pycharm-community
-      pkgs-2311.jetbrains.clion
-      pkgs-2311.jetbrains.goland
       simple-scan
 
       (lutris.override {

@@ -2,7 +2,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-2311.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     disko.url = "github:nix-community/disko";
 
@@ -32,16 +31,11 @@
       inherit system;
       config.allowUnfree = true;
     };
-
-    pkgs-2311 = import inputs.nixpkgs-2311 {
-      inherit system;
-      config.allowUnfree = true;
-    };
   in {
     nixosConfigurations = {
       sviblovo = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit self inputs pkgs pkgs-unstable pkgs-2311;};
+        specialArgs = {inherit self inputs pkgs pkgs-unstable;};
 
         modules = [
           ./disko.nix
@@ -53,7 +47,7 @@
             home-manager.verbose = true;
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
-            home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-unstable pkgs-2311;};
+            home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-unstable;};
             home-manager.users.iilyakov.imports = [./home];
           }
         ];
