@@ -22,6 +22,9 @@
     libqalculate
     libnotify
     yt-dlp
+    far2l
+    mc
+    yazi
   ];
 
   programs = {
