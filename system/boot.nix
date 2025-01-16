@@ -1,9 +1,30 @@
 {
+  config,
   pkgs,
+  pkgs-unstable,
   lib,
   ...
 }: {
   boot = {
+    kernelPackages = pkgs-unstable.linuxPackages_6_6;
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback pkgs-unstable.linuxPackages_6_6.amneziawg];
+    kernelModules = [
+      "v4l2loopback"
+      "kvm-amd"
+    ];
+
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+      ];
+      kernelModules = [
+        "nvme"
+        "xhci_pci"
+        "amdgpu"
+      ];
+    };
+
     loader = {
       efi = {
         canTouchEfiVariables = true;

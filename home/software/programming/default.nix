@@ -1,5 +1,6 @@
 {...}: {
   imports = [
-    ./foot.nix
+    ./editors
+    ./languages
   ];
 }

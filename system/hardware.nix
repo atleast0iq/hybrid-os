@@ -1,34 +1,11 @@
 {
-  config,
   pkgs,
-  pkgs-unstable,
   modulesPath,
   ...
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
-
-  boot = {
-    kernelPackages = pkgs-unstable.linuxPackages_6_6;
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback pkgs-unstable.linuxPackages_6_6.amneziawg];
-    kernelModules = [
-      "v4l2loopback"
-      "kvm-amd"
-    ];
-
-    initrd = {
-      availableKernelModules = [
-        "nvme"
-        "xhci_pci"
-      ];
-      kernelModules = [
-        "nvme"
-        "xhci_pci"
-        "amdgpu"
-      ];
-    };
-  };
 
   hardware = {
     cpu.amd.updateMicrocode = true;

@@ -1,9 +1,10 @@
 {...}: {
   imports = [
-    ./browsers
-    ./editors
-    ./media
+    ./programming
     ./terminal
-    ./tools
+    ./browsers.nix
+    ./games.nix
+    ./graphics.nix
+    ./spotify.nix
   ];
 }

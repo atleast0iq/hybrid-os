@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./languages
     ./software
     ./wm
     ./services.nix

@@ -37,6 +37,7 @@
       "$mod,Return,exec,foot"
       "$mod SHIFT,f,exec,firefox"
       "$mod SHIFT,s,exec,slurp | grim -g - - | wl-copy"
+      ",Print,exec,grim - | wl-copy"
       "$mod,d,exec,rofi -show drun"
 
       "$mod,h,movefocus,l"

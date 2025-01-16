@@ -17,11 +17,9 @@ in {
 
     greetd = {
       enable = true;
-      settings = {
-        default_session = {
-          command = "${tuigreet} --time --remember --cmd ${session}";
-          user = "greeter";
-        };
+      settings.default_session = {
+        command = "${tuigreet} --time --remember --cmd ${session}";
+        user = "greeter";
       };
     };
 
@@ -47,14 +45,12 @@ in {
     udisks2.enable = true;
   };
 
-  virtualisation = {
-    docker = {
-      enable = true;
+  virtualisation.docker = {
+    enable = true;
 
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
     };
   };
 }
