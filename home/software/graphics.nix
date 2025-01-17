@@ -16,14 +16,18 @@
       obs-studio
       libreoffice
       gimp
-      pkgs-unstable.video-downloader
+      bottles
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
       vesktop
+      video-downloader
     ]);
 
   programs = {
-    zathura.enable = true;
+    zathura = {
+      enable = true;
+      options.selection-clipboard = "clipboard";
+    };
   };
 }

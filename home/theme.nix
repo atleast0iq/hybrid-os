@@ -41,6 +41,7 @@ in {
       hyprlock.enable = false;
       rofi.enable = false;
       spicetify.enable = false;
+      vscode.enable = false;
     };
   };
 
