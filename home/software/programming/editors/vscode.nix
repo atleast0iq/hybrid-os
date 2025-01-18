@@ -1,11 +1,11 @@
-{pkgs, ...}: {
+{pkgs-unstable, ...}: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium-fhs;
+    package = pkgs-unstable.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs-unstable.vscode-extensions; [
       vscode-icons-team.vscode-icons
       ms-vscode.cpptools
       golang.go
@@ -30,7 +30,7 @@
       "workbench.iconTheme" = "vscode-icons";
       "workbench.colorTheme" = "Ayu Mirage Bordered";
       "workbench.statusBar.visible" = false;
-      "workbench.activityBar.visible" = false;
+      "workbench.activityBar.location" = "hidden";
       "breadcrumbs.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "files.autoSave" = "onFocusChange";
