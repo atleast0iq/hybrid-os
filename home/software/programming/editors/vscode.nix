@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs.vscodium-fhs;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
@@ -32,10 +32,7 @@
       "workbench.statusBar.visible" = false;
       "workbench.activityBar.visible" = false;
       "breadcrumbs.enabled" = false;
-
       "window.menuBarVisibility" = "toggle";
-      "window.titleBarStyle" = "custom";
-
       "files.autoSave" = "onFocusChange";
       "files.insertFinalNewline" = true;
     };
