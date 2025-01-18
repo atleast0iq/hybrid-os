@@ -14,36 +14,30 @@
     ];
 
     userSettings = {
-      extensions.autoCheckUpdates = false;
-      update.mode = "none";
-      files.autoSave = "onFocusChange";
+      "extensions.autoUpdate" = false;
 
-      editor = {
-        fontFamily = "JetBrainsMono Nerd Font";
-        fontSize = 14;
-        fontWeight = 400;
-        fontLigatures = true;
-        fontVariations = false;
-        minimap.enabled = false;
-        hideCursorInOverviewRuler = true;
-        overviewRulerBorder = false;
-        scrollbar.horizontal = "hidden";
-        scrollbar.vertical = "hidden";
-      };
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "editor.fontSize" = 14;
+      "editor.fontWeight" = 400;
+      "editor.fontLigatures" = true;
+      "editor.fontVariations" = false;
+      "editor.minimap.enabled" = false;
+      "editor.hideCursorInOverviewRuler" = true;
+      "editor.overviewRulerBorder" = false;
+      "editor.scrollbar.horizontal" = "hidden";
+      "editor.scrollbar.vertical" = "hidden";
 
-      workbench = {
-        iconTheme = "vscode-icons";
-        colorTheme = "Ayu Mirage Bordered";
-        statusBar.visible = false;
-        activityBar.visible = false;
-      };
+      "workbench.iconTheme" = "vscode-icons";
+      "workbench.colorTheme" = "Ayu Mirage Bordered";
+      "workbench.statusBar.visible" = false;
+      "workbench.activityBar.visible" = false;
+      "breadcrumbs.enabled" = false;
 
-      breadcrumbs.enabled = false;
+      "window.menuBarVisibility" = "toggle";
+      "window.titleBarStyle" = "custom";
 
-      window = {
-        menuBarVisibility = "toggle";
-        zoomLevel = 1;
-      };
+      "files.autoSave" = "onFocusChange";
+      "files.insertFinalNewline" = true;
     };
   };
 }
