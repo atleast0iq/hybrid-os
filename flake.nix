@@ -1,12 +1,12 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.11";
 
     disko.url = "github:nix-community/disko";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
-    stylix.url = "github:danth/stylix/release-24.11";
+    home-manager.url = "github:nix-community/home-manager/master";
+    stylix.url = "github:danth/stylix/master";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     zen-browser.url = "github:youwen5/zen-browser-flake";
@@ -20,7 +20,7 @@
       config.allowUnfree = true;
     };
 
-    pkgs-unstable = import inputs.nixpkgs-unstable {
+    pkgs-stable = import inputs.nixpkgs-stable {
       inherit system;
       config.allowUnfree = true;
     };
@@ -28,7 +28,7 @@
     nixosConfigurations = {
       sviblovo = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit self inputs pkgs pkgs-unstable;};
+        specialArgs = {inherit self inputs pkgs pkgs-stable;};
 
         modules = [
           ./disko.nix
@@ -40,7 +40,7 @@
             home-manager.verbose = true;
             home-manager.backupFileExtension = "homeManagerBackupFileExtension";
             home-manager.useGlobalPkgs = true;
-            home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-unstable;};
+            home-manager.extraSpecialArgs = {inherit self inputs pkgs pkgs-stable;};
             home-manager.users.iilyakov.imports = [./home];
           }
         ];

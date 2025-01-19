@@ -1,10 +1,10 @@
 {
-  pkgs,
+  pkgs-stable,
   lib,
   ...
 }: {
   nix = {
-    package = pkgs.nixVersions.stable;
+    package = pkgs-stable.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
 
     settings = {

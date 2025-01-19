@@ -1,11 +1,11 @@
 {
-  pkgs,
+  pkgs-stable,
   inputs,
   ...
 }: let
   default_font = {
     name = "JetBrainsMono Nerd Font";
-    package = pkgs.nerdfonts.override {
+    package = pkgs-stable.nerdfonts.override {
       fonts = [
         "JetBrainsMono"
       ];
@@ -18,10 +18,10 @@ in {
     enable = true;
     polarity = "dark";
     image = ./../unmanaged/images/fish.webp;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
+    base16Scheme = "${pkgs-stable.base16-schemes}/share/themes/ayu-mirage.yaml";
 
     cursor = {
-      package = pkgs.rose-pine-cursor;
+      package = pkgs-stable.rose-pine-cursor;
       name = "BreezeX-RosePine-Linux";
       size = 24;
     };
@@ -49,7 +49,7 @@ in {
     enable = true;
 
     iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
+      package = pkgs-stable.rose-pine-icon-theme;
       name = "rose-pine";
     };
 

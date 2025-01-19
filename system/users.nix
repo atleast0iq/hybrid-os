@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs-stable, ...}: {
   users = {
     users.iilyakov = {
       isNormalUser = true;
@@ -14,7 +14,7 @@
       ];
       createHome = true;
       home = "/home/iilyakov";
-      shell = pkgs.zsh;
+      shell = pkgs-stable.zsh;
     };
   };
 }

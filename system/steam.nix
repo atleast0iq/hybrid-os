@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{pkgs-stable, ...}: {
   programs.steam = {
     enable = true;
-    package = pkgs.steam.override {
+    package = pkgs-stable.steam.override {
       extraLibraries = pkgs:
         with pkgs; [
           xorg.libXcursor
@@ -22,7 +22,7 @@
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
 
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs-stable; [
       pango
       libthai
       harfbuzz
@@ -31,10 +31,10 @@
       pkgsi686Linux.gperftools
     ];
 
-    extraCompatPackages = [pkgs.proton-ge-bin];
+    extraCompatPackages = [pkgs-stable.proton-ge-bin];
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs-stable; [
     mangohud
     gamemode
   ];

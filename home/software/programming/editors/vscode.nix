@@ -1,11 +1,11 @@
-{pkgs-unstable, ...}: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    package = pkgs-unstable.vscodium;
+    package = pkgs.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
-    extensions = with pkgs-unstable.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
       vscode-icons-team.vscode-icons
       ms-vscode.cpptools
       golang.go

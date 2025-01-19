@@ -12,7 +12,6 @@
     extraConfig = {
       modi = "drun";
       show-icons = true;
-      font = "JetBrainsMono Nerd Font Mono 12";
       drun-display-format = "{icon} {name}";
     };
 
@@ -118,7 +117,6 @@
       };
       "element-text" = {
         background-color = lib.mkForce (mkLiteral "transparent");
-        font = "JetBrainsMono Nerd Font Mono 12";
         text-color = lib.mkForce (mkLiteral "inherit");
         cursor = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";

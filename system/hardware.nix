@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgs-stable,
   modulesPath,
   ...
 }: {
@@ -24,7 +24,7 @@
 
     sane = {
       enable = true;
-      extraBackends = with pkgs; [hplipWithPlugin epkowa];
+      extraBackends = with pkgs-stable; [hplipWithPlugin epkowa];
     };
   };
 
@@ -37,7 +37,7 @@
 
   services.printing = {
     enable = true;
-    drivers = with pkgs; [
+    drivers = with pkgs-stable; [
       gutenprintBin
       canon-cups-ufr2
       canon-capt

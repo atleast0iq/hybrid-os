@@ -1,5 +1,5 @@
-{pkgs, ...}: let
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+{pkgs-stable, ...}: let
+  tuigreet = "${pkgs-stable.greetd.tuigreet}/bin/tuigreet";
   session = "Hyprland";
 in {
   systemd.services.greetd.serviceConfig = {

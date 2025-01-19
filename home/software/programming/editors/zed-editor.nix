@@ -1,7 +1,11 @@
-{pkgs-unstable, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   programs.zed-editor = {
     enable = true;
-    package = pkgs-unstable.zed-editor;
+    package = pkgs.zed-editor;
     extensions = [
       "nix"
       "just"
@@ -14,11 +18,10 @@
         metrics = false;
       };
 
-      theme = "Ayu Mirage";
-      buffer_font_family = "JetBrainsMono Nerd Font";
-      buffer_font_size = 16;
-      ui_font_family = "JetBrainsMono Nerd Font";
-      ui_font_size = 16;
+      buffer_font_family = lib.mkForce "JetBrainsMono Nerd Font";
+      buffer_font_size = lib.mkForce 16;
+      ui_font_family = lib.mkForce "JetBrainsMono Nerd Font";
+      ui_font_size = lib.mkForce 16;
 
       autosave = "on_focus_change";
 
