@@ -17,7 +17,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./../unmanaged/images/fish.webp;
+    image = ./../unmanaged/images/metro.jpg;
     base16Scheme = "${pkgs-stable.base16-schemes}/share/themes/ayu-mirage.yaml";
 
     cursor = {
