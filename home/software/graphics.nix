@@ -11,7 +11,6 @@
     obs-studio
     libreoffice
     gimp
-    bottles
     telegram-desktop
     vesktop
     video-downloader

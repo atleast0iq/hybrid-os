@@ -3,10 +3,6 @@
   pkgs-stable,
   ...
 }: {
-  imports = [
-    ./steam.nix
-  ];
-
   environment.systemPackages =
     (with pkgs-stable; [
       alejandra
