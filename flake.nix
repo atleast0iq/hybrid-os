@@ -9,7 +9,7 @@
     stylix.url = "github:danth/stylix/release-24.11";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.url = "github:youwen5/zen-browser-flake/5a697becc1cdcbc8943d9ee6023dfa5922214a5d";
   };
 
   outputs = inputs @ {self, ...}: let

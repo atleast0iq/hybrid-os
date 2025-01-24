@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./amnezia-vpn.nix
     ./boot.nix
     ./hardware.nix
     ./locale.nix

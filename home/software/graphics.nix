@@ -20,6 +20,7 @@
       telegram-desktop
       vesktop
       video-downloader
+      amnezia-vpn
     ]);
 
   programs = {

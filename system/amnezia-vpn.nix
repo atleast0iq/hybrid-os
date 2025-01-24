@@ -4,6 +4,9 @@
   services.resolved.enable = true;
   systemd = {
     packages = [pkgs-unstable.amnezia-vpn];
-    services."AmneziaVPN".wantedBy = ["multi-user.target"];
+    services."AmneziaVPN" = {
+      enable = true;
+      wantedBy = ["multi-user.target"];
+    };
   };
 }
