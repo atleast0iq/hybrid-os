@@ -1,25 +1,10 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}: {
-  imports = [
-    ./steam.nix
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    alejandra
+    git
+    just
+    neovim
   ];
-
-  environment.systemPackages =
-    (with pkgs; [
-      alejandra
-      git
-      just
-      neovim
-    ])
-    ++ (
-      with pkgs-unstable; [
-        amneziawg-go
-        amneziawg-tools
-      ]
-    );
 
   programs = {
     adb.enable = true;

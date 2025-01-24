@@ -12,17 +12,14 @@
       qbittorrent
       eog
       vlc
-      lmms
       obs-studio
       libreoffice
       gimp
-      bottles
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
       vesktop
       video-downloader
-      amnezia-vpn
     ]);
 
   programs = {
