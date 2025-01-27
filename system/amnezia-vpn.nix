@@ -1,12 +1,13 @@
-{pkgs-unstable, ...}: {
-  environment.systemPackages = [pkgs-unstable.amnezia-vpn];
-  services.dbus.packages = [pkgs-unstable.amnezia-vpn];
+{ pkgs-unstable, ... }:
+{
+  environment.systemPackages = [ pkgs-unstable.amnezia-vpn ];
+  services.dbus.packages = [ pkgs-unstable.amnezia-vpn ];
   services.resolved.enable = true;
   systemd = {
-    packages = [pkgs-unstable.amnezia-vpn];
+    packages = [ pkgs-unstable.amnezia-vpn ];
     services."AmneziaVPN" = {
       enable = true;
-      wantedBy = ["multi-user.target"];
+      wantedBy = [ "multi-user.target" ];
     };
   };
 }

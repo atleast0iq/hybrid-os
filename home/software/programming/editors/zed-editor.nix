@@ -1,4 +1,5 @@
-{pkgs-unstable, ...}: {
+{ pkgs-unstable, ... }:
+{
   programs.zed-editor = {
     enable = true;
     package = pkgs-unstable.zed-editor;
@@ -6,7 +7,7 @@
       "nix"
       "just"
     ];
-    userKeymaps = {};
+    userKeymaps = { };
     userSettings = {
       auto_update = false;
       telemetry = {

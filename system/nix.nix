@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   nix = {
     package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
@@ -10,7 +11,7 @@
     settings = {
       auto-optimise-store = true;
 
-      trusted-users = ["iilyakov"];
+      trusted-users = [ "iilyakov" ];
       substituters = [
         "https://cache.nixos.org"
         "https://nix-community.cachix.org"

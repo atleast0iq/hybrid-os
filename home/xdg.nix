@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   xdg = {
     enable = true;
 
@@ -17,14 +18,14 @@
 
     mimeApps.enable = true;
     mimeApps.defaultApplications = {
-      "inode/directory" = ["org.gnome.Nautilus.desktop"];
-      "default-web-browser" = ["zen.desktop"];
-      "text/html" = ["zen.desktop"];
-      "x-scheme-handler/http" = ["zen.desktop"];
-      "x-scheme-handler/https" = ["zen.desktop"];
-      "x-scheme-handler/about" = ["zen.desktop"];
-      "x-scheme-handler/unknown" = ["zen.desktop"];
-      "application/pdf" = ["org.pwmt.zathura.desktop"];
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+      "default-web-browser" = [ "zen.desktop" ];
+      "text/html" = [ "zen.desktop" ];
+      "x-scheme-handler/http" = [ "zen.desktop" ];
+      "x-scheme-handler/https" = [ "zen.desktop" ];
+      "x-scheme-handler/about" = [ "zen.desktop" ];
+      "x-scheme-handler/unknown" = [ "zen.desktop" ];
+      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
     };
   };
 }

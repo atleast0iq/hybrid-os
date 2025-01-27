@@ -1,7 +1,9 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   session = "Hyprland";
-in {
+in
+{
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
     StandardInput = "tty";

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./programming
     ./terminal

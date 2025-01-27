@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   programs.waybar = {
     enable = true;
 
@@ -19,7 +20,7 @@
           "hyprland/workspaces"
           "hyprland/window"
         ];
-        "modules-center" = ["clock"];
+        "modules-center" = [ "clock" ];
         "modules-right" = [
           "tray"
           "hyprland/language"

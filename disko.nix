@@ -2,8 +2,9 @@
   inputs,
   device ? throw "no device",
   ...
-}: {
-  imports = [inputs.disko.nixosModules.default];
+}:
+{
+  imports = [ inputs.disko.nixosModules.default ];
   disko.devices = {
     disk = {
       main = {

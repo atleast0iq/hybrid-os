@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./software
     ./wm
@@ -12,7 +13,7 @@
 
     username = "iilyakov";
     homeDirectory = "/home/iilyakov";
-    sessionPath = ["$HOME/.local/bin"];
+    sessionPath = [ "$HOME/.local/bin" ];
   };
 
   programs.home-manager.enable = true;

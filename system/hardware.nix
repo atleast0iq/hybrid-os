@@ -2,7 +2,8 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -11,6 +12,7 @@
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
     amdgpu.initrd.enable = true;
+    opentabletdriver.enable = true;
 
     graphics = {
       enable = true;
@@ -24,7 +26,10 @@
 
     sane = {
       enable = true;
-      extraBackends = with pkgs; [hplipWithPlugin epkowa];
+      extraBackends = with pkgs; [
+        hplipWithPlugin
+        epkowa
+      ];
     };
   };
 

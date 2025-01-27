@@ -1,8 +1,9 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
-    layerrule = [];
+    layerrule = [ ];
 
-    windowrule = [];
+    windowrule = [ ];
 
     windowrulev2 = [
       "noblur,class:^()$,title:^()$"

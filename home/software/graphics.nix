@@ -2,7 +2,8 @@
   pkgs,
   pkgs-unstable,
   ...
-}: {
+}:
+{
   home.packages =
     (with pkgs; [
       nautilus
@@ -15,6 +16,7 @@
       obs-studio
       libreoffice
       gimp
+      xournalpp
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
