@@ -4,12 +4,19 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     stylix.url = "github:danth/stylix/release-24.11";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix/38f2062e9d3520dd850fe84fc38840d994467443";
+    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+
     zen-browser.url = "github:youwen5/zen-browser-flake/5a697becc1cdcbc8943d9ee6023dfa5922214a5d";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
