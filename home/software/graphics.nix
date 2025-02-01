@@ -17,6 +17,23 @@
       libreoffice
       gimp
       xournalpp
+
+      mindustry-wayland
+      (lutris.override {
+        extraPkgs = pkgs: [
+          wineWowPackages.waylandFull
+          attr
+          gamescope
+          mangohud
+          libthai
+          pango
+          zandronum
+        ];
+
+        extraLibraries = pkgs: [
+          attr
+        ];
+      })
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop

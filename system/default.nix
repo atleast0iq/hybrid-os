@@ -10,6 +10,7 @@
     ./nix.nix
     ./packages.nix
     ./services.nix
+    ./steam.nix
     ./users.nix
   ];
 
