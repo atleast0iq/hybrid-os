@@ -9,6 +9,7 @@
     extensions = with pkgs-unstable.vscode-extensions; [
       vscode-icons-team.vscode-icons
       ms-vscode.cpptools
+      ms-python.python
       golang.go
       bbenoist.nix
       teabyii.ayu

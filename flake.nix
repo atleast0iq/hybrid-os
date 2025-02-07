@@ -15,7 +15,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix/38f2062e9d3520dd850fe84fc38840d994467443";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    zen-browser.url = "github:youwen5/zen-browser-flake/5a697becc1cdcbc8943d9ee6023dfa5922214a5d";
+    zen-browser.url = "github:leonhazen/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
