@@ -3,39 +3,67 @@
   inputs,
   ...
 }:
-let
-  default_font = {
-    name = "JetBrainsMono Nerd Font";
-    package = pkgs.nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-      ];
-    };
-  };
-in
 {
   imports = [ inputs.stylix.homeManagerModules.stylix ];
 
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./../unmanaged/images/fish.webp;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
+    image = ./../unmanaged/images/backgrounds/moscow.png;
+    base16Scheme = {
+      base00 = "000000"; # base
+      base01 = "000000"; # mantle
+      base02 = "313244"; # surface0
+      base03 = "45475a"; # surface1
+      base04 = "585b70"; # surface2
+      base05 = "cdd6f4"; # text
+      base06 = "f5e0dc"; # rosewater
+      base07 = "b4befe"; # lavender
+      base08 = "f38ba8"; # red
+      base09 = "fab387"; # peach
+      base0A = "f9e2af"; # yellow
+      base0B = "a6e3a1"; # green
+      base0C = "94e2d5"; # teal
+      base0D = "89b4fa"; # blue
+      base0E = "cba6f7"; # mauve
+      base0F = "f2cdcd"; # flamingo
+    };
 
     cursor = {
-      package = pkgs.rose-pine-cursor;
-      name = "BreezeX-RosePine-Linux";
-      size = 24;
+      name = "WhiteSur-cursors";
+      package = pkgs.whitesur-cursors;
+      size = 22;
     };
 
-    fonts = {
-      monospace = default_font;
-      serif = default_font;
-      sansSerif = default_font;
-      emoji = default_font;
-      sizes.applications = 15;
-      sizes.terminal = 15;
+    iconTheme = {
+      enable = true;
+      package = pkgs.whitesur-icon-theme.override {
+        alternativeIcons = true;
+        boldPanelIcons = true;
+      };
+      dark = "WhiteSur-dark";
+      light = "WhiteSur-light";
     };
+
+    fonts =
+      let
+        default = {
+          name = "JetBrainsMono Nerd Font";
+          package = pkgs.nerdfonts.override {
+            fonts = [
+              "JetBrainsMono"
+            ];
+          };
+        };
+      in
+      {
+        monospace = default;
+        serif = default;
+        sansSerif = default;
+        emoji = default;
+        sizes.applications = 15;
+        sizes.terminal = 15;
+      };
 
     opacity.terminal = 0.9;
 
@@ -49,14 +77,6 @@ in
 
   gtk = {
     enable = true;
-
-    iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine";
-    };
-
-    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
-    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
 
   qt = {

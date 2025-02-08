@@ -5,7 +5,7 @@
     # BACKGROUND
     background {
         monitor =
-        path = ${self}/unmanaged/images/fish.webp
+        path = ${self}/unmanaged/images/backgrounds/moscow.png
         blur_passes = 2
         contrast = 0.8916
         brightness = 0.6872
