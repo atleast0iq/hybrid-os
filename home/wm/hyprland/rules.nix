@@ -24,7 +24,8 @@
       "float,title:^(Open File)$"
       "float,title:^(Open Folder)$"
 
-      "opacity 0.9 0.9,class:^(org.pwmt.zathura)$"
+      "opacity 0.9 0.9 1.0,class:^(org.pwmt.zathura)$"
+      "opacity 0.9 0.9 1.0,class:^(VSCodium)$"
     ];
   };
 }

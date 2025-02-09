@@ -7,12 +7,12 @@
     enableUpdateCheck = false;
 
     extensions = with pkgs-unstable.vscode-extensions; [
-      vscode-icons-team.vscode-icons
       ms-vscode.cpptools
       ms-python.python
       golang.go
       bbenoist.nix
-      teabyii.ayu
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
     ];
 
     userSettings = {
@@ -29,14 +29,24 @@
       "editor.scrollbar.horizontal" = "hidden";
       "editor.scrollbar.vertical" = "hidden";
 
-      "workbench.iconTheme" = "vscode-icons";
-      "workbench.colorTheme" = "Ayu Mirage Bordered";
       "workbench.statusBar.visible" = false;
       "workbench.activityBar.location" = "hidden";
       "breadcrumbs.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "files.autoSave" = "onFocusChange";
       "files.insertFinalNewline" = true;
+
+      "workbench.iconTheme" = "catppuccin-mocha";
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      "catppuccin.workbenchMode" = "flat";
+      "catppuccin.extraBordersEnabled" = true;
+      "catppuccin.colorOverrides" = {
+        "all" = {
+          "base" = "#000000";
+          "mantle" = "#010101";
+          "crust" = "#020202";
+        };
+      };
     };
   };
 }

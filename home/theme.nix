@@ -65,7 +65,7 @@
         sizes.terminal = 15;
       };
 
-    opacity.terminal = 0.9;
+    opacity.terminal = 0.8;
 
     targets = {
       hyprlock.enable = false;
