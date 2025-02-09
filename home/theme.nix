@@ -45,25 +45,21 @@
       light = "WhiteSur-light";
     };
 
-    fonts =
-      let
-        default = {
-          name = "JetBrainsMono Nerd Font";
-          package = pkgs.nerdfonts.override {
-            fonts = [
-              "JetBrainsMono"
-            ];
-          };
+    fonts = rec {
+      serif = monospace;
+      sansSerif = monospace;
+      monospace = {
+        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerdfonts.override {
+          fonts = [
+            "JetBrainsMono"
+          ];
         };
-      in
-      {
-        monospace = default;
-        serif = default;
-        sansSerif = default;
-        emoji = default;
-        sizes.applications = 15;
-        sizes.terminal = 15;
       };
+      emoji = monospace;
+      sizes.applications = 15;
+      sizes.terminal = 15;
+    };
 
     opacity.terminal = 0.8;
 
