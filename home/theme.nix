@@ -46,17 +46,15 @@
     };
 
     fonts = rec {
-      serif = monospace;
-      sansSerif = monospace;
-      monospace = {
-        name = "JetBrainsMono Nerd Font";
-        package = pkgs.nerdfonts.override {
-          fonts = [
-            "JetBrainsMono"
-          ];
-        };
+      serif = {
+        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
+        name = "SFProDisplay Nerd Font";
       };
-      emoji = monospace;
+      sansSerif = serif;
+      monospace = {
+        package = inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd;
+        name = "SFMono Nerd Font";
+      };
       sizes.applications = 15;
       sizes.terminal = 15;
     };

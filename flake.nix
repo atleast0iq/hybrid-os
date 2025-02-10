@@ -17,6 +17,8 @@
 
     zen-browser.url = "github:leonhazen/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+
+    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
   };
 
   outputs =

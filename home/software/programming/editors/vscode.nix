@@ -18,7 +18,7 @@
     userSettings = {
       "extensions.autoUpdate" = false;
 
-      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "editor.fontFamily" = "SFMono Nerd Font";
       "editor.fontSize" = 14;
       "editor.fontWeight" = 400;
       "editor.fontLigatures" = true;

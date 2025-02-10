@@ -18,6 +18,7 @@
       gimp
       xournalpp
 
+      adwsteamgtk
       mindustry-wayland
       (lutris.override {
         extraPkgs = pkgs: [
