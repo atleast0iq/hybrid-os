@@ -20,6 +20,7 @@
 
       adwsteamgtk
       mindustry-wayland
+      bottles
       (lutris.override {
         extraPkgs = pkgs: [
           wineWowPackages.waylandFull
