@@ -15,7 +15,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    zen-browser.url = "github:leonhazen/zen-browser-flake";
+    zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
