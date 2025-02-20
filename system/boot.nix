@@ -7,10 +7,10 @@
 }:
 {
   boot = {
-    kernelPackages = pkgs-unstable.linuxPackages_6_6;
+    kernelPackages = pkgs-unstable.linuxPackages_xanmod_stable;
     extraModulePackages = with config.boot.kernelPackages; [
       v4l2loopback
-      pkgs-unstable.linuxPackages_6_6.amneziawg
+      pkgs-unstable.linuxPackages_xanmod_stable.amneziawg
     ];
     kernelModules = [
       "v4l2loopback"
