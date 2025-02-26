@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-73cf49b.url = "github:NixOS/nixpkgs/73cf49b8ad837ade2de76f87eb53fc85ed5d4680";
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
@@ -35,6 +36,11 @@
         inherit system;
         config.allowUnfree = true;
       };
+
+      pkgs-73cf49b = import inputs.nixpkgs-73cf49b {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in
     {
       nixosConfigurations = {
@@ -46,6 +52,7 @@
               inputs
               pkgs
               pkgs-unstable
+              pkgs-73cf49b
               ;
           };
 
@@ -65,6 +72,7 @@
                   inputs
                   pkgs
                   pkgs-unstable
+                  pkgs-73cf49b
                   ;
               };
               home-manager.users.iilyakov.imports = [ ./home ];

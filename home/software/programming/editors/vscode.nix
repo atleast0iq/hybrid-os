@@ -1,12 +1,12 @@
-{ pkgs, ... }:
+{ pkgs-73cf49b, ... }:
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs-73cf49b.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs-73cf49b.vscode-extensions; [
       ms-vscode.cpptools
       ms-python.python
       golang.go
