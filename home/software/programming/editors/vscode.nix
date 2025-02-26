@@ -1,12 +1,12 @@
-{ pkgs-73cf49b, ... }:
+{ pkgs, lib, ... }:
 {
   programs.vscode = {
     enable = true;
-    package = pkgs-73cf49b.vscodium;
+    package = pkgs.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
-    extensions = with pkgs-73cf49b.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
       ms-vscode.cpptools
       ms-python.python
       golang.go
@@ -18,8 +18,11 @@
     userSettings = {
       "extensions.autoUpdate" = false;
 
-      "editor.fontFamily" = "SFMono Nerd Font";
-      "editor.fontSize" = 14;
+      "editor.fontFamily" = lib.mkForce "SFMono Nerd Font";
+      "editor.fontSize" = lib.mkForce 14;
+      "terminal.integrated.fontSize" = lib.mkForce 14;
+      "debug.console.fontSize" = lib.mkForce 14;
+      "markdown.preview.fontSize" = lib.mkForce 14;
       "editor.fontWeight" = 400;
       "editor.fontLigatures" = true;
       "editor.fontVariations" = false;
@@ -37,16 +40,6 @@
       "files.insertFinalNewline" = true;
 
       "workbench.iconTheme" = "catppuccin-mocha";
-      "workbench.colorTheme" = "Catppuccin Mocha";
-      "catppuccin.workbenchMode" = "flat";
-      "catppuccin.extraBordersEnabled" = true;
-      "catppuccin.colorOverrides" = {
-        "all" = {
-          "base" = "#000000";
-          "mantle" = "#010101";
-          "crust" = "#020202";
-        };
-      };
     };
   };
 }
