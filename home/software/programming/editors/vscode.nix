@@ -1,12 +1,12 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
-    package = pkgs-unstable.vscodium;
+    package = pkgs.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
 
-    extensions = with pkgs-unstable.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
       ms-vscode.cpptools
       ms-python.python
       golang.go
