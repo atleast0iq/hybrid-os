@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs.python312Packages; [
-    python
-    pip
-    tkinter
-    virtualenv
+  home.packages = with pkgs; [
+    python312Full
+    python312Packages.pip
+    python312Packages.tkinter
+    python312Packages.virtualenv
   ];
 }
