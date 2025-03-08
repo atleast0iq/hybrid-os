@@ -11,7 +11,32 @@
     settings = {
       monitor = [
         "eDP-1,1920x1080@60,0x0,1"
-        ",preferred,auto,1,mirror,eDP-1"
+        "HDMI-A-1,1920x1080,1920x0,1"
+      ];
+
+      workspace = [
+        "eDP-1,1"
+        "HDMI-A-1,1"
+
+        "1,monitor:eDP-1"
+        "2,monitor:eDP-1"
+        "3,monitor:eDP-1"
+        "4,monitor:eDP-1"
+        "5,monitor:eDP-1"
+        "6,monitor:eDP-1"
+        "7,monitor:eDP-1"
+        "8,monitor:eDP-1"
+        "9,monitor:eDP-1"
+
+        "11,monitor:HDMI-A-1"
+        "12,monitor:HDMI-A-1"
+        "13,monitor:HDMI-A-1"
+        "14,monitor:HDMI-A-1"
+        "15,monitor:HDMI-A-1"
+        "16,monitor:HDMI-A-1"
+        "17,monitor:HDMI-A-1"
+        "18,monitor:HDMI-A-1"
+        "19,monitor:HDMI-A-1"
       ];
 
       xwayland = {

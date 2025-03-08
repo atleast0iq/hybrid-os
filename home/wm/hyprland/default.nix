@@ -12,5 +12,8 @@
     ./xdg-portal.nix
   ];
 
-  home.packages = with pkgs; [ hyprpolkitagent ];
+  home.packages = with pkgs; [
+    hyprpolkitagent
+    hyprsome
+  ];
 }

@@ -9,7 +9,6 @@
 
     settings = lib.mkForce {
       mainBar = {
-        "output" = "eDP-1";
         "height" = 32;
 
         "margin-left" = 20;
@@ -32,7 +31,22 @@
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
-            "*" = 6;
+            "eDP-1" = [
+              1
+              2
+              3
+              4
+              5
+              6
+            ];
+            "HDMI-A-1" = [
+              11
+              12
+              13
+              14
+              15
+              16
+            ];
           };
         };
 
