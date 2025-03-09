@@ -16,7 +16,7 @@
 
       workspace = [
         "eDP-1,1"
-        "HDMI-A-1,1"
+        "HDMI-A-1,11"
 
         "1,monitor:eDP-1"
         "2,monitor:eDP-1"
@@ -27,6 +27,7 @@
         "7,monitor:eDP-1"
         "8,monitor:eDP-1"
         "9,monitor:eDP-1"
+        "10,monitor:eDP-1"
 
         "11,monitor:HDMI-A-1"
         "12,monitor:HDMI-A-1"
@@ -37,6 +38,7 @@
         "17,monitor:HDMI-A-1"
         "18,monitor:HDMI-A-1"
         "19,monitor:HDMI-A-1"
+        "20,monitor:HDMI-A-1"
       ];
 
       xwayland = {
