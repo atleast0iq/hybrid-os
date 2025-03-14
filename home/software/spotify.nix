@@ -16,7 +16,7 @@
     in
     {
       enable = true;
-      spotifyPackage = pkgs.spotify-unwrapped;
+      spotifyPackage = pkgs.spotify;
       theme = lib.mkForce spicePkgs.themes.sleek;
       colorScheme = lib.mkForce "custom";
       customColorScheme = {

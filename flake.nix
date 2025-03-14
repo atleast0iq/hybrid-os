@@ -38,7 +38,7 @@
     in
     {
       nixosConfigurations = {
-        sviblovo = inputs.nixpkgs.lib.nixosSystem {
+        pavshino = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
             inherit
