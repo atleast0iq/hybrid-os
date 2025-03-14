@@ -34,6 +34,7 @@
 
       "workbench.statusBar.visible" = false;
       "workbench.activityBar.location" = "hidden";
+      "workbench.sideBar.location" = "right";
       "breadcrumbs.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "files.autoSave" = "onFocusChange";
