@@ -17,6 +17,8 @@
       "fullscreenstate, -1, 2,class:^(firefox)$,title:^(Firefox)$"
       "pin,class:^(firefox)$,title:^(Firefox)$"
       "float,class:^(firefox)$,title:^(Firefox)$"
+      "float,title:^(codeblocks_term)$"
+      "size 700 500,title:^(codeblocks_term)$"
 
       "stayfocused, title:^()$,class:^(steam)$"
       "minsize 1 1, title:^()$,class:^(steam)$"
