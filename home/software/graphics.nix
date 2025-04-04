@@ -18,24 +18,24 @@
       gimp
       xournalpp
 
-      adwsteamgtk
-      mindustry-wayland
-      bottles
-      (lutris.override {
-        extraPkgs = pkgs: [
-          wineWowPackages.waylandFull
-          attr
-          gamescope
-          mangohud
-          libthai
-          pango
-          zandronum
-        ];
+      # adwsteamgtk
+      # mindustry-wayland
+      # bottles
+      # (lutris.override {
+      #   extraPkgs = pkgs: [
+      #     wineWowPackages.waylandFull
+      #     attr
+      #     gamescope
+      #     mangohud
+      #     libthai
+      #     pango
+      #     zandronum
+      #   ];
 
-        extraLibraries = pkgs: [
-          attr
-        ];
-      })
+      #   extraLibraries = pkgs: [
+      #     attr
+      #   ];
+      # })
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop

@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   programs.steam = {
-    enable = true;
+    # enable = true;
+    enable = false;
     package = pkgs.steam.override {
       extraLibraries =
         pkgs: with pkgs; [
