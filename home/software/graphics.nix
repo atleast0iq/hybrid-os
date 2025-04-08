@@ -17,25 +17,7 @@
       libreoffice
       gimp
       xournalpp
-
-      # adwsteamgtk
-      # mindustry-wayland
-      # bottles
-      # (lutris.override {
-      #   extraPkgs = pkgs: [
-      #     wineWowPackages.waylandFull
-      #     attr
-      #     gamescope
-      #     mangohud
-      #     libthai
-      #     pango
-      #     zandronum
-      #   ];
-
-      #   extraLibraries = pkgs: [
-      #     attr
-      #   ];
-      # })
+      bottles
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
