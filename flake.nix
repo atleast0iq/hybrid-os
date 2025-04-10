@@ -12,7 +12,7 @@
     stylix.url = "github:danth/stylix/release-24.11";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix/c0876c7";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     zen-browser.url = "github:youwen5/zen-browser-flake";
