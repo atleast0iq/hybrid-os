@@ -10,6 +10,9 @@
     ./rules.nix
     ./settings.nix
     ./xdg-portal.nix
+    ./mako.nix
+    ./rofi.nix
+    ./waybar.nix
   ];
 
   home.packages = with pkgs; [

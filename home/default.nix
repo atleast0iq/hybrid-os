@@ -2,7 +2,7 @@
 {
   imports = [
     ./software
-    ./wm
+    ./wm/hyprland
     ./services.nix
     ./theme.nix
     ./xdg.nix
