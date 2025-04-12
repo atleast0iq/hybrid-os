@@ -1,29 +1,7 @@
 { pkgs, ... }:
-let
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  session = "Hyprland";
-in
 {
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    StandardInput = "tty";
-    StandardOutput = "tty";
-    StandardError = "journal";
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
-  };
-
   services = {
     blueman.enable = true;
-
-    greetd = {
-      enable = true;
-      settings.default_session = {
-        command = "${tuigreet} --time --remember --cmd ${session}";
-        user = "greeter";
-      };
-    };
 
     gvfs.enable = true;
 

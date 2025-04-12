@@ -8,7 +8,6 @@
     (with pkgs; [
       nautilus
       bitwarden-desktop
-      obsidian
       simple-scan
       qbittorrent
       eog

@@ -14,5 +14,15 @@
     ./users.nix
   ];
 
+  specialisation = {
+    hyprland.configuration = {
+      imports = [ ./hyprland.nix ];
+    };
+
+    gnome.configuration = {
+      imports = [ ./gnome.nix ];
+    };
+  };
+
   system.stateVersion = "24.05";
 }
