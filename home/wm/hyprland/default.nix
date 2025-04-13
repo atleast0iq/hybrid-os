@@ -11,12 +11,8 @@
     ./settings.nix
     ./xdg-portal.nix
     ./mako.nix
+    ./packages.nix
     ./rofi.nix
     ./waybar.nix
-  ];
-
-  home.packages = with pkgs; [
-    hyprpolkitagent
-    hyprsome
   ];
 }

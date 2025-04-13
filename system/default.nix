@@ -4,6 +4,7 @@
     ./amnezia-vpn.nix
     ./boot.nix
     ./hardware.nix
+    ./hyprland.nix
     ./locale.nix
     ./misc.nix
     ./networking.nix
@@ -15,10 +16,6 @@
   ];
 
   specialisation = {
-    hyprland.configuration = {
-      imports = [ ./hyprland.nix ];
-    };
-
     gnome.configuration = {
       imports = [ ./gnome.nix ];
     };

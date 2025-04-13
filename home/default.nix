@@ -1,12 +1,22 @@
-{ ... }:
+{ osConfig, ... }:
 {
-  imports = [
-    ./software
-    ./wm/hyprland
-    ./services.nix
-    ./theme.nix
-    ./xdg.nix
-  ];
+  imports =
+    [
+      ./software
+      ./services.nix
+      ./theme.nix
+      ./xdg.nix
+    ]
+    ++ (
+      if osConfig.services.xserver.desktopManager.gnome.enable then
+        [
+          ./wm/gnome
+        ]
+      else
+        [
+          ./wm/hyprland
+        ]
+    );
 
   home = {
     stateVersion = "24.05";

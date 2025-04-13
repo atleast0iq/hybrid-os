@@ -8,6 +8,10 @@
       autoload -Uz compinit && compinit
       compinit
     '';
+    initExtra = ''
+      bindkey "^[[1;5C" forward-word
+      bindkey "^[[1;5D" backward-word
+    '';
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {

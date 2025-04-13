@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    dconf
-  ];
-
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;

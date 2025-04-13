@@ -9,9 +9,9 @@
       nautilus
       bitwarden-desktop
       simple-scan
-      qbittorrent
-      eog
-      vlc
+      transmission_4-gtk
+      loupe
+      totem
       obs-studio
       libreoffice
       gimp
@@ -21,14 +21,6 @@
     ++ (with pkgs-unstable; [
       telegram-desktop
       vesktop
-      video-downloader
       amnezia-vpn
     ]);
-
-  programs = {
-    zathura = {
-      enable = true;
-      options.selection-clipboard = "clipboard";
-    };
-  };
 }
