@@ -35,7 +35,7 @@
       "$mod SHIFT,o,togglesplit,"
       "$mod SHIFT,p,pseudo,"
 
-      "$mod,Return,exec,alacritty"
+      "$mod,Return,exec,foot"
       "$mod SHIFT,f,exec,firefox"
       "$mod SHIFT,s,exec,slurp | grim -g - - | wl-copy"
       ",Print,exec,grim - | wl-copy"
