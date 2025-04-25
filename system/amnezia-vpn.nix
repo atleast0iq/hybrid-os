@@ -8,6 +8,11 @@
     services."AmneziaVPN" = {
       enable = true;
       wantedBy = [ "multi-user.target" ];
+      path = with pkgs-unstable; [
+        procps
+        iproute2
+        sudo
+      ];
     };
   };
 }
