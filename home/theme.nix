@@ -4,7 +4,7 @@
   ...
 }:
 {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.homeModules.stylix ];
 
   stylix = {
     enable = true;
@@ -70,10 +70,5 @@
 
   gtk = {
     enable = true;
-  };
-
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk3";
   };
 }

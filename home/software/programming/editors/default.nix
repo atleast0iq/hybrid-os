@@ -5,7 +5,8 @@
     ./zed-editor.nix
   ];
 
-  home.packages = with pkgs; [
-    jetbrains.pycharm-community
+  home.packages = [
+    pkgs.jetbrains.pycharm-community
+    pkgs.jetbrains.clion
   ];
 }

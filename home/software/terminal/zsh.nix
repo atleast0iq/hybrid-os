@@ -8,7 +8,7 @@
       autoload -Uz compinit && compinit
       compinit
     '';
-    initExtra = ''
+    initContent = ''
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
     '';

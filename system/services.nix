@@ -6,6 +6,8 @@
     udisks2.enable = true;
   };
 
+  programs.amnezia-vpn.enable = true;
+
   virtualisation.docker = {
     enable = true;
 

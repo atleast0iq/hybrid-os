@@ -13,16 +13,12 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "Iosevka"
-        "FiraCode"
-        "JetBrainsMono"
-        "DroidSansMono"
-        "UbuntuMono"
-        "SpaceMono"
-      ];
-    })
+    nerd-fonts.iosevka
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.space-mono
     google-fonts
   ];
 }

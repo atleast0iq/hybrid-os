@@ -8,7 +8,7 @@ update-flake:
     nix flake update
 
 fmt:
-    nix fmt
+    nix fmt .
 
 update-dotfiles: fmt
     git add .
