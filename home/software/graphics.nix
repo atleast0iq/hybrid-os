@@ -17,6 +17,7 @@
       gimp
       xournalpp
       bottles
+      obsidian
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
