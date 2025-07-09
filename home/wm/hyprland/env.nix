@@ -12,6 +12,7 @@
       "MOZ_ENABLE_WAYLAND,1"
       "XDG_SESSION_TYPE,wayland"
       "GDK_BACKEND,wayland"
+      "ELECTRON_OZONE_PLATFORM_HINT,wayland"
     ];
   };
 }
