@@ -2,7 +2,7 @@ default:
     @just --list
 
 switch-system:
-    sudo nixos-rebuild switch --flake path:.#pavshino --option
+    sudo nixos-rebuild switch --flake path:.#pavshino --option cores 3
 
 update-flake:
     nix flake update
