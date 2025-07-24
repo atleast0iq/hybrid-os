@@ -18,10 +18,10 @@
       xournalpp
       bottles
       obsidian
+      amnezia-vpn
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
       vesktop
-      amnezia-vpn
     ]);
 }
