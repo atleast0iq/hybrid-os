@@ -19,6 +19,7 @@
       bottles
       obsidian
       amnezia-vpn
+      mpv
     ])
     ++ (with pkgs-unstable; [
       telegram-desktop
