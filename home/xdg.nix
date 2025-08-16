@@ -17,6 +17,7 @@
     };
 
     mimeApps.enable = true;
+    configFile."mimeapps.list".force = true;
     mimeApps.defaultApplications = {
       "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
       "default-web-browser" = [ "zen.desktop" ];

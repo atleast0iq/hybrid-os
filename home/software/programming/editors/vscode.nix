@@ -1,13 +1,13 @@
-{ pkgs, lib, ... }:
+{ pkgs-unstable, lib, ... }:
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = pkgs-unstable.vscode;
     profiles.default = {
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
 
-      extensions = with pkgs.vscode-extensions; [
+      extensions = with pkgs-unstable.vscode-extensions; [
         ms-vscode.cpptools
         ms-python.python
         golang.go
