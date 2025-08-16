@@ -1,4 +1,5 @@
 {
+  pkgs-unstable,
   config,
   lib,
   ...
@@ -6,6 +7,7 @@
 {
   programs.waybar = {
     enable = true;
+    package = pkgs-unstable.waybar;
 
     settings = lib.mkForce {
       mainBar = {
