@@ -9,19 +9,36 @@
     };
     extraSpecialArgs = {inherit self inputs pkgs;};
   in {
-    nixosConfigurations.pavshino = inputs.nixpkgs.lib.nixosSystem {
-      inherit system specialArgs;
+    nixosConfigurations = {
+      pavshino = inputs.nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
 
-      modules = [
-        ./nixos/pavshino
-        inputs.home-manager.nixosModules.home-manager
-        {
-          home-manager.verbose = true;
-          home-manager.backupFileExtension = "homeManagerBackupFileExtension";
-          home-manager.extraSpecialArgs = extraSpecialArgs;
-          home-manager.users.iilyakov.imports = [./home/iilyakov];
-        }
-      ];
+        modules = [
+          ./nixos/pavshino
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.verbose = true;
+            home-manager.backupFileExtension = "homeManagerBackupFileExtension";
+            home-manager.extraSpecialArgs = extraSpecialArgs;
+            home-manager.users.iilyakov.imports = [./home/iilyakov];
+          }
+        ];
+      };
+
+      meteora = inputs.nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+
+        modules = [
+          ./nixos/meteora
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.verbose = true;
+            home-manager.backupFileExtension = "homeManagerBackupFileExtension";
+            home-manager.extraSpecialArgs = extraSpecialArgs;
+            home-manager.users.atleast0iq.imports = [./home/atleast0iq];
+          }
+        ];
+      };
     };
 
     formatter.${system} = pkgs.alejandra;
