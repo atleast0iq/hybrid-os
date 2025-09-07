@@ -1,4 +1,4 @@
-{ self, ... }: let
+{self, ...}: let
   sysmod = "${self}/modules/system";
 in {
   imports = [
