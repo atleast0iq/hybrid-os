@@ -1,5 +1,5 @@
 { self, ... }: let
-  sysmod = "${self}/modules/system"
+  sysmod = "${self}/modules/system";
 in {
   imports = [
     ./configuration.nix
