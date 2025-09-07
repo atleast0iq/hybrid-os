@@ -5,6 +5,7 @@ in {
     ./configuration.nix
     ./hardware-configuration.nix
 
+    "${sysmod}/amnezia-vpn.nix"
     "${sysmod}/nix.nix"
   ];
 
