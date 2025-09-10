@@ -23,8 +23,8 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.space-mono
     google-fonts
-    inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
-    inputs.apple-fonts.packages.${pkgs.system}.sf-compact-nerd
-    inputs.apple-fonts.packages.${pkgs.system}.ny-nerd
+    # inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
+    # inputs.apple-fonts.packages.${pkgs.system}.sf-compact-nerd
+    # inputs.apple-fonts.packages.${pkgs.system}.ny-nerd
   ];
 }

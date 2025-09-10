@@ -1,15 +1,58 @@
-{self, ...}: let
+{
+  self,
+  config,
+  pkgs,
+  ...
+}: let
   sysmod = "${self}/modules/system";
 in {
   imports = [
-    ./configuration.nix
-    ./hardware-configuration.nix
-
-    "${sysmod}/amnezia-vpn.nix"
+    "${sysmod}/hardware/bluetooth.nix"
+    "${sysmod}/hardware/fwupd.nix"
+    "${sysmod}/hardware/graphics.nix"
+    "${sysmod}/hardware/printing.nix"
+    "${sysmod}/hardware/scanners.nix"
+    "${sysmod}/packages/fonts.nix"
+    "${sysmod}/packages/programs.nix"
+    "${sysmod}/services/amnezia-vpn.nix"
+    "${sysmod}/services/docker.nix"
+    "${sysmod}/services/gnome.nix"
+    "${sysmod}/services/pipewire.nix"
+    "${sysmod}/networking.nix"
     "${sysmod}/nix.nix"
+    "${sysmod}/security.nix"
+    "${sysmod}/steam.nix"
+
+    ./hardware-configuration.nix
+    ./users.nix
   ];
 
+  networking.hostName = "meteora";
+  time.timeZone = "Europe/Moscow";
+  time.hardwareClockInLocalTime = true;
+  i18n.defaultLocale = "en_US.UTF-8";
+
   boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+
+    initrd.systemd.enable = true;
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
     kernelModules = ["amdgpu" "v4l2loopback" "ideapad_laptop"];
+    kernel.sysctl = {
+      "vm.swappiness" = 10;
+      "vm.vfs_cache_pressure" = 50;
+    };
+    kernelParams = [
+      "quiet"
+      "loglevel=3"
+      "systemd.show_status=auto"
+      "rd.udev.log_level=3"
+    ];
   };
+
+  hardware.cpu.amd.updateMicrocode = true;
+
+  system.stateVersion = "25.05";
 }
