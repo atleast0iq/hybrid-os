@@ -1,5 +1,9 @@
-{
-  imports = [];
+{self, ...}: let
+  usermod = "${self}/modules/user";
+in {
+  imports = [
+    "${usermod}/terminal"
+  ];
 
   home = {
     stateVersion = "24.05";
