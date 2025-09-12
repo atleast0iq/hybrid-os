@@ -5,6 +5,7 @@ in {
     "${usermod}/services"
     "${usermod}/software"
     "${usermod}/terminal"
+    "${usermod}/desktop/gnome"
   ];
 
   home = {

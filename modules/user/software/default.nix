@@ -29,6 +29,5 @@ in {
     transmission_4-gtk
     obs-studio
     obsidian
-    amnezia-vpn
   ];
 }
