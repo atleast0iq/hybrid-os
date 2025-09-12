@@ -5,7 +5,6 @@ in {
     "${usermod}/services"
     "${usermod}/software"
     "${usermod}/terminal"
-    "${usermod}/wayland.nix"
   ];
 
   home = {
