@@ -2,7 +2,10 @@
   usermod = "${self}/modules/user";
 in {
   imports = [
+    "${usermod}/services"
+    "${usermod}/software"
     "${usermod}/terminal"
+    "${usermod}/wayland.nix"
   ];
 
   home = {

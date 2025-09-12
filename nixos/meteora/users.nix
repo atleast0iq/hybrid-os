@@ -18,11 +18,6 @@
       createHome = true;
       home = "/home/atleast0iq";
       shell = pkgs.zsh;
-
-      # TODO: delete
-      packages = with pkgs; [
-        zed-editor
-      ];
     };
   };
 }
