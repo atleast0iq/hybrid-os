@@ -36,6 +36,8 @@ in {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
+    plymouth.enable = true;
+
     initrd.systemd.enable = true;
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
