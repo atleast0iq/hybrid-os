@@ -1,12 +1,13 @@
 {
   outputs = {self, ...} @ inputs: let
     system = "x86_64-linux";
-    specialArgs = {inherit self inputs;};
 
     pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
+
+    specialArgs = {inherit self inputs;};
     extraSpecialArgs = {inherit self inputs pkgs;};
   in {
     nixosConfigurations = {
