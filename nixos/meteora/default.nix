@@ -1,5 +1,7 @@
 {
   self,
+  inputs,
+  lib,
   config,
   pkgs,
   ...
@@ -25,6 +27,8 @@ in {
 
     ./hardware-configuration.nix
     ./users.nix
+
+    inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
   networking.hostName = "meteora";
@@ -32,8 +36,15 @@ in {
   time.hardwareClockInLocalTime = true;
   i18n.defaultLocale = "en_US.UTF-8";
 
+  boot.loader.systemd-boot.enable = lib.mkForce false;
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
+  environment.systemPackages = [pkgs.sbctl];
+
   boot = {
-    loader.systemd-boot.enable = true;
+    # loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
     plymouth.enable = true;
@@ -49,6 +60,7 @@ in {
     kernelParams = [
       "quiet"
       "loglevel=3"
+      "splash"
       "systemd.show_status=auto"
       "rd.udev.log_level=3"
     ];
