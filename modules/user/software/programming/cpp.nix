@@ -1,9 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    libclang
-    gcc
     cmake
+    gcc
     gdb
-    lldb
   ];
 }

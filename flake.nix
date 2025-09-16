@@ -7,8 +7,13 @@
       config.allowUnfree = true;
     };
 
-    specialArgs = {inherit self inputs;};
-    extraSpecialArgs = {inherit self inputs pkgs;};
+    unstable = import inputs.nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    specialArgs = {inherit self inputs unstable;};
+    extraSpecialArgs = {inherit self inputs pkgs unstable;};
   in {
     nixosConfigurations = {
       meteora = inputs.nixpkgs.lib.nixosSystem {
@@ -27,22 +32,31 @@
       };
     };
 
+    devShells = {
+      default = pkgs.mkShell {
+        packages = [pkgs.alejandra pkgs.git];
+        name = "nixland";
+        DIRENV_LOG_FORMAT = "";
+      };
+    };
+
     formatter.${system} = pkgs.alejandra;
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix/release-25.05";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix/c0876c7";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     zen-browser.url = "github:youwen5/zen-browser-flake";

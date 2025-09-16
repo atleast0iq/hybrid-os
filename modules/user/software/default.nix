@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  unstable,
   ...
 }: let
   zenWithWayland = pkgs.symlinkJoin {
@@ -19,16 +20,16 @@ in {
     ./spotify.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = [
     zenWithWayland
-    ungoogled-chromium
+    pkgs.ungoogled-chromium
 
-    telegram-desktop
-    vesktop
+    unstable.telegram-desktop
+    pkgs.vesktop
 
-    bitwarden-desktop
-    transmission_4-gtk
-    obs-studio
-    obsidian
+    pkgs.bitwarden-desktop
+    pkgs.transmission_4-gtk
+    pkgs.obs-studio
+    pkgs.obsidian
   ];
 }
