@@ -21,6 +21,7 @@ in {
 
   home.packages = with pkgs; [
     zenWithWayland
+    ungoogled-chromium
 
     telegram-desktop
     vesktop

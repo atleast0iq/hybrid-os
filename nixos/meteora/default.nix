@@ -36,6 +36,7 @@ in {
   time.hardwareClockInLocalTime = true;
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # lanzaboote
   boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.lanzaboote = {
     enable = true;
