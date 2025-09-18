@@ -27,6 +27,7 @@ in {
     unstable.telegram-desktop
     pkgs.vesktop
 
+    pkgs.libreoffice
     pkgs.bitwarden-desktop
     pkgs.transmission_4-gtk
     pkgs.obs-studio
