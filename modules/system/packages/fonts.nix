@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   fonts = {
     fontconfig = {
       enable = true;
@@ -18,5 +18,11 @@
       enable = true;
       decompressFonts = true;
     };
+
+    packages = with pkgs; [
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
+    ];
   };
 }
