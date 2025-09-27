@@ -5,6 +5,7 @@
     ./direnv.nix
     ./cmp.nix
     ./lualine.nix
+    ./neotree.nix
     ./misc.nix
   ];
 }

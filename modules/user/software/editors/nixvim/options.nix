@@ -1,26 +1,35 @@
 {
   programs.nixvim = {
-    diagnostic.settings.virtual_text = true;
-
-    clipboard = {
-      register = "unnamedplus";
-      providers.wl-copy.enable = true;
-    };
+    luaLoader.enable = true;
 
     opts = {
       number = true;
       relativenumber = true;
-      showmode = false;
-
-      swapfile = false;
 
       tabstop = 2;
       shiftwidth = 2;
       expandtab = true;
       autoindent = true;
 
-      wrap = false;
+      updatetime = 50;
 
+      hlsearch = true;
+      incsearch = true;
+      ignorecase = true;
+      smartcase = true;
+
+      swapfile = false;
+      backup = false;
+      undofile = true;
+
+      mouse = "a";
+      mousemodel = "extend";
+      splitbelow = true;
+      splitright = true;
+
+      wrap = false;
+      virtualedit = "block";
+      showmode = false;
       completeopt = ["menu" "menuone" "noselect"];
       termguicolors = true;
     };
@@ -32,6 +41,20 @@
         configs = true;
         plugins = true;
       };
+    };
+
+    extraConfigLuaPre = ''
+      vim.fn.sign_define("diagnosticsignerror", { text = " ", texthl = "diagnosticerror", linehl = "", numhl = "" })
+      vim.fn.sign_define("diagnosticsignwarn", { text = " ", texthl = "diagnosticwarn", linehl = "", numhl = "" })
+      vim.fn.sign_define("diagnosticsignhint", { text = "󰌵 ", texthl = "diagnostichint", linehl = "", numhl = "" })
+      vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
+    '';
+
+    diagnostic.settings.virtual_text = true;
+
+    clipboard = {
+      register = "unnamedplus";
+      providers.wl-copy.enable = true;
     };
   };
 }

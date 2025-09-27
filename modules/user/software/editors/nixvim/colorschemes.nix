@@ -1,6 +1,13 @@
 {
-  programs.nixvim.colorschemes = {
-    nightfox.enable = true;
-    nightfox.autoLoad = true;
+  programs.nixvim = {
+    colorschemes = {
+      tokyonight.enable = true;
+      tokyonight.autoLoad = true;
+    };
+
+    highlightOverride = {
+      LineNr.fg = "orange";
+      CursorLineNr.fg = "white";
+    };
   };
 }

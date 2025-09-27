@@ -5,7 +5,7 @@
       inlayHints = true;
       servers = {
         clangd.enable = true;
-
+        gopls.enable = true;
         nixd.enable = true;
       };
     };
