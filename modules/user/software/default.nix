@@ -27,6 +27,8 @@ in {
     unstable.telegram-desktop
     pkgs.vesktop
 
+    unstable.yandex-music
+
     pkgs.libreoffice
     pkgs.bitwarden-desktop
     pkgs.transmission_4-gtk
