@@ -2,6 +2,11 @@
   networking = {
     networkmanager.enable = true;
     networkmanager.wifi.powersave = true;
+
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [80 443 22 7777];
+    };
   };
 
   services.resolved.enable = true;

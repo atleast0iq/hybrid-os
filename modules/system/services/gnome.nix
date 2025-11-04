@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.udev.packages = with pkgs; [gnome-settings-daemon];
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs

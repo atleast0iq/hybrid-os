@@ -24,15 +24,20 @@ in {
     zenWithWayland
     pkgs.ungoogled-chromium
 
-    unstable.telegram-desktop
+    unstable.materialgram
     pkgs.vesktop
 
     unstable.yandex-music
 
     pkgs.libreoffice
     pkgs.bitwarden-desktop
-    pkgs.transmission_4-gtk
+    unstable.transmission_4
     pkgs.obs-studio
     pkgs.obsidian
+
+    unstable.hydralauncher
+    unstable.protonplus
+    unstable.bottles
+    unstable.lutris
   ];
 }
