@@ -23,5 +23,6 @@
     libnotify
     yt-dlp
     bat
+    glow
   ];
 }

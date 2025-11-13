@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./arduino.nix
     ./cpp.nix
     ./direnv.nix
     ./go.nix

@@ -6,6 +6,7 @@
       extraGroups = [
         "wheel"
         "adbusers"
+        "dialout"
         "docker"
         "kvm"
         "audio"
